@@ -16,6 +16,7 @@
 		7A55813E27BED13300C2FC3F /* Project_Group_6Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A55813D27BED13300C2FC3F /* Project_Group_6Tests.swift */; };
 		7A55814827BED13300C2FC3F /* Project_Group_6UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A55814727BED13300C2FC3F /* Project_Group_6UITests.swift */; };
 		7A55814A27BED13300C2FC3F /* Project_Group_6UITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A55814927BED13300C2FC3F /* Project_Group_6UITestsLaunchTests.swift */; };
+		7A55815727BED17500C2FC3F /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 7A55815627BED17500C2FC3F /* .gitignore */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		7A55814327BED13300C2FC3F /* Project_Group_6UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Project_Group_6UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7A55814727BED13300C2FC3F /* Project_Group_6UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Project_Group_6UITests.swift; sourceTree = "<group>"; };
 		7A55814927BED13300C2FC3F /* Project_Group_6UITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Project_Group_6UITestsLaunchTests.swift; sourceTree = "<group>"; };
+		7A55815627BED17500C2FC3F /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +81,7 @@
 		7A55811A27BED12E00C2FC3F = {
 			isa = PBXGroup;
 			children = (
+				7A55815627BED17500C2FC3F /* .gitignore */,
 				7A55812527BED12E00C2FC3F /* Project_Group_6 */,
 				7A55813C27BED13300C2FC3F /* Project_Group_6Tests */,
 				7A55814627BED13300C2FC3F /* Project_Group_6UITests */,
@@ -231,6 +234,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7A55815727BED17500C2FC3F /* .gitignore in Resources */,
 				7A55813327BED13200C2FC3F /* LaunchScreen.storyboard in Resources */,
 				7A55813027BED13200C2FC3F /* Assets.xcassets in Resources */,
 				7A55812E27BED12E00C2FC3F /* Main.storyboard in Resources */,
