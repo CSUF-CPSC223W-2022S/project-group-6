@@ -8,3 +8,10 @@
 import Foundation
 
 //parth just did this
+struct covidRequirement{
+    var result: String
+    
+    //Code goes here
+    
+    
+}
