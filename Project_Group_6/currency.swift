@@ -9,6 +9,7 @@ import Foundation
 struct currency {
     var money: Int
     var language: String
+    var convert: Float
     
     //code
     
