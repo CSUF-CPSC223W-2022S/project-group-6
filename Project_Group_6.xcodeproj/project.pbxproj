@@ -17,7 +17,7 @@
 		7A55814827BED13300C2FC3F /* Project_Group_6UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A55814727BED13300C2FC3F /* Project_Group_6UITests.swift */; };
 		7A55814A27BED13300C2FC3F /* Project_Group_6UITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A55814927BED13300C2FC3F /* Project_Group_6UITestsLaunchTests.swift */; };
 		7A55815727BED17500C2FC3F /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 7A55815627BED17500C2FC3F /* .gitignore */; };
-		A912D4F627BED32B0006509A /* Marco_file.swift in Sources */ = {isa = PBXBuildFile; fileRef = A912D4F527BED32B0006509A /* Marco_file.swift */; };
+		A96779BC27C7316C00DE88C8 /* currency.swift in Sources */ = {isa = PBXBuildFile; fileRef = A96779BB27C7316C00DE88C8 /* currency.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,7 +52,7 @@
 		7A55814727BED13300C2FC3F /* Project_Group_6UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Project_Group_6UITests.swift; sourceTree = "<group>"; };
 		7A55814927BED13300C2FC3F /* Project_Group_6UITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Project_Group_6UITestsLaunchTests.swift; sourceTree = "<group>"; };
 		7A55815627BED17500C2FC3F /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
-		A912D4F527BED32B0006509A /* Marco_file.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Marco_file.swift; sourceTree = "<group>"; };
+		A96779BB27C7316C00DE88C8 /* currency.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = currency.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,7 +111,7 @@
 				7A55812F27BED13200C2FC3F /* Assets.xcassets */,
 				7A55813127BED13200C2FC3F /* LaunchScreen.storyboard */,
 				7A55813427BED13200C2FC3F /* Info.plist */,
-				A912D4F527BED32B0006509A /* Marco_file.swift */,
+				A96779BB27C7316C00DE88C8 /* currency.swift */,
 			);
 			path = Project_Group_6;
 			sourceTree = "<group>";
@@ -265,7 +265,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A912D4F627BED32B0006509A /* Marco_file.swift in Sources */,
+				A96779BC27C7316C00DE88C8 /* currency.swift in Sources */,
 				7A55812B27BED12E00C2FC3F /* ViewController.swift in Sources */,
 				7A55812727BED12E00C2FC3F /* AppDelegate.swift in Sources */,
 				7A55812927BED12E00C2FC3F /* SceneDelegate.swift in Sources */,
