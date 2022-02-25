@@ -22,7 +22,7 @@ struct airport {
         self.fullMapImage = fullMapImage
     }
 }
-class AIRPORTMANEGER {
+class AIRPORTMANAGER {
     //  contains a dictionary of Airports and functions to access the data
     
     let Airports: [String: airport] =
@@ -61,7 +61,7 @@ class AIRPORTMANEGER {
     
 }
 
-class COUNTRYMANEGER {
+class COUNTRYMANAGER {
     let countryList: [String] = ["United States", "United Kingdom", "Japan"]
     
     init() {  }
