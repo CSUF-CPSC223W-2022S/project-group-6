@@ -27,7 +27,7 @@ class airportManagerTests: XCTestCase {
         let manager = AIRPORTMANAGER()
         XCTAssertEqual(manager.getCode(for: "Los Angeles International Airport"), "LAX")
         
-        XCTAssertEqual(manager.gateNumbers(for: "Los Angeles International Airport"), ["12", "24B", "5"])
+        XCTAssertEqual(manager.gateNumbers(from: "Los Angeles International Airport"), ["12", "24B", "5"])
         
         XCTAssertEqual(manager.getMap(of: "Los Angeles International Airport"), "Lax_terminal_overview.pdf")
     }
@@ -41,6 +41,23 @@ class airportManagerTests: XCTestCase {
         XCTAssertEqual(manager.getCode(for: "Haneda International Airport"), "HND")
         
         XCTAssertEqual(manager.getCode(for: "San Francisco International Airport"), "SFO")
+    }
     
+    func testNonExistingAirports() {
+        let manager = AIRPORTMANAGER()
+        
+        XCTAssertEqual(manager.getMap(of: "Random user input"), "")
+        
+        XCTAssertEqual(manager.gateNumbers(from: "Random Airport"), [])
+        
+        XCTAssertEqual(manager.getCode(for: "Non exiting Airport"), "")
+    }
+    
+    func testGetAirportName() {
+        let manager = AIRPORTMANAGER()
+        
+        XCTAssertEqual(manager.getAirportName(of: "LAX"), "Los Angeles International Airport")
+        
+        XCTAssertEqual(manager.getAirportName(of: "ASD"), "")
     }
 }
