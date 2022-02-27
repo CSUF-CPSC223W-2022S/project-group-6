@@ -69,6 +69,28 @@ class AirportManagerTests: XCTestCase {
         XCTAssertEqual(manager.getCountry(of: "Haneda International Airport"), "Japan")
         
         XCTAssertEqual(manager.getCountry(of: "random airport"), "")
+    }
     
+    func testGetGateNumber() {
+        let manager = AirportManager()
+        let Flights = manager.flightNumbers(from: "Los Angeles International Airport")
+        XCTAssertEqual(manager.getGateNumber(from: "Los Angeles International Airport", for: Flights[0]), "12")
+    }
+    
+    func testGetFlightNumber() {
+        let manager = AirportManager()
+        let Gates = manager.gateNumbers(from: "Los Angeles International Airport")
+        XCTAssertEqual(manager.getFlightNumber(from: "Los Angeles International Airport", for: Gates[0]), "AA234")
+    }
+    func testGetFlightAndGate() {
+        let manager = AirportManager()
+        let flights = manager.flightNumbers(from: "J.F.K International Airport")
+        let gates = manager.gateNumbers(from: "J.F.K International Airport")
+        let flight = manager.getFlightNumber(from: "J.F.K International Airport", for: gates[2])
+        let gate = manager.getGateNumber(from: "J.F.K International Airport", for: flights[2])
+        
+        XCTAssertEqual(flight, "BA3442")
+        XCTAssertEqual(gate, "3")
+        
     }
 }

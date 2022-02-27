@@ -20,6 +20,7 @@
 		7ABC8D8127C8A21B00910A35 /* airportManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ABC8D8027C8A21B00910A35 /* airportManager.swift */; };
 		7ABC8D8327C8A23600910A35 /* managerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ABC8D8227C8A23600910A35 /* managerTests.swift */; };
 		7ABC8D8527C8A24A00910A35 /* Images in Resources */ = {isa = PBXBuildFile; fileRef = 7ABC8D8427C8A24A00910A35 /* Images */; };
+		7AC24BDE27CC12BB00BEAC21 /* airportData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AC24BDD27CC12BB00BEAC21 /* airportData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +58,7 @@
 		7ABC8D8027C8A21B00910A35 /* airportManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = airportManager.swift; sourceTree = "<group>"; };
 		7ABC8D8227C8A23600910A35 /* managerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = managerTests.swift; sourceTree = "<group>"; };
 		7ABC8D8427C8A24A00910A35 /* Images */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Images; sourceTree = "<group>"; };
+		7AC24BDD27CC12BB00BEAC21 /* airportData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = airportData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,6 +112,7 @@
 			isa = PBXGroup;
 			children = (
 				7ABC8D8027C8A21B00910A35 /* airportManager.swift */,
+				7AC24BDD27CC12BB00BEAC21 /* airportData.swift */,
 				7A55812627BED12E00C2FC3F /* AppDelegate.swift */,
 				7A55812827BED12E00C2FC3F /* SceneDelegate.swift */,
 				7A55812A27BED12E00C2FC3F /* ViewController.swift */,
@@ -274,6 +277,7 @@
 			files = (
 				7A55812B27BED12E00C2FC3F /* ViewController.swift in Sources */,
 				7A55812727BED12E00C2FC3F /* AppDelegate.swift in Sources */,
+				7AC24BDE27CC12BB00BEAC21 /* airportData.swift in Sources */,
 				7A55812927BED12E00C2FC3F /* SceneDelegate.swift in Sources */,
 				7ABC8D8127C8A21B00910A35 /* airportManager.swift in Sources */,
 			);
