@@ -13,30 +13,32 @@ struct airport {
     //  contains all the infomation needed about a single airport
     
     var airportCode: String
+    var country: String
     var gateNumbers: [String]
     var fullMapImage: String
     
-    init(code: String, gateNumbers: [String], fullMapImage: String) {
+    init(code: String, country: String,  gateNumbers: [String], fullMapImage: String) {
         self.airportCode = code
+        self.country = country
         self.gateNumbers = gateNumbers
         self.fullMapImage = fullMapImage
     }
 }
-class AIRPORTMANAGER {
+class AirportManager {
     //  contains a dictionary of Airports and functions to access the data
     
     let Airports: [String: airport] =
     [
         "Los Angeles International Airport":
-            airport(code:"LAX", gateNumbers: ["12", "24B", "5"], fullMapImage: "Lax_terminal_overview.pdf"),
+            airport(code:"LAX", country: "United States", gateNumbers: ["12", "24B", "5"], fullMapImage: "Lax_terminal_overview.pdf"),
         "Northwest Arkansas National Airport":
-            airport(code:"XNA", gateNumbers: ["1", "2", "3"], fullMapImage:"XnaMap.pdf"),
+            airport(code:"XNA", country: "United States", gateNumbers: ["1", "2", "3"], fullMapImage:"XnaMap.pdf"),
         "J.F.K International Airport":
-            airport(code:"JFK", gateNumbers: ["1", "2", "3"], fullMapImage:"JFK_Map.pdf"),
+            airport(code:"JFK", country: "United States", gateNumbers: ["1", "2", "3"], fullMapImage:"JFK_Map.pdf"),
         "Haneda International Airport":
-            airport(code:"HND", gateNumbers: ["1", "2", "3"], fullMapImage:"HNDterminalMap.pdf"),
+            airport(code:"HND", country: "Japan", gateNumbers: ["1", "2", "3"], fullMapImage:"HNDterminalMap.pdf"),
         "San Francisco International Airport":
-            airport(code:"SFO", gateNumbers: ["1", "2", "3"], fullMapImage:"SFO_Map.pdf")
+            airport(code:"SFO", country: "United States", gateNumbers: ["1", "2", "3"], fullMapImage:"SFO_Map.pdf")
     ]
     
     //  empty initialer because we are setting the veriable in the class
@@ -64,6 +66,17 @@ class AIRPORTMANAGER {
         return ""
     }
     
+    //  returns the country that an airport is located at
+    func getCountry(of airportName: String) -> String {
+        for airport in Airports {
+            if airportName == airport.key {
+                return airport.value.country
+            }
+        }
+    //  will return empty string if airport is not in the database
+        return ""
+    }
+    
     //  returns an array of gate numbers located at desired Airport
     func gateNumbers(from name: String) -> [String] {
         //code find
@@ -85,21 +98,5 @@ class AIRPORTMANAGER {
         }
     //  will return empty string if airport is not in the database
         return ""
-    }
-}
-
-class COUNTRYMANAGER {
-    let countryList: [String] = ["United States", "United Kingdom", "Japan", "Mexico"]
-    
-    init() {  }
-    
-    func find(name: String) -> String {
-        var returnValue: String = ""
-        for country in countryList {
-            if name == country {
-                returnValue = country
-            }
-        }
-        return returnValue
     }
 }

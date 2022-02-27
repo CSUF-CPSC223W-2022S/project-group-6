@@ -8,7 +8,7 @@
 import XCTest
 @testable import Project_Group_6
 
-class airportManagerTests: XCTestCase {
+class AirportManagerTests: XCTestCase {
     
     override func setUpWithError() throws {
         // Put setup code here. This method is called before the invocation of each test method in the class.
@@ -19,12 +19,12 @@ class airportManagerTests: XCTestCase {
     }
     
     func testInitialer() {
-        let manager = AIRPORTMANAGER()
+        let manager = AirportManager()
         XCTAssertTrue(!manager.Airports.isEmpty)
     }
     
     func testFunctionCalls() {
-        let manager = AIRPORTMANAGER()
+        let manager = AirportManager()
         XCTAssertEqual(manager.getCode(for: "Los Angeles International Airport"), "LAX")
         
         XCTAssertEqual(manager.gateNumbers(from: "Los Angeles International Airport"), ["12", "24B", "5"])
@@ -33,7 +33,7 @@ class airportManagerTests: XCTestCase {
     }
     
     func testDifferentAirportNames() {
-        let manager = AIRPORTMANAGER()
+        let manager = AirportManager()
         XCTAssertEqual(manager.getCode(for: "Northwest Arkansas National Airport"), "XNA")
         
         XCTAssertEqual(manager.getCode(for: "J.F.K International Airport"), "JFK")
@@ -44,7 +44,7 @@ class airportManagerTests: XCTestCase {
     }
     
     func testNonExistingAirports() {
-        let manager = AIRPORTMANAGER()
+        let manager = AirportManager()
         
         XCTAssertEqual(manager.getMap(of: "Random user input"), "")
         
@@ -54,10 +54,21 @@ class airportManagerTests: XCTestCase {
     }
     
     func testGetAirportName() {
-        let manager = AIRPORTMANAGER()
+        let manager = AirportManager()
         
         XCTAssertEqual(manager.getAirportName(of: "LAX"), "Los Angeles International Airport")
         
         XCTAssertEqual(manager.getAirportName(of: "ASD"), "")
+    }
+    
+    func testGetCountry() {
+        let manager = AirportManager()
+        
+        XCTAssertEqual(manager.getCountry(of: "Los Angeles International Airport"), "United States")
+        
+        XCTAssertEqual(manager.getCountry(of: "Haneda International Airport"), "Japan")
+        
+        XCTAssertEqual(manager.getCountry(of: "random airport"), "")
+    
     }
 }
