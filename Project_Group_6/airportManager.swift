@@ -1,5 +1,5 @@
 //
-//  airportManeger.swift
+//  airportManager.swift
 //  Project_Group_6
 //
 //  Created by diego on 2/24/22.
@@ -16,18 +16,20 @@ struct airport {
     var country: String
     var gateNumbers: [String]
     var flightNumbers: [String]
-    var fullMapImage: String
+    var terminalImages: [String]
     
-    init(code: String, country: String,  gateNumbers: [String], flightNumbers: [String], fullMapImage: String) {
+    init(code: String, country: String,  gateNumbers: [String], flightNumbers: [String], terminalImages: [String]) {
         self.airportCode = code
         self.country = country
         self.gateNumbers = gateNumbers
         self.flightNumbers = flightNumbers
-        self.fullMapImage = fullMapImage
+        self.terminalImages = terminalImages
     }
 }
 
 struct airline {
+    //  contains all the information needed about a single Airline
+    
     var airlineCode: String //     "AA"
     var connectedAirports : [String]//    names only, no need to have the entire airport struct
     //                                    ["Los Angeles International Airport", "San Franciso International Airport", ""]
@@ -45,11 +47,21 @@ class AirportManager {
         Airlines = loadAirlines()
     }
     
+    //  returns size of Airports Dictionary
+    var airportSize: Int{
+        return Airports.count
+    }
+    
+    //  returns size of Airlines Dictionary
+    var airlineSize: Int {
+        return Airlines.count
+    }
+    
     //  returns 3 letter code of airport
     func getCode(for name: String) -> String {
-        for names in Airports.keys {
+        for (names, airport) in Airports {
             if name == names {
-                return Airports[name]!.airportCode
+                return airport.airportCode
             }
         }
     //  will return empty string if airport is not in the database
@@ -58,9 +70,9 @@ class AirportManager {
     
     //  returns full name of Airport
     func getAirportName(of code: String) -> String {
-        for airport in Airports {
-            if airport.value.airportCode == code {
-                return airport.key
+        for (name, airport) in Airports {
+            if airport.airportCode == code {
+                return name
             }
         }
     //  will return empty string if airport is not in the database
@@ -69,9 +81,9 @@ class AirportManager {
     
     //  returns the country that an airport is located at
     func getCountry(of airportName: String) -> String {
-        for airport in Airports {
-            if airportName == airport.key {
-                return airport.value.country
+        for (name, airport) in Airports {
+            if airportName == name {
+                return airport.country
             }
         }
     //  will return empty string if airport is not in the database
@@ -81,9 +93,9 @@ class AirportManager {
     //  returns an array of gate numbers located at desired Airport
     func gateNumbers(from name: String) -> [String] {
         //code find
-        for names in Airports.keys {
+        for (names, airport) in Airports {
             if name == names {
-                return Airports[name]!.gateNumbers
+                return airport.gateNumbers
             }
         }
     //  will return an empty array if airport is not in the database
@@ -93,9 +105,9 @@ class AirportManager {
     //  returns an array of flight numbers for the day
     func flightNumbers(from name: String) -> [String] {
         //code find
-        for names in Airports.keys {
+        for (names, airport) in Airports {
             if name == names {
-                return Airports[name]!.flightNumbers
+                return airport.flightNumbers
             }
         }
     //  will return an empty array if airport is not in the database
@@ -104,7 +116,7 @@ class AirportManager {
     
     //  will return a specific gate number based on the flight number or empty string
     func getGateNumber(from airport: String, for flightNumber: String) -> String {
-        for index in 0...Airports.count - 1 {
+        for index in 0...Airports[airport]!.flightNumbers.count - 1 {
             if Airports[airport]!.flightNumbers[index] == flightNumber {
                 return Airports[airport]!.gateNumbers[index]
             }
@@ -115,7 +127,7 @@ class AirportManager {
     
     //  will return a specific flight number based on the gate number or empty string
     func getFlightNumber(from airport: String, for gateNumber: String) -> String {
-        for index in 0...Airports.count - 1 {
+        for index in 0...Airports[airport]!.gateNumbers.count - 1 {
             if Airports[airport]!.gateNumbers[index] == gateNumber {
                 return Airports[airport]!.flightNumbers[index]
             }
@@ -125,10 +137,10 @@ class AirportManager {
     }
     
     //  returns a file name which contains a full map of the airport terminals
-    func getMap(of name: String) -> String {
-        for names in Airports.keys {
+    func getMap(of name: String, terminalNumber: Int) -> String {
+        for (names, airport) in Airports {
             if name == names {
-                return Airports[name]!.fullMapImage
+                return airport.terminalImages[terminalNumber - 1]
             }
         }
     //  will return empty string if airport is not in the database

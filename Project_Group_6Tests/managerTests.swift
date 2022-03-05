@@ -1,8 +1,8 @@
 //
-//  manegerTests.swift
+//  managerTests.swift
 //  Project_Group_6Tests
 //
-//  Created by csuftitan on 2/24/22.
+//  Created by Diego on 2/24/22.
 //
 
 import XCTest
@@ -27,9 +27,7 @@ class AirportManagerTests: XCTestCase {
         let manager = AirportManager()
         XCTAssertEqual(manager.getCode(for: "Los Angeles International Airport"), "LAX")
         
-        XCTAssertEqual(manager.gateNumbers(from: "Los Angeles International Airport"), ["12", "24B", "5"])
-        
-        XCTAssertEqual(manager.getMap(of: "Los Angeles International Airport"), "Lax_terminal_overview.pdf")
+        XCTAssertEqual(manager.getGateNumber(from: "Los Angeles International Airport", for: "344"), "13")
     }
     
     func testDifferentAirportNames() {
@@ -45,8 +43,6 @@ class AirportManagerTests: XCTestCase {
     
     func testNonExistingAirports() {
         let manager = AirportManager()
-        
-        XCTAssertEqual(manager.getMap(of: "Random user input"), "")
         
         XCTAssertEqual(manager.gateNumbers(from: "Random Airport"), [])
         
@@ -74,13 +70,16 @@ class AirportManagerTests: XCTestCase {
     func testGetGateNumber() {
         let manager = AirportManager()
         let Flights = manager.flightNumbers(from: "Los Angeles International Airport")
-        XCTAssertEqual(manager.getGateNumber(from: "Los Angeles International Airport", for: Flights[0]), "12")
+        let Gates = manager.gateNumbers(from: "Los Angeles International Airport")
+        XCTAssertEqual(Flights.count, Gates.count)
+        XCTAssertEqual(manager.getGateNumber(from: "Los Angeles International Airport", for: Flights[22]), Gates[22])
     }
     
     func testGetFlightNumber() {
         let manager = AirportManager()
+        let Flights = manager.flightNumbers(from: "Los Angeles International Airport")
         let Gates = manager.gateNumbers(from: "Los Angeles International Airport")
-        XCTAssertEqual(manager.getFlightNumber(from: "Los Angeles International Airport", for: Gates[0]), "AA234")
+        XCTAssertEqual(manager.getFlightNumber(from: "Los Angeles International Airport", for: Gates[10]), Flights[10])
     }
     func testGetFlightAndGate() {
         let manager = AirportManager()
@@ -91,6 +90,19 @@ class AirportManagerTests: XCTestCase {
         
         XCTAssertEqual(flight, "BA3442")
         XCTAssertEqual(gate, "3")
-        
+    }
+    
+    func testgetMap() {
+        let m = AirportManager()
+        //code for getting terminal number
+        var terminalX: Int = 1
+        XCTAssertEqual(m.getMap(of: "Los Angeles International Airport", terminalNumber: terminalX), "Terminal 1.pdf")
+        terminalX = 8
+        XCTAssertEqual(m.getMap(of: "Los Angeles International Airport", terminalNumber: terminalX), "Terminal 8.pdf" )
+    }
+    func testSizeComputedProperty() {
+        let m = AirportManager()
+        XCTAssertEqual(m.airportSize, 5)
+        XCTAssertEqual(m.airlineSize, 68)
     }
 }
