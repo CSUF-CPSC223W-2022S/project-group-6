@@ -17,6 +17,10 @@
 		7A55814827BED13300C2FC3F /* Project_Group_6UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A55814727BED13300C2FC3F /* Project_Group_6UITests.swift */; };
 		7A55814A27BED13300C2FC3F /* Project_Group_6UITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A55814927BED13300C2FC3F /* Project_Group_6UITestsLaunchTests.swift */; };
 		7A55815727BED17500C2FC3F /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 7A55815627BED17500C2FC3F /* .gitignore */; };
+		7ABC8D8127C8A21B00910A35 /* airportManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ABC8D8027C8A21B00910A35 /* airportManager.swift */; };
+		7ABC8D8327C8A23600910A35 /* managerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ABC8D8227C8A23600910A35 /* managerTests.swift */; };
+		7ABC8D8527C8A24A00910A35 /* Images in Resources */ = {isa = PBXBuildFile; fileRef = 7ABC8D8427C8A24A00910A35 /* Images */; };
+		7AC24BDE27CC12BB00BEAC21 /* airportData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AC24BDD27CC12BB00BEAC21 /* airportData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +55,10 @@
 		7A55814727BED13300C2FC3F /* Project_Group_6UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Project_Group_6UITests.swift; sourceTree = "<group>"; };
 		7A55814927BED13300C2FC3F /* Project_Group_6UITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Project_Group_6UITestsLaunchTests.swift; sourceTree = "<group>"; };
 		7A55815627BED17500C2FC3F /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
+		7ABC8D8027C8A21B00910A35 /* airportManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = airportManager.swift; sourceTree = "<group>"; };
+		7ABC8D8227C8A23600910A35 /* managerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = managerTests.swift; sourceTree = "<group>"; };
+		7ABC8D8427C8A24A00910A35 /* Images */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Images; sourceTree = "<group>"; };
+		7AC24BDD27CC12BB00BEAC21 /* airportData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = airportData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +90,7 @@
 			isa = PBXGroup;
 			children = (
 				7A55815627BED17500C2FC3F /* .gitignore */,
+				7ABC8D8427C8A24A00910A35 /* Images */,
 				7A55812527BED12E00C2FC3F /* Project_Group_6 */,
 				7A55813C27BED13300C2FC3F /* Project_Group_6Tests */,
 				7A55814627BED13300C2FC3F /* Project_Group_6UITests */,
@@ -102,6 +111,8 @@
 		7A55812527BED12E00C2FC3F /* Project_Group_6 */ = {
 			isa = PBXGroup;
 			children = (
+				7ABC8D8027C8A21B00910A35 /* airportManager.swift */,
+				7AC24BDD27CC12BB00BEAC21 /* airportData.swift */,
 				7A55812627BED12E00C2FC3F /* AppDelegate.swift */,
 				7A55812827BED12E00C2FC3F /* SceneDelegate.swift */,
 				7A55812A27BED12E00C2FC3F /* ViewController.swift */,
@@ -116,6 +127,7 @@
 		7A55813C27BED13300C2FC3F /* Project_Group_6Tests */ = {
 			isa = PBXGroup;
 			children = (
+				7ABC8D8227C8A23600910A35 /* managerTests.swift */,
 				7A55813D27BED13300C2FC3F /* Project_Group_6Tests.swift */,
 			);
 			path = Project_Group_6Tests;
@@ -234,6 +246,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7ABC8D8527C8A24A00910A35 /* Images in Resources */,
 				7A55815727BED17500C2FC3F /* .gitignore in Resources */,
 				7A55813327BED13200C2FC3F /* LaunchScreen.storyboard in Resources */,
 				7A55813027BED13200C2FC3F /* Assets.xcassets in Resources */,
@@ -264,7 +277,9 @@
 			files = (
 				7A55812B27BED12E00C2FC3F /* ViewController.swift in Sources */,
 				7A55812727BED12E00C2FC3F /* AppDelegate.swift in Sources */,
+				7AC24BDE27CC12BB00BEAC21 /* airportData.swift in Sources */,
 				7A55812927BED12E00C2FC3F /* SceneDelegate.swift in Sources */,
+				7ABC8D8127C8A21B00910A35 /* airportManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -273,6 +288,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7A55813E27BED13300C2FC3F /* Project_Group_6Tests.swift in Sources */,
+				7ABC8D8327C8A23600910A35 /* managerTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -371,7 +387,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -426,7 +442,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -443,6 +459,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = SWZ2ZYMKNS;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Project_Group_6/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -450,12 +467,13 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "edu.fullerton.ecs.paul.Project-Group-6";
+				PRODUCT_BUNDLE_IDENTIFIER = "edu.fullerton.ecs.group6.Project-Group-6";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -470,6 +488,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = SWZ2ZYMKNS;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Project_Group_6/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -477,6 +496,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -495,10 +515,12 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = SWZ2ZYMKNS;
 				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "edu.fullerton.ecs.paul.Project-Group-6Tests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -516,8 +538,9 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = SWZ2ZYMKNS;
 				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "edu.fullerton.ecs.paul.Project-Group-6Tests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -534,6 +557,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = SWZ2ZYMKNS;
 				GENERATE_INFOPLIST_FILE = YES;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "edu.fullerton.ecs.paul.Project-Group-6UITests";
@@ -551,6 +575,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = SWZ2ZYMKNS;
 				GENERATE_INFOPLIST_FILE = YES;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "edu.fullerton.ecs.paul.Project-Group-6UITests";
