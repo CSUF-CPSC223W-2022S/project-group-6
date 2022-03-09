@@ -19,6 +19,7 @@
 		7A55815727BED17500C2FC3F /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 7A55815627BED17500C2FC3F /* .gitignore */; };
 		7A6CE56C27D8169000A40678 /* seatMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A6CE56B27D8169000A40678 /* seatMap.swift */; };
 		7A6CE56E27D8175700A40678 /* seatMapTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A6CE56D27D8175700A40678 /* seatMapTests.swift */; };
+		7A6FDBD127D8547C00595D34 /* seatPage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7A6FDBD027D8547C00595D34 /* seatPage.storyboard */; };
 		7ABC8D8127C8A21B00910A35 /* airportManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ABC8D8027C8A21B00910A35 /* airportManager.swift */; };
 		7ABC8D8327C8A23600910A35 /* managerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ABC8D8227C8A23600910A35 /* managerTests.swift */; };
 		7ABC8D8527C8A24A00910A35 /* Images in Resources */ = {isa = PBXBuildFile; fileRef = 7ABC8D8427C8A24A00910A35 /* Images */; };
@@ -59,6 +60,7 @@
 		7A55815627BED17500C2FC3F /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		7A6CE56B27D8169000A40678 /* seatMap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = seatMap.swift; sourceTree = "<group>"; };
 		7A6CE56D27D8175700A40678 /* seatMapTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = seatMapTests.swift; sourceTree = "<group>"; };
+		7A6FDBD027D8547C00595D34 /* seatPage.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = seatPage.storyboard; sourceTree = "<group>"; };
 		7ABC8D8027C8A21B00910A35 /* airportManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = airportManager.swift; sourceTree = "<group>"; };
 		7ABC8D8227C8A23600910A35 /* managerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = managerTests.swift; sourceTree = "<group>"; };
 		7ABC8D8427C8A24A00910A35 /* Images */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Images; sourceTree = "<group>"; };
@@ -115,6 +117,7 @@
 		7A55812527BED12E00C2FC3F /* Project_Group_6 */ = {
 			isa = PBXGroup;
 			children = (
+				7A6FDBCF27D8545300595D34 /* Feature Seat Map */,
 				7ABC8D8027C8A21B00910A35 /* airportManager.swift */,
 				7AC24BDD27CC12BB00BEAC21 /* airportData.swift */,
 				7A55812627BED12E00C2FC3F /* AppDelegate.swift */,
@@ -124,7 +127,6 @@
 				7A55812F27BED13200C2FC3F /* Assets.xcassets */,
 				7A55813127BED13200C2FC3F /* LaunchScreen.storyboard */,
 				7A55813427BED13200C2FC3F /* Info.plist */,
-				7A6CE56B27D8169000A40678 /* seatMap.swift */,
 			);
 			path = Project_Group_6;
 			sourceTree = "<group>";
@@ -146,6 +148,15 @@
 				7A55814927BED13300C2FC3F /* Project_Group_6UITestsLaunchTests.swift */,
 			);
 			path = Project_Group_6UITests;
+			sourceTree = "<group>";
+		};
+		7A6FDBCF27D8545300595D34 /* Feature Seat Map */ = {
+			isa = PBXGroup;
+			children = (
+				7A6CE56B27D8169000A40678 /* seatMap.swift */,
+				7A6FDBD027D8547C00595D34 /* seatPage.storyboard */,
+			);
+			path = "Feature Seat Map";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -252,6 +263,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7A6FDBD127D8547C00595D34 /* seatPage.storyboard in Resources */,
 				7ABC8D8527C8A24A00910A35 /* Images in Resources */,
 				7A55815727BED17500C2FC3F /* .gitignore in Resources */,
 				7A55813327BED13200C2FC3F /* LaunchScreen.storyboard in Resources */,
