@@ -18,6 +18,8 @@
 		7A55814A27BED13300C2FC3F /* Project_Group_6UITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A55814927BED13300C2FC3F /* Project_Group_6UITestsLaunchTests.swift */; };
 		7A55815727BED17500C2FC3F /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 7A55815627BED17500C2FC3F /* .gitignore */; };
 		7A55815927BED25500C2FC3F /* covidRequirement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A55815827BED25500C2FC3F /* covidRequirement.swift */; };
+		7AC6EC4927DA50D4009B436B /* airportData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AC6EC4827DA50D4009B436B /* airportData.swift */; };
+		7AC6EC4B27DA512A009B436B /* airportManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AC6EC4A27DA512A009B436B /* airportManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +55,8 @@
 		7A55814927BED13300C2FC3F /* Project_Group_6UITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Project_Group_6UITestsLaunchTests.swift; sourceTree = "<group>"; };
 		7A55815627BED17500C2FC3F /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		7A55815827BED25500C2FC3F /* covidRequirement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = covidRequirement.swift; sourceTree = "<group>"; };
+		7AC6EC4827DA50D4009B436B /* airportData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = airportData.swift; sourceTree = "<group>"; };
+		7AC6EC4A27DA512A009B436B /* airportManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = airportManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,6 +116,8 @@
 				7A55813127BED13200C2FC3F /* LaunchScreen.storyboard */,
 				7A55813427BED13200C2FC3F /* Info.plist */,
 				7A55815827BED25500C2FC3F /* covidRequirement.swift */,
+				7AC6EC4827DA50D4009B436B /* airportData.swift */,
+				7AC6EC4A27DA512A009B436B /* airportManager.swift */,
 			);
 			path = Project_Group_6;
 			sourceTree = "<group>";
@@ -266,7 +272,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				7A55812B27BED12E00C2FC3F /* ViewController.swift in Sources */,
+				7AC6EC4B27DA512A009B436B /* airportManager.swift in Sources */,
 				7A55815927BED25500C2FC3F /* covidRequirement.swift in Sources */,
+				7AC6EC4927DA50D4009B436B /* airportData.swift in Sources */,
 				7A55812727BED12E00C2FC3F /* AppDelegate.swift in Sources */,
 				7A55812927BED12E00C2FC3F /* SceneDelegate.swift in Sources */,
 			);
