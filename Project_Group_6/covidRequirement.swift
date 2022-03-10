@@ -8,10 +8,18 @@
 import Foundation
 
 //parth just did this
-struct covidRequirement{
+class covidRequirement{
     var result: String
+    var location: String
     
-    //Code goes here
+    init(location: String){
+        self.location = location
+    }
     
-    //another change
+    func covidRequirement() -> String {
+        return result
+        
+    }
 }
+
+
