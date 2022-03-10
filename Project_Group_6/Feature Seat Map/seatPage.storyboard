@@ -6,26 +6,121 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="UIMenu" message="Requires Xcode 11 or later." minToolsVersion="11.0" requiredIntegratedClassName="UICommandDiff"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--seatVIewController-->
         <scene sceneID="s0d-6b-0kx">
             <objects>
-                <viewController id="Y6W-OH-hqX" sceneMemberID="viewController">
+                <viewController title="seatVIewController" id="Y6W-OH-hqX" customClass="seatViewController" customModule="Project_Group_6" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Seat Number:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aeI-9g-Aky">
+                                <rect key="frame" x="99" y="164" width="89" height="17"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Wuu-gY-6ao" userLabel="seatNumber">
+                                <rect key="frame" x="211" y="155" width="127" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="getSeatNumber:" destination="nuD-XD-qK5" eventType="editingDidEnd" id="S6v-je-lD1"/>
+                                    <action selector="seatNumber:" destination="nuD-XD-qK5" eventType="editingDidEnd" id="hb4-f0-IyH"/>
+                                </connections>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pmh-ca-fPZ">
+                                <rect key="frame" x="247" y="325" width="90" height="48"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Done"/>
+                                <connections>
+                                    <segue destination="ae0-Mw-fgs" kind="show" animates="NO" id="5uT-Cq-iqH"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Flying from: " lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eJf-r0-t6s" userLabel="Flying from:">
+                                <rect key="frame" x="43" y="204" width="81" height="17"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="To: " lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ndr-iC-fVz">
+                                <rect key="frame" x="43" y="234" width="24" height="17"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gQv-0c-qtc" userLabel="destinationAirport">
+                                <rect key="frame" x="75" y="229" width="127" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" showsMenuAsPrimaryAction="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" role="primary" translatesAutoresizingMaskIntoConstraints="NO" id="Yz7-RH-3eB" userLabel="airportList">
+                                <rect key="frame" x="147" y="197" width="224" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <menu key="menu" title="Airports" id="H3T-ad-VL7">
+                                    <menuOptions key="menuOptions" singleSelection="YES"/>
+                                    <children>
+                                        <command title="Los Angeles International Airport" discoverabilityTitle="Los Angeles International Airport" id="cEY-xA-Yn8"/>
+                                        <command title="Haneda International Airport" discoverabilityTitle="Haneda International Airport" id="N2K-f9-zbo"/>
+                                    </children>
+                                </menu>
+                                <state key="normal" title="tap here..."/>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="nuD-XD-qK5" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="128.98550724637681" y="98.4375"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="rya-vt-fe7">
+            <objects>
+                <viewController id="ae0-Mw-fgs" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="GCD-vt-mOF">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="60l-0U-xQi">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="LAX_terminal_overview" translatesAutoresizingMaskIntoConstraints="NO" id="gft-bs-EfM">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
+                                    </imageView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="aFk-Ce-6sA"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="aFk-Ce-6sA" firstAttribute="bottom" secondItem="60l-0U-xQi" secondAttribute="bottom" id="56l-q1-964"/>
+                            <constraint firstItem="aFk-Ce-6sA" firstAttribute="trailing" secondItem="60l-0U-xQi" secondAttribute="trailing" id="6bW-RI-lCN"/>
+                            <constraint firstItem="60l-0U-xQi" firstAttribute="leading" secondItem="aFk-Ce-6sA" secondAttribute="leading" id="9z4-sk-Pxb"/>
+                            <constraint firstItem="60l-0U-xQi" firstAttribute="top" secondItem="aFk-Ce-6sA" secondAttribute="top" id="NyG-ue-50g"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="whx-t8-vY7"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="73M-fw-ZJi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="950.72463768115949" y="97.767857142857139"/>
+        </scene>
     </scenes>
     <resources>
+        <image name="LAX_terminal_overview" width="840" height="575"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
