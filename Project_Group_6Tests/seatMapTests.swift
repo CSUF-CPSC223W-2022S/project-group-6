@@ -21,30 +21,20 @@ class seatMapTests: XCTestCase {
     
     func testInializer() {
    
-        let seating = seatMap(yourSeatNumber: "7B", flyingFrom: "Los Angeles International Airport", to: "Northwest Arkansas National Airport")
+        let seating = seatMap(yourSeatNumber: "7B", flyingFrom: "Los Angeles International Airport", to: "Northwest Arkansas National Airport", using: "Aeroflot")
         
         XCTAssertEqual(seating.seatNumber, "7B")
     }
     func testIsDomestic() {
         
-        let seating = seatMap(yourSeatNumber: "34A", flyingFrom: "Los Angeles International Airport", to: "Haneda International Airport")
+        let seating = seatMap(yourSeatNumber: "34A", flyingFrom: "Los Angeles International Airport", to: "Haneda International Airport", using: "American Airlines")
         
         XCTAssertEqual(seating.isflyingDomestic(), false)
     }
-    
-    func testCreatingALargeSeatMap() {
-        let seating = seatMap(yourSeatNumber: "34A", flyingFrom: "Los Angeles International Airport", to: "Haneda International Airport")
-        XCTAssertTrue(!seating.seatList.isEmpty)
-        XCTAssert(seating.seatList.contains("34A"))
-        XCTAssert(seating.seatList.contains("19A"))
-        XCTAssert(seating.seatList.contains("45K"))
+    func testGetSeatMap() {
+        let seating = seatMap(yourSeatNumber: "34A", flyingFrom: "Los Angeles International Airport", to: "Haneda International Airport", using: "American Airlines")
+        
+        XCTAssertEqual(seating.getSeatMap(), "boeing777.pdf")
     }
     
-    func testCreatingASmallSeatMap() {
-        let seating = seatMap(yourSeatNumber: "27C", flyingFrom: "Los Angeles International Airport", to: "Northwest Arkansas National Airport")
-        XCTAssertTrue(!seating.seatList.isEmpty)
-        XCTAssert(seating.seatList.contains("27C"))
-        XCTAssert(seating.seatList.contains("7A"))
-        XCTAssert(seating.seatList.contains("34F"))
-    }
 }

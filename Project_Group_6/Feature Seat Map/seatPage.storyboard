@@ -1,126 +1,112 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y6W-OH-hqX">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="GQA-nc-IoB">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
-        <capability name="UIMenu" message="Requires Xcode 11 or later." minToolsVersion="11.0" requiredIntegratedClassName="UICommandDiff"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--seatVIewController-->
+        <!--seatInformationView-->
         <scene sceneID="s0d-6b-0kx">
             <objects>
-                <viewController title="seatVIewController" id="Y6W-OH-hqX" customClass="seatViewController" customModule="Project_Group_6" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="seatInformationView" modalPresentationStyle="fullScreen" id="Y6W-OH-hqX" customClass="seatViewController" customModule="Project_Group_6" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Seat Number:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aeI-9g-Aky">
-                                <rect key="frame" x="99" y="164" width="89" height="17"/>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter your Seat Number" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Wuu-gY-6ao" userLabel="seatNumber">
+                                <rect key="frame" x="71" y="156" width="273" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Wuu-gY-6ao" userLabel="seatNumber">
-                                <rect key="frame" x="211" y="155" width="127" height="34"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                                <connections>
-                                    <action selector="getSeatNumber:" destination="nuD-XD-qK5" eventType="editingDidEnd" id="S6v-je-lD1"/>
-                                    <action selector="seatNumber:" destination="nuD-XD-qK5" eventType="editingDidEnd" id="hb4-f0-IyH"/>
-                                </connections>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pmh-ca-fPZ">
-                                <rect key="frame" x="247" y="325" width="90" height="48"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hgv-l6-rJH">
+                                <rect key="frame" x="226" y="676" width="143" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Done"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Continue"/>
                                 <connections>
-                                    <segue destination="ae0-Mw-fgs" kind="show" animates="NO" id="5uT-Cq-iqH"/>
+                                    <action selector="informationEntered:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="XkX-k0-CRh"/>
+                                    <segue destination="rCN-FP-m57" kind="show" id="aDa-fK-16d"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Flying from: " lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eJf-r0-t6s" userLabel="Flying from:">
-                                <rect key="frame" x="43" y="204" width="81" height="17"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="To: " lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ndr-iC-fVz">
-                                <rect key="frame" x="43" y="234" width="24" height="17"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gQv-0c-qtc" userLabel="destinationAirport">
-                                <rect key="frame" x="75" y="229" width="127" height="34"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" showsMenuAsPrimaryAction="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" role="primary" translatesAutoresizingMaskIntoConstraints="NO" id="Yz7-RH-3eB" userLabel="airportList">
-                                <rect key="frame" x="147" y="197" width="224" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <menu key="menu" title="Airports" id="H3T-ad-VL7">
-                                    <menuOptions key="menuOptions" singleSelection="YES"/>
-                                    <children>
-                                        <command title="Los Angeles International Airport" discoverabilityTitle="Los Angeles International Airport" id="cEY-xA-Yn8"/>
-                                        <command title="Haneda International Airport" discoverabilityTitle="Haneda International Airport" id="N2K-f9-zbo"/>
-                                    </children>
-                                </menu>
-                                <state key="normal" title="tap here..."/>
-                            </button>
+                            <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ZXA-Bw-FDC">
+                                <rect key="frame" x="0.0" y="234" width="414" height="162"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            </pickerView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
+                    <navigationItem key="navigationItem" largeTitleDisplayMode="always" id="cwL-Ha-t4F"/>
+                    <connections>
+                        <outlet property="picker" destination="ZXA-Bw-FDC" id="jfh-va-YOJ"/>
+                        <outlet property="userSeat" destination="Wuu-gY-6ao" id="qQ7-UV-WHi"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-                <exit id="nuD-XD-qK5" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="128.98550724637681" y="98.4375"/>
+            <point key="canvasLocation" x="1949.2753623188407" y="98.4375"/>
         </scene>
-        <!--View Controller-->
-        <scene sceneID="rya-vt-fe7">
+        <!--mapView-->
+        <scene sceneID="CfH-SW-79t">
             <objects>
-                <viewController id="ae0-Mw-fgs" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="GCD-vt-mOF">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                <viewController title="mapView" modalPresentationStyle="fullScreen" id="rCN-FP-m57" customClass="mapViewController" customModule="Project_Group_6" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="iFc-Ea-frb">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="60l-0U-xQi">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="5QZ-Nx-y42">
+                                <rect key="frame" x="0.0" y="130" width="414" height="732"/>
                                 <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="LAX_terminal_overview" translatesAutoresizingMaskIntoConstraints="NO" id="gft-bs-EfM">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
+                                    <imageView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="VPh-RV-kWA">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="732"/>
                                     </imageView>
                                 </subviews>
                             </stackView>
                         </subviews>
-                        <viewLayoutGuide key="safeArea" id="aFk-Ce-6sA"/>
+                        <viewLayoutGuide key="safeArea" id="yau-4m-dBD"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="aFk-Ce-6sA" firstAttribute="bottom" secondItem="60l-0U-xQi" secondAttribute="bottom" id="56l-q1-964"/>
-                            <constraint firstItem="aFk-Ce-6sA" firstAttribute="trailing" secondItem="60l-0U-xQi" secondAttribute="trailing" id="6bW-RI-lCN"/>
-                            <constraint firstItem="60l-0U-xQi" firstAttribute="leading" secondItem="aFk-Ce-6sA" secondAttribute="leading" id="9z4-sk-Pxb"/>
-                            <constraint firstItem="60l-0U-xQi" firstAttribute="top" secondItem="aFk-Ce-6sA" secondAttribute="top" id="NyG-ue-50g"/>
+                            <constraint firstItem="5QZ-Nx-y42" firstAttribute="centerX" secondItem="iFc-Ea-frb" secondAttribute="centerX" id="5Lx-hR-on3"/>
+                            <constraint firstItem="5QZ-Nx-y42" firstAttribute="bottom" secondItem="yau-4m-dBD" secondAttribute="bottom" id="9Mo-sH-Ud8"/>
+                            <constraint firstItem="5QZ-Nx-y42" firstAttribute="leading" secondItem="yau-4m-dBD" secondAttribute="leading" id="HoI-iJ-vhv"/>
+                            <constraint firstItem="5QZ-Nx-y42" firstAttribute="top" secondItem="iFc-Ea-frb" secondAttribute="topMargin" constant="-10" id="jWh-Qa-YiH"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="whx-t8-vY7"/>
+                    <navigationItem key="navigationItem" largeTitleDisplayMode="always" id="uH3-HG-R24"/>
+                    <connections>
+                        <outlet property="mapImage" destination="VPh-RV-kWA" id="3tS-hT-CNn"/>
+                        <outlet property="seatinformation" destination="uH3-HG-R24" id="YKe-cz-C1x"/>
+                    </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="73M-fw-ZJi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8Da-vz-t1V" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="950.72463768115949" y="97.767857142857139"/>
+            <point key="canvasLocation" x="2676.811594202899" y="97.767857142857139"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="uSS-CS-R3b">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="GQA-nc-IoB" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="GZF-sX-WRb">
+                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Y6W-OH-hqX" kind="relationship" relationship="rootViewController" id="CpV-f4-SKc"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TAd-bB-gIh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1039.1304347826087" y="98.4375"/>
         </scene>
     </scenes>
     <resources>
-        <image name="LAX_terminal_overview" width="840" height="575"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
