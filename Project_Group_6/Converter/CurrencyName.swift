@@ -23,4 +23,5 @@ enum CurrencyName : String, CaseIterable {
     case HUF = "HUF"; case SEK = "SEK"
     case IDR = "IDR"; case SGD = "SGD"
     case ILS = "ILS"; case THB = "THB"
+    
 }

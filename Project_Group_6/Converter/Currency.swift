@@ -9,7 +9,7 @@ import UIKit
 class Currency: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
     // MARK: - Properties
 
-    // array for the name of the currency code
+    // array for the name of the currency code 
     var currency: [String] = []
     // the values of the currency
     var value: [Double] = []

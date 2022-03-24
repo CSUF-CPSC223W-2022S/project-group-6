@@ -69,12 +69,12 @@ class ConverterTests: XCTestCase {
         XCTAssert(true)
     }
     
-    //
+    // test for the keys
     func testKeys() {
         XCTAssert(CurrencyConverterLocalData.mostRecentExchangeRates == "CurrencyConverterLocalData.Keys.mostRecentExchangeRates")
         }
     
-    // tests the exchange rates
+    // test the exchange rates
     func testfallExchange() {
         XCTAssert(CurrencyConverterLocalData.fallBackExchangeRates == [.USD: 1.1321])
     }

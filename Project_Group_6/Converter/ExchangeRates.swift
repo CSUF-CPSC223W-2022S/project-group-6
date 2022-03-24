@@ -7,6 +7,6 @@
 import Foundation
 
 struct ExchangeRates: Codable {
-    // a dictionary that holds the rates
+    // a dictionary that holds the rates 
     let rates: [String: Double]
 }
