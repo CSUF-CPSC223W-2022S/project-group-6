@@ -27,29 +27,26 @@ class ConverterTests: XCTestCase {
 
     func testPerformanceExample() throws {
         // This is an example of a performance test case.
-        self.measure {
+        measure {
             // Put the code you want to measure the time of here.
         }
     }
     
+    // tests the initiliazer for currency to be 0
     func testCurrencyInitializer() {
         let currency = Currency()
         
         XCTAssertEqual(currency.currency.count, 0)
     }
     
+    // tests the values of currency
     func testValueInitializer() {
         let value = Currency()
         
         XCTAssertEqual(value.value.count, 0)
     }
     
-    // func testExchangeRates() {
-    // let rates = ExchangeRates()
-        
-    // XCTAssertEqual(rates.rates.count, 0)
-    // }
-    
+    // tests the JSON data
     var mockContentData: Data {
         return getData(name: "ContentResponse")
     }
@@ -59,5 +56,26 @@ class ConverterTests: XCTestCase {
         let fileUrl = bundle.url(forResource: name, withExtension: withExtension)
         let data = try! Data(contentsOf: fileUrl!)
         return data
+    }
+    
+    // tests the enums
+    func testEnum() throws {
+        let result = CurrencyName(rawValue: "AUD")
+        XCTAssertEqual(result?.rawValue, "AUD")
+    }
+    
+    // tests if the api is true
+    func testAPI() {
+        XCTAssert(true)
+    }
+    
+    //
+    func testKeys() {
+        XCTAssert(CurrencyConverterLocalData.mostRecentExchangeRates == "CurrencyConverterLocalData.Keys.mostRecentExchangeRates")
+        }
+    
+    // tests the exchange rates
+    func testfallExchange() {
+        XCTAssert(CurrencyConverterLocalData.fallBackExchangeRates == [.USD: 1.1321])
     }
 }
