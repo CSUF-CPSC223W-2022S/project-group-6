@@ -16,7 +16,7 @@ private enum CurrencyConverterLocalData {
     enum Keys {
         static let mostRecentExchangeRates = "CurrencyConverterLocalData.Keys.mostRecentExchangeRates"
     }
-    
+
     // MARK: Static Properties:
 
     // This will never be used once the method CustrrencyConverter.updateExchangeRates is called with internet access.
@@ -55,7 +55,7 @@ private enum CurrencyConverterLocalData {
         .THB: 35.955,
         .ZAR: 15.7631,
     ]
-    
+
     // MARK: Static Methods:
 
     // Saves the most recent exchange rates by locally storing it. */
@@ -63,7 +63,7 @@ private enum CurrencyConverterLocalData {
         let convertedExchangeRates = convertExchangeRatesForUserDefaults(exchangeRates)
         UserDefaults.standard.set(convertedExchangeRates, forKey: Keys.mostRecentExchangeRates)
     }
-    
+
     // Loads the most recent exchange rates from the local storage. */
     static func loadMostRecentExchangeRates() -> [CurrencyName: Double] {
         if let userDefaultsExchangeRates = UserDefaults.standard.dictionary(forKey: Keys.mostRecentExchangeRates) as? [String: Double] {
@@ -73,9 +73,9 @@ private enum CurrencyConverterLocalData {
             return fallBackExchangeRates
         }
     }
-    
+
     // MARK: Private Static Methods:
-    
+
     // Converts the [String : Double] dictionary with the exchange rates to a [Currency : Double] dictionary
     private static func convertExchangeRatesFromUserDefaults(_ userDefaultsExchangeRates: [String: Double]) -> [CurrencyName: Double] {
         var exchangeRates: [CurrencyName: Double] = [:]
@@ -86,7 +86,7 @@ private enum CurrencyConverterLocalData {
         }
         return exchangeRates
     }
-    
+
     // Converts the [Currency : Double] dictionary with the exchange rates to a [String : Double] one so it can be stored locally.
     private static func convertExchangeRatesForUserDefaults(_ exchangeRates: [CurrencyName: Double]) -> [String: Double] {
         var userDefaultsExchangeRates: [String: Double] = [:]
