@@ -91,18 +91,12 @@ class Destination {
         return gateMap
     }
 
-    // ------------------------------------------------------------------------------------------------------
+    // MARK: ------------------------------------------------------------------------------------------------
 
     var terminalNumber1: [String] = ["9", "11A", "11B", "12B", "13", "14", "15", "16", "17A", "17B", "18A", "18B"]
 
     // 12 gate numbers
     func validGateNumberForTerminal1() -> String {
-        // let convertGateNumber = Int(getGateNumber()) ?? 0
-        // if convertGateNumber >= 0, convertGateNumber <= 11 {
-        // if getGateMap() == "Terminal 1.pdf" {
-        //    terminalNumber = "1"
-        // }
-        // }
         for gateNumber in terminalNumber1 {
             if gateNumber == getTerminal1GateNumber() {
                 terminalNumber = "1"
@@ -195,7 +189,7 @@ class Destination {
         return terminalNumber
     }
 
-    // ------------------------------------------------------------------------------------------------------
+    // MARK: ------------------------------------------------------------------------------------------------
 
     var airlineListForTerminal1: [String] = ["G4", "WN", "SY", "VB"]
 
@@ -294,7 +288,6 @@ class Destination {
     }
 
     // Display the image of the terminal that the gate number is located.
-    // Indicate the gate number on the image and give it a color or border that is visible.
 
     // Based on the location of the gate number, give an estimated time of arrival when the user has cleared the security gate.
 

@@ -10,7 +10,9 @@
 		7A24AB4627D7DD4600A15924 /* departingGateNumber_V2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A24AB4527D7DD4600A15924 /* departingGateNumber_V2.swift */; };
 		7A24AB4B27D7E14600A15924 /* departingGateNumberTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A24AB4A27D7E14600A15924 /* departingGateNumberTests.swift */; };
 		7A24AB5027D9464100A15924 /* DepartingGate.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7A24AB4F27D9464100A15924 /* DepartingGate.storyboard */; };
-		7A24AB5427D9B05C00A15924 /* departingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A24AB5327D9B05C00A15924 /* departingViewController.swift */; };
+		7A24AB5427D9B05C00A15924 /* gateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A24AB5327D9B05C00A15924 /* gateViewController.swift */; };
+		7A24ABDB27EB8D4400A15924 /* FlightNumberTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A24ABDA27EB8D4400A15924 /* FlightNumberTableViewController.swift */; };
+		7A24ABDD27EB8D5E00A15924 /* AirlineNameTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A24ABDC27EB8D5E00A15924 /* AirlineNameTableViewController.swift */; };
 		7A55812727BED12E00C2FC3F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A55812627BED12E00C2FC3F /* AppDelegate.swift */; };
 		7A55812927BED12E00C2FC3F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A55812827BED12E00C2FC3F /* SceneDelegate.swift */; };
 		7A55812B27BED12E00C2FC3F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A55812A27BED12E00C2FC3F /* ViewController.swift */; };
@@ -39,7 +41,9 @@
 		7A24AB4527D7DD4600A15924 /* departingGateNumber_V2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = departingGateNumber_V2.swift; sourceTree = "<group>"; };
 		7A24AB4A27D7E14600A15924 /* departingGateNumberTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = departingGateNumberTests.swift; sourceTree = "<group>"; };
 		7A24AB4F27D9464100A15924 /* DepartingGate.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DepartingGate.storyboard; sourceTree = "<group>"; };
-		7A24AB5327D9B05C00A15924 /* departingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = departingViewController.swift; sourceTree = "<group>"; };
+		7A24AB5327D9B05C00A15924 /* gateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = gateViewController.swift; sourceTree = "<group>"; };
+		7A24ABDA27EB8D4400A15924 /* FlightNumberTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightNumberTableViewController.swift; sourceTree = "<group>"; };
+		7A24ABDC27EB8D5E00A15924 /* AirlineNameTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AirlineNameTableViewController.swift; sourceTree = "<group>"; };
 		7A55812327BED12E00C2FC3F /* Project_Group_6.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Project_Group_6.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7A55812627BED12E00C2FC3F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7A55812827BED12E00C2FC3F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -81,7 +85,9 @@
 			isa = PBXGroup;
 			children = (
 				7A24AB4F27D9464100A15924 /* DepartingGate.storyboard */,
-				7A24AB5327D9B05C00A15924 /* departingViewController.swift */,
+				7A24AB5327D9B05C00A15924 /* gateViewController.swift */,
+				7A24ABDA27EB8D4400A15924 /* FlightNumberTableViewController.swift */,
+				7A24ABDC27EB8D5E00A15924 /* AirlineNameTableViewController.swift */,
 			);
 			path = DepartingGate;
 			sourceTree = "<group>";
@@ -251,9 +257,11 @@
 				7A24AB4627D7DD4600A15924 /* departingGateNumber_V2.swift in Sources */,
 				7A55812B27BED12E00C2FC3F /* ViewController.swift in Sources */,
 				7A55812727BED12E00C2FC3F /* AppDelegate.swift in Sources */,
-				7A24AB5427D9B05C00A15924 /* departingViewController.swift in Sources */,
+				7A24ABDD27EB8D5E00A15924 /* AirlineNameTableViewController.swift in Sources */,
+				7A24AB5427D9B05C00A15924 /* gateViewController.swift in Sources */,
 				7AC24BDE27CC12BB00BEAC21 /* airportData.swift in Sources */,
 				7A55812927BED12E00C2FC3F /* SceneDelegate.swift in Sources */,
+				7A24ABDB27EB8D4400A15924 /* FlightNumberTableViewController.swift in Sources */,
 				7ABC8D8127C8A21B00910A35 /* airportManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
