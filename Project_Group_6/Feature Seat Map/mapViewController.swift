@@ -8,8 +8,12 @@
 import UIKit
 
 class mapViewController: UIViewController {
+    //  tracks seat map information across different view controllers
+    var seatMapTracker: SeatMapTracker!
     //  asset image
     private var imageCodeName: UIImage?
+    //  imageView
+    private var imageView: UIImageView?
     //  outlets
     @IBOutlet var mapImage: UIImageView!
     @IBOutlet var seatinformation: UINavigationItem!
@@ -23,16 +27,25 @@ class mapViewController: UIViewController {
     func loadImage() {
         //  checks if the information that is passed in from the previous seatViewController is valid
         //  if so, create an image based on that name
-        if let validImageName = seatinformation?.title {
-            imageCodeName = UIImage(named: validImageName)
-        }
-        if let image = imageCodeName {
+        let imageName = seatMapTracker.list[0].getSeatMap()
+        //if let validImageName = seatinformation?.title {
+        //    imageCodeName = UIImage(named: validImageName)
+        //}
+        imageCodeName = UIImage(named: imageName)
+        //if let image = imageCodeName {
             //  creates an image view based on the image
-            mapImage = UIImageView(image: image)
+        //    imageView = UIImageView(image: image)
             //  adds the image to the screen
-            view.addSubview(mapImage)
+        //    if let validImageView = imageView {
+         //       mapImage.addSubview(validImageView)
+         //   }
+       // }
+        imageView = UIImageView(image: imageCodeName)
+        if let validImageView = imageView {
+            mapImage.addSubview(validImageView)
         }
-        debugPrint(seatinformation.title!)
-        debugPrint(mapImage.image!.debugDescription)
+        let delete = seatMapTracker.list.popLast()
+        //debugPrint(seatinformation.title!)
+        //debugPrint(mapImage.image!.debugDescription)
     }
 }

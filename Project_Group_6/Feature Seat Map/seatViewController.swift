@@ -9,6 +9,8 @@ import UIKit
 
 class seatViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
     let m = AirportManager()
+    //  tracks seat map information across different view controllers
+    var seatMapTracker: SeatMapTracker!
     //  outlets
     @IBOutlet var userSeat: UITextField!
     @IBOutlet var picker: UIPickerView!
@@ -22,6 +24,7 @@ class seatViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDa
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        seatMapTracker = SeatMapTracker(name: "Created SeatMaps")
         picker.delegate = self
         picker.dataSource = self
         loadPickerData()
@@ -38,8 +41,13 @@ class seatViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDa
         //  create the map instance in this seatViewController, pass a string of the image name to the next
         //  mapViewController
         let map = seatMap(yourSeatNumber: seatNumber, flyingFrom: start, to: destination, using: airline)
-        debugPrint(map.getSeatMap())
-        segue.destination.navigationItem.title = "LAX_terminal_overview" // map.getSeatMap()
+        seatMapTracker.list.append(map)
+        if let addSeatMap = segue.destination as? mapViewController {
+            addSeatMap.seatMapTracker = seatMapTracker
+        }
+        
+        //debugPrint(map.getSeatMap())
+        //segue.destination.navigationItem.title =  map.getSeatMap()
     }
 
     func loadPickerData() {

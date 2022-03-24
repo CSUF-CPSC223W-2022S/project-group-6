@@ -49,7 +49,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1949.2753623188407" y="98.4375"/>
+            <point key="canvasLocation" x="1861" y="98"/>
         </scene>
         <!--mapView-->
         <scene sceneID="CfH-SW-79t">
@@ -62,7 +62,7 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="5QZ-Nx-y42">
                                 <rect key="frame" x="0.0" y="130" width="414" height="732"/>
                                 <subviews>
-                                    <imageView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="VPh-RV-kWA">
+                                    <imageView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="redraw" horizontalHuggingPriority="251" verticalHuggingPriority="251" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="VPh-RV-kWA">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="732"/>
                                     </imageView>
                                 </subviews>

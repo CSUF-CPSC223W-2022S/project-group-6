@@ -34,7 +34,7 @@ class seatMapTests: XCTestCase {
     func testGetSeatMap() {
         let seating = seatMap(yourSeatNumber: "34A", flyingFrom: "Los Angeles International Airport", to: "Haneda International Airport", using: "American Airlines")
         
-        XCTAssertEqual(seating.getSeatMap(), "boeing777.pdf")
+        XCTAssertEqual(seating.getSeatMap(), "boeing777")
     }
     
 }

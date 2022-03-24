@@ -7,6 +7,16 @@
 
 import Foundation
 
+class SeatMapTracker {
+    var name: String
+    var list: [seatMap]
+    
+    init(name: String) {
+        self.name = name
+        self.list = []
+    }
+}
+
 struct seatMap {
     //  used to determine what type of plane I'll use for the seatList
     

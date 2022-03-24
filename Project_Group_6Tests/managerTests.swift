@@ -96,9 +96,9 @@ class AirportManagerTests: XCTestCase {
         let m = AirportManager()
         //code for getting terminal number
         var terminalX: Int = 1
-        XCTAssertEqual(m.getMap(of: "Los Angeles International Airport", terminalNumber: terminalX), "Terminal 1.pdf")
+        XCTAssertEqual(m.getMap(of: "Los Angeles International Airport", terminalNumber: terminalX), "Terminal 1")
         terminalX = 8
-        XCTAssertEqual(m.getMap(of: "Los Angeles International Airport", terminalNumber: terminalX), "Terminal 8.pdf" )
+        XCTAssertEqual(m.getMap(of: "Los Angeles International Airport", terminalNumber: terminalX), "Terminal 8" )
     }
     func testSizeComputedProperty() {
         let m = AirportManager()
