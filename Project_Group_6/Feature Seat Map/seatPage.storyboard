@@ -17,15 +17,91 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter your Seat Number" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Wuu-gY-6ao" userLabel="seatNumber">
-                                <rect key="frame" x="71" y="156" width="273" height="34"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter your Seat Number" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Wuu-gY-6ao" userLabel="seatNumber">
+                                <rect key="frame" x="20" y="88" width="374" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters"/>
+                                <connections>
+                                    <action selector="hideAllTables:" destination="Y6W-OH-hqX" eventType="editingDidBegin" id="WEI-Vc-acz"/>
+                                </connections>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hgv-l6-rJH">
-                                <rect key="frame" x="226" y="676" width="143" height="31"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter starting Airport" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qXN-Z3-2kd">
+                                <rect key="frame" x="20" y="130" width="374" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="Start_Airport_Clicked:" destination="Y6W-OH-hqX" eventType="editingDidBegin" id="8pc-YW-gyY"/>
+                                    <action selector="Start_Airport_notClicked:" destination="Y6W-OH-hqX" eventType="editingDidEndOnExit" id="30W-bi-V7h"/>
+                                </connections>
+                            </textField>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="STARTTable" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="wNb-y6-seb" userLabel="Starting Airport Table">
+                                <rect key="frame" x="20" y="172" width="374" height="128"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="128" id="cFe-3n-bMj"/>
+                                </constraints>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="starting_Airports" id="zxi-7B-w1S">
+                                        <rect key="frame" x="0.0" y="44.5" width="374" height="43.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="zxi-7B-w1S" id="pHU-v5-Sgc">
+                                            <rect key="frame" x="0.0" y="0.0" width="374" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter destination airport" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="uu6-ue-WjS">
+                                <rect key="frame" x="20" y="172" width="374" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="End_Airport_Clicked:" destination="Y6W-OH-hqX" eventType="editingDidBegin" id="v4e-ds-WyO"/>
+                                    <action selector="End_Airport_notClicked:" destination="Y6W-OH-hqX" eventType="editingDidEndOnExit" id="Kut-Ee-yDf"/>
+                                </connections>
+                            </textField>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="ENDTable" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="vGc-h8-chn" userLabel="Destination Table ">
+                                <rect key="frame" x="20" y="214" width="374" height="128"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="128" id="rcM-fX-KKH"/>
+                                </constraints>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="des_Airports" id="f8d-Yr-lMU">
+                                        <rect key="frame" x="0.0" y="44.5" width="374" height="43.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="f8d-Yr-lMU" id="YaJ-hd-dfu">
+                                            <rect key="frame" x="0.0" y="0.0" width="374" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Airline" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="L8x-2N-HCK">
+                                <rect key="frame" x="20" y="214" width="374" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="Airline_Clicked:" destination="Y6W-OH-hqX" eventType="editingDidBegin" id="m5B-w3-zWu"/>
+                                    <action selector="Airline_notClicked:" destination="Y6W-OH-hqX" eventType="editingDidEndOnExit" id="HOv-6Q-tMU"/>
+                                </connections>
+                            </textField>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="AirlineTable" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="tQm-TT-KZr" userLabel="Airline Table">
+                                <rect key="frame" x="20" y="256" width="374" height="264"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Airlines" id="GZV-ce-C8w">
+                                        <rect key="frame" x="0.0" y="44.5" width="374" height="43.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="GZV-ce-C8w" id="0g0-dc-unt">
+                                            <rect key="frame" x="0.0" y="0.0" width="374" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hgv-l6-rJH">
+                                <rect key="frame" x="251" y="556" width="143" height="31"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Continue"/>
                                 <connections>
@@ -33,23 +109,53 @@
                                     <segue destination="rCN-FP-m57" kind="show" id="aDa-fK-16d"/>
                                 </connections>
                             </button>
-                            <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ZXA-Bw-FDC">
-                                <rect key="frame" x="0.0" y="234" width="414" height="162"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                            </pickerView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstItem="L8x-2N-HCK" firstAttribute="top" secondItem="vGc-h8-chn" secondAttribute="bottom" constant="-128" id="1sp-2p-5Tw"/>
+                            <constraint firstItem="Wuu-gY-6ao" firstAttribute="trailing" secondItem="uu6-ue-WjS" secondAttribute="trailing" id="1yv-qs-TIr"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="qXN-Z3-2kd" secondAttribute="trailing" constant="20" id="5XB-0Q-AyC"/>
+                            <constraint firstItem="Wuu-gY-6ao" firstAttribute="trailing" secondItem="wNb-y6-seb" secondAttribute="trailing" id="CnS-sD-n11"/>
+                            <constraint firstItem="qXN-Z3-2kd" firstAttribute="top" secondItem="Wuu-gY-6ao" secondAttribute="bottom" constant="8" id="Imr-fK-kR7"/>
+                            <constraint firstItem="Wuu-gY-6ao" firstAttribute="leading" secondItem="qXN-Z3-2kd" secondAttribute="leading" id="KH7-Vp-Gs7"/>
+                            <constraint firstItem="Wuu-gY-6ao" firstAttribute="leading" secondItem="wNb-y6-seb" secondAttribute="leading" id="NGh-6E-Rdb"/>
+                            <constraint firstItem="Wuu-gY-6ao" firstAttribute="leading" secondItem="uu6-ue-WjS" secondAttribute="leading" id="OTG-5B-tTz"/>
+                            <constraint firstItem="tQm-TT-KZr" firstAttribute="top" secondItem="L8x-2N-HCK" secondAttribute="bottom" constant="8" id="PwE-6p-bjc"/>
+                            <constraint firstItem="wNb-y6-seb" firstAttribute="top" secondItem="qXN-Z3-2kd" secondAttribute="bottom" constant="8" symbolic="YES" id="UXG-yK-umB"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="hgv-l6-rJH" secondAttribute="trailing" constant="20" id="ZAG-PV-Bnm"/>
+                            <constraint firstItem="vGc-h8-chn" firstAttribute="top" secondItem="uu6-ue-WjS" secondAttribute="bottom" constant="8" symbolic="YES" id="Zgd-j7-wip"/>
+                            <constraint firstItem="hgv-l6-rJH" firstAttribute="top" secondItem="tQm-TT-KZr" secondAttribute="bottom" constant="36" id="eGD-79-rGF"/>
+                            <constraint firstItem="Wuu-gY-6ao" firstAttribute="leading" secondItem="L8x-2N-HCK" secondAttribute="leading" id="gQF-c7-qeQ"/>
+                            <constraint firstItem="qXN-Z3-2kd" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="20" id="gVG-8I-vYe"/>
+                            <constraint firstItem="Wuu-gY-6ao" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="hxg-GM-AXs"/>
+                            <constraint firstItem="Wuu-gY-6ao" firstAttribute="leading" secondItem="vGc-h8-chn" secondAttribute="leading" id="iOw-ae-C0t"/>
+                            <constraint firstItem="Wuu-gY-6ao" firstAttribute="trailing" secondItem="tQm-TT-KZr" secondAttribute="trailing" id="myw-qa-RP3"/>
+                            <constraint firstItem="Wuu-gY-6ao" firstAttribute="trailing" secondItem="L8x-2N-HCK" secondAttribute="trailing" id="nCh-5b-qdW"/>
+                            <constraint firstItem="Wuu-gY-6ao" firstAttribute="leading" secondItem="tQm-TT-KZr" secondAttribute="leading" id="oVg-N7-39h"/>
+                            <constraint firstItem="Wuu-gY-6ao" firstAttribute="trailing" secondItem="qXN-Z3-2kd" secondAttribute="trailing" id="sAn-wI-5CO"/>
+                            <constraint firstItem="Wuu-gY-6ao" firstAttribute="trailing" secondItem="vGc-h8-chn" secondAttribute="trailing" id="t2F-az-tYH"/>
+                            <constraint firstItem="hgv-l6-rJH" firstAttribute="top" secondItem="tQm-TT-KZr" secondAttribute="bottom" constant="36" id="tLd-sM-dyz"/>
+                            <constraint firstItem="uu6-ue-WjS" firstAttribute="top" secondItem="wNb-y6-seb" secondAttribute="bottom" constant="-128" id="tu8-t5-1eZ"/>
+                            <constraint firstItem="hgv-l6-rJH" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="251" id="wxI-ad-z7B"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="hgv-l6-rJH" secondAttribute="bottom" constant="275" id="yEh-JZ-gDk"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" largeTitleDisplayMode="always" id="cwL-Ha-t4F"/>
                     <connections>
-                        <outlet property="picker" destination="ZXA-Bw-FDC" id="jfh-va-YOJ"/>
+                        <outlet property="airlineSearch" destination="L8x-2N-HCK" id="a4T-AF-TQK"/>
+                        <outlet property="airlineTable" destination="tQm-TT-KZr" id="KwU-Ld-za0"/>
+                        <outlet property="airportTable" destination="wNb-y6-seb" id="JEh-JZ-0ZB"/>
+                        <outlet property="des_airportSearch" destination="uu6-ue-WjS" id="kv5-lW-vKH"/>
+                        <outlet property="destinationAirportTable" destination="vGc-h8-chn" id="eSO-2z-EnF"/>
+                        <outlet property="start_airportSearch" destination="qXN-Z3-2kd" id="ytd-cj-Hh4"/>
                         <outlet property="userSeat" destination="Wuu-gY-6ao" id="qQ7-UV-WHi"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1861" y="98"/>
+            <point key="canvasLocation" x="1860.8695652173915" y="97.767857142857139"/>
         </scene>
         <!--mapView-->
         <scene sceneID="CfH-SW-79t">
@@ -60,10 +166,11 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="5QZ-Nx-y42">
-                                <rect key="frame" x="0.0" y="130" width="414" height="732"/>
+                                <rect key="frame" x="0.0" y="78" width="414" height="784"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="redraw" horizontalHuggingPriority="251" verticalHuggingPriority="251" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="VPh-RV-kWA">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="732"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="784"/>
+                                        <gestureRecognizers/>
                                     </imageView>
                                 </subviews>
                             </stackView>
@@ -85,15 +192,15 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8Da-vz-t1V" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2676.811594202899" y="97.767857142857139"/>
+            <point key="canvasLocation" x="2674" y="98"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="uSS-CS-R3b">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="GQA-nc-IoB" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="GZF-sX-WRb">
-                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="GZF-sX-WRb">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>

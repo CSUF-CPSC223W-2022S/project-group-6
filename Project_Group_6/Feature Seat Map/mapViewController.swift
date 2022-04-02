@@ -44,7 +44,7 @@ class mapViewController: UIViewController {
         if let validImageView = imageView {
             mapImage.addSubview(validImageView)
         }
-        let delete = seatMapTracker.list.popLast()
+        seatMapTracker.list.popLast()
         //debugPrint(seatinformation.title!)
         //debugPrint(mapImage.image!.debugDescription)
     }

@@ -28,6 +28,7 @@
 		7ABC8D8527C8A24A00910A35 /* Images in Resources */ = {isa = PBXBuildFile; fileRef = 7ABC8D8427C8A24A00910A35 /* Images */; };
 		7AC24BDE27CC12BB00BEAC21 /* airportData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AC24BDD27CC12BB00BEAC21 /* airportData.swift */; };
 		7AD70B1827D9ADCA0059A1B7 /* seatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AD70B1727D9ADCA0059A1B7 /* seatViewController.swift */; };
+		7ADF989827EF8E0200EACED3 /* tableTestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ADF989727EF8E0200EACED3 /* tableTestViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -73,6 +74,7 @@
 		7ABC8D8427C8A24A00910A35 /* Images */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Images; sourceTree = "<group>"; };
 		7AC24BDD27CC12BB00BEAC21 /* airportData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = airportData.swift; sourceTree = "<group>"; };
 		7AD70B1727D9ADCA0059A1B7 /* seatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = seatViewController.swift; sourceTree = "<group>"; };
+		7ADF989727EF8E0200EACED3 /* tableTestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tableTestViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -175,6 +177,7 @@
 				7A6FDBD027D8547C00595D34 /* seatPage.storyboard */,
 				7AD70B1727D9ADCA0059A1B7 /* seatViewController.swift */,
 				7A2AFAC027E7A87E00A45E39 /* mapViewController.swift */,
+				7ADF989727EF8E0200EACED3 /* tableTestViewController.swift */,
 			);
 			path = "Feature Seat Map";
 			sourceTree = "<group>";
@@ -316,6 +319,7 @@
 				7A55812B27BED12E00C2FC3F /* ViewController.swift in Sources */,
 				7A2AFAC127E7A87E00A45E39 /* mapViewController.swift in Sources */,
 				7A55812727BED12E00C2FC3F /* AppDelegate.swift in Sources */,
+				7ADF989827EF8E0200EACED3 /* tableTestViewController.swift in Sources */,
 				7AC24BDE27CC12BB00BEAC21 /* airportData.swift in Sources */,
 				7A55812927BED12E00C2FC3F /* SceneDelegate.swift in Sources */,
 				7AD70B1827D9ADCA0059A1B7 /* seatViewController.swift in Sources */,
