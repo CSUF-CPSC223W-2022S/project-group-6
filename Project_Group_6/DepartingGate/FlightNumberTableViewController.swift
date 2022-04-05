@@ -12,13 +12,27 @@ class FlightNumberTableViewController: UITableViewController, UISearchBarDelegat
     
     var flightNumber = AirportManager().flightNumbers(from: "Los Angeles International Airport")
     
+    // This stores the filtered flight numbers.
     var filteredFlightNumberData: [String]!
+    
+    var selectedFlightNumber: String = ""
+    
+    var isSearching = false
+    
+    var nameOfAirline = ""
+    var nameofAirport = ""
+    
+    var airlineName = ""
+    var airportName = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         searchBar.delegate = self
         filteredFlightNumberData = flightNumber
+
+        airlineName = nameOfAirline
+        airportName = nameofAirport
         
         // Sets the background color.
         view.backgroundColor = .systemBlue
@@ -29,53 +43,63 @@ class FlightNumberTableViewController: UITableViewController, UISearchBarDelegat
         searchTextField.clearButtonMode = .never
         searchTextField.backgroundColor = UIColor.black
     }
-
-    // MARK: - Table view data source
-
-    // This is only going to have one section of items inside of the table view.
-    override func numberOfSections(in tableView: UITableView) -> Int {
-        return 1
-    }
-
-    // The number of rows are equal to the amount of data inside of the filteredFlightNumberData.
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return filteredFlightNumberData.count
-    }
     
-    // This function tells the computer what I want to show as each of my cells.
+    // MARK: - Table View Data Source
+    
+    // This function will return the number of items from the search results when it is true, otherwise it will return all of the items.
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        if isSearching {
+            return filteredFlightNumberData.count
+        } else {
+            return flightNumber.count
+        }
+    }
+
+    // This function will do the same thing as the previous function above, but it will return the flight numbers for each row.
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Flight")! as UITableViewCell
-        cell.textLabel?.text = filteredFlightNumberData[indexPath.row]
+        if isSearching {
+            cell.textLabel?.text = filteredFlightNumberData[indexPath.row]
+        } else {
+            cell.textLabel?.text = flightNumber[indexPath.row]
+        }
         return cell
     }
-    
-    // This function gets the user's selectedFlightNumber and prints the flight number.
+
+    // This function gets the user's selectedFlightNumber.
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let selectedFlightNumber = flightNumber[indexPath.row]
-        print(selectedFlightNumber)
+        if isSearching {
+            selectedFlightNumber = filteredFlightNumberData[indexPath.row]
+            view.tintColor = .gray
+        } else {
+            selectedFlightNumber = flightNumber[indexPath.row]
+            view.tintColor = .gray
+        }
+        
+        // Passes the selectedAirport, the airportName, and the airlineName to the next view controller.
+        if let vc = storyboard?.instantiateViewController(withIdentifier: "Terminal") as? gateViewController {
+            vc.airlineFlightNumber = selectedFlightNumber
+            vc.nameOfAirport = airportName
+            vc.nameOfAirline = airlineName
+            navigationController?.pushViewController(vc, animated: true)
+        }
+        
         // This closes the keyboard when the user selects a cell.
         searchBar.searchTextField.endEditing(true)
     }
-    
+
     // MARK: - Search Bar Configuration
-    
-    // Whenever the text inside of the search bar changes, run the code inside of the function.
+
+    // This function is being called every time a change is made to the search bar and it detects if the text that is being typed in the search bar matches with an item that is in the list of flight numbers.
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-        filteredFlightNumberData = []
-        if searchText == "" {
-            filteredFlightNumberData = flightNumber
-        } else {
-            for flight in flightNumber {
-                if flight.lowercased().contains(searchText.lowercased()) {
-                    filteredFlightNumberData.append(flight)
-                }
-            }
-        }
+        filteredFlightNumberData = flightNumber.filter { $0.lowercased().prefix(searchText.count) == searchText.lowercased() }
+        isSearching = true
         tableView.reloadData()
     }
     
-    // This function is used when the user pressed the "Cancel" button.
+    // This function is called when the user presses the "Cancel" button, which then resets the search bar and the table view.
     func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
+        isSearching = false
         searchBar.text = ""
         tableView.reloadData()
     }
