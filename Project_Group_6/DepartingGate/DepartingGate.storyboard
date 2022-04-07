@@ -183,12 +183,22 @@
                             <constraint firstItem="SVr-We-ecX" firstAttribute="trailing" secondItem="A4Q-ne-JZF" secondAttribute="trailing" id="mF3-ib-LiM"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" largeTitleDisplayMode="always" id="B5C-fu-MXt"/>
+                    <navigationItem key="navigationItem" largeTitleDisplayMode="always" id="B5C-fu-MXt">
+                        <barButtonItem key="rightBarButtonItem" style="plain" id="L3X-XH-4sx">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="h2S-ew-jQ5" userLabel="Selected Button">
+                                <rect key="frame" x="247.5" y="5" width="146.5" height="34.5"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Selected Button"/>
+                            </button>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="blurView" destination="I7W-Rz-6uW" id="leq-FR-19f"/>
                         <outlet property="gateArrival" destination="V40-iX-fn2" id="1T8-Qr-7gw"/>
                         <outlet property="popupView" destination="ERK-LS-eMr" id="9NZ-af-iIP"/>
                         <outlet property="scrollView" destination="SVr-We-ecX" id="hqR-wM-SpO"/>
+                        <outlet property="searchedButton" destination="L3X-XH-4sx" id="IUV-Hz-m1r"/>
                         <outlet property="terminalImageView" destination="OjJ-1O-GRL" id="ss8-Gs-KVq"/>
                         <outlet property="timeToGate" destination="xha-wl-KtS" id="3k0-SX-v5X"/>
                     </connections>

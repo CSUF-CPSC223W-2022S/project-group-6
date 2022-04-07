@@ -67,6 +67,7 @@ class AirlineNameTableViewController: UITableViewController, UISearchBarDelegate
         searchBar.delegate = self
         
         airportName = nameOfAirport
+        //debugPrint(airportName)
 
         // Sets the background color.
         view.backgroundColor = .systemBlue

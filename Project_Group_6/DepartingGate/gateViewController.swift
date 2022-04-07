@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Foundation
 
 class gateViewController: UIViewController, UIScrollViewDelegate {
     @IBOutlet var scrollView: UIScrollView!
@@ -20,6 +21,20 @@ class gateViewController: UIViewController, UIScrollViewDelegate {
     @IBAction func doneAction(_ sender: Any) {
         animateOut(desiredView: popupView)
         animateOut(desiredView: blurView)
+    }
+
+    @IBOutlet private weak var searchedButton: UIBarButtonItem!
+    
+    func getAirportName() -> String {
+        return airportName
+    }
+    
+    func getAirlineName() -> String {
+        return airlineName
+    }
+    
+    func getFlightNumber() -> String {
+        return flightNumber
     }
     
     let terminal = Destination()
@@ -55,6 +70,8 @@ class gateViewController: UIViewController, UIScrollViewDelegate {
         view.backgroundColor = .systemBlue
         
         updateUI()
+        
+        displayStoredTerminalMap()
         
         // Sets the size of the blur view to be equal to the size of the overall view.
         blurView.bounds = view.bounds
@@ -100,6 +117,28 @@ class gateViewController: UIViewController, UIScrollViewDelegate {
     func viewForZooming(in scrollView: UIScrollView) -> UIView? {
         return terminalImageView
     }
+    
+    // MARK: - Display to store the terminal map for the user.
+
+    func displayStoredTerminalMap() {
+        let terminalImage1 = UIAction(title: "Terminal 1", image: UIImage(systemName: "airplane")) { [self] (action) in
+            self.terminalImageView.image = UIImage(named: self.airports.getMaps(of: "Haneda International Airport", terminalNumber: 2))
+        }
+        
+        let terminalImage2 = UIAction(title: "Terminal 2", image: UIImage(systemName: "airplane")) { (action) in
+            print("Terminal 2 was added")
+        }
+        
+        let menu = UIMenu(title: "Saved Terminals", options: .displayInline, children: [terminalImage1, terminalImage2])
+        
+        let action = UIAction(title: "Add Terminal Map") { (action) in
+            print("Terminal Map was added")
+        }
+
+        let navigationItems = [UIBarButtonItem(image: UIImage(systemName: "plus"), primaryAction: action, menu: menu), .fixedSpace(10), UIBarButtonItem(systemItem: .search, menu: menu)]
+
+        self.navigationItem.rightBarButtonItems = navigationItems
+    }
 
     // MARK: - Displaying the terminal map of the different airports.
     
@@ -117,7 +156,7 @@ class gateViewController: UIViewController, UIScrollViewDelegate {
     
     func navigationDisplayForLAX() {
         if airportName == "Los Angeles International Airport" {
-            navigationItem.prompt = "Airline Name: \(airlineName) / Flight Number: \(airlineFlightNumber) / Airline Code: \(airportCode)"
+            navigationItem.prompt = "Airline Name: \(airlineName) / Flight Number: \(airlineFlightNumber) / Airport Code: \(airportCode)"
             if findingTerminalNumberAtLAX() == 1 {
                 let gateNumber = terminal.validGateNumberForTerminal1AtLAX()
                 navigationItem.title = "Gate \(gateNumber) in Terminal 1"
@@ -189,7 +228,7 @@ class gateViewController: UIViewController, UIScrollViewDelegate {
 
     func navigationDisplayForXNA() {
         if airportName == "Northwest Arkansas National Airport" {
-            navigationItem.prompt = "Airline Name: \(airlineName) / Flight Number: \(airlineFlightNumber) / Airline Code: \(airportCode)"
+            navigationItem.prompt = "Airline Name: \(airlineName) / Flight Number: \(airlineFlightNumber) / Airport Code: \(airportCode)"
             if findingTerminalNumberAtXNA() == 1 {
                 let gateNumber = terminal.validGateNumberForConcourseAAtXNA()
                 navigationItem.title = "Gate \(gateNumber) in Terminal A"
@@ -213,7 +252,7 @@ class gateViewController: UIViewController, UIScrollViewDelegate {
 
     func navigationDisplayForJFK() {
         if airportName == "J.F.K International Airport" {
-            navigationItem.prompt = "Airline Name: \(airlineName) / Flight Number: \(airlineFlightNumber) / Airline Code: \(airportCode)"
+            navigationItem.prompt = "Airline Name: \(airlineName) / Flight Number: \(airlineFlightNumber) / Airport Code: \(airportCode)"
             if findingTerminalNumberAtJFK() == 1 {
                 let gateNumber = terminal.validGateNumberForTerminal1AtJFK()
                 navigationItem.title = "Gate \(gateNumber) in Terminal 1"
@@ -269,7 +308,7 @@ class gateViewController: UIViewController, UIScrollViewDelegate {
     
     func navigationDisplayForHND() {
         if airportName == "Haneda International Airport" {
-            navigationItem.prompt = "Airline Name: \(airlineName) / Flight Number: \(airlineFlightNumber) / Airline Code: \(airportCode)"
+            navigationItem.prompt = "Airline Name: \(airlineName) / Flight Number: \(airlineFlightNumber) / Airport Code: \(airportCode)"
             if findingTerminalNumberAtHND() == 1 {
                 let gateNumber = terminal.validGateNumberForTerminal1AtHND()
                 navigationItem.title = "Gate \(gateNumber) in Terminal 1"
@@ -301,7 +340,7 @@ class gateViewController: UIViewController, UIScrollViewDelegate {
     
     func navigationDisplayForSFO() {
         if airportName == "San Francisco International Airport" {
-            navigationItem.prompt = "Airline Name: \(airlineName) / Flight Number: \(airlineFlightNumber) / Airline Code: \(airportCode)"
+            navigationItem.prompt = "Airline Name: \(airlineName) / Flight Number: \(airlineFlightNumber) / Airport Code: \(airportCode)"
             if findingTerminalNumberAtSFO() == 1 {
                 let gateNumber = terminal.validGateNumberForTerminal1AtSFO()
                 navigationItem.title = "Gate \(gateNumber) in Terminal 1"
