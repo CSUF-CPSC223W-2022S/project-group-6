@@ -21,9 +21,6 @@
                                 <rect key="frame" x="20" y="88" width="374" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters"/>
-                                <connections>
-                                    <action selector="hideAllTables:" destination="Y6W-OH-hqX" eventType="editingDidBegin" id="WEI-Vc-acz"/>
-                                </connections>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter starting Airport" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qXN-Z3-2kd">
                                 <rect key="frame" x="20" y="130" width="374" height="34"/>
@@ -165,39 +162,48 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="5QZ-Nx-y42">
-                                <rect key="frame" x="0.0" y="78" width="414" height="784"/>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" delaysContentTouches="NO" maximumZoomScale="10" translatesAutoresizingMaskIntoConstraints="NO" id="2IM-vl-ZfF">
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
                                 <subviews>
-                                    <imageView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="redraw" horizontalHuggingPriority="251" verticalHuggingPriority="251" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="VPh-RV-kWA">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="784"/>
-                                        <gestureRecognizers/>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="erj175" translatesAutoresizingMaskIntoConstraints="NO" id="KHW-PA-9Hz">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="774"/>
                                     </imageView>
                                 </subviews>
-                            </stackView>
+                                <constraints>
+                                    <constraint firstItem="KHW-PA-9Hz" firstAttribute="height" secondItem="boV-qU-4C3" secondAttribute="height" id="L4O-Dz-XXW"/>
+                                    <constraint firstItem="KHW-PA-9Hz" firstAttribute="trailing" secondItem="jaO-mh-p6C" secondAttribute="trailing" id="UzG-0v-aU4"/>
+                                    <constraint firstItem="KHW-PA-9Hz" firstAttribute="width" secondItem="boV-qU-4C3" secondAttribute="width" id="bLV-Hf-OdT"/>
+                                    <constraint firstItem="KHW-PA-9Hz" firstAttribute="top" secondItem="jaO-mh-p6C" secondAttribute="top" id="lkR-MZ-FR4"/>
+                                    <constraint firstItem="KHW-PA-9Hz" firstAttribute="leading" secondItem="jaO-mh-p6C" secondAttribute="leading" id="oqd-Dh-cmY"/>
+                                    <constraint firstItem="KHW-PA-9Hz" firstAttribute="bottom" secondItem="jaO-mh-p6C" secondAttribute="bottom" id="xew-XU-WdM"/>
+                                </constraints>
+                                <viewLayoutGuide key="contentLayoutGuide" id="jaO-mh-p6C"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="boV-qU-4C3"/>
+                            </scrollView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="yau-4m-dBD"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="5QZ-Nx-y42" firstAttribute="centerX" secondItem="iFc-Ea-frb" secondAttribute="centerX" id="5Lx-hR-on3"/>
-                            <constraint firstItem="5QZ-Nx-y42" firstAttribute="bottom" secondItem="yau-4m-dBD" secondAttribute="bottom" id="9Mo-sH-Ud8"/>
-                            <constraint firstItem="5QZ-Nx-y42" firstAttribute="leading" secondItem="yau-4m-dBD" secondAttribute="leading" id="HoI-iJ-vhv"/>
-                            <constraint firstItem="5QZ-Nx-y42" firstAttribute="top" secondItem="iFc-Ea-frb" secondAttribute="topMargin" constant="-10" id="jWh-Qa-YiH"/>
+                            <constraint firstItem="2IM-vl-ZfF" firstAttribute="bottom" secondItem="yau-4m-dBD" secondAttribute="bottom" id="D6a-fa-4PK"/>
+                            <constraint firstItem="2IM-vl-ZfF" firstAttribute="trailing" secondItem="yau-4m-dBD" secondAttribute="trailing" id="JoN-xm-7ho"/>
+                            <constraint firstItem="2IM-vl-ZfF" firstAttribute="leading" secondItem="yau-4m-dBD" secondAttribute="leading" id="KhC-Me-cgX"/>
+                            <constraint firstItem="2IM-vl-ZfF" firstAttribute="top" secondItem="yau-4m-dBD" secondAttribute="top" id="qam-Y9-wyh"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" largeTitleDisplayMode="always" id="uH3-HG-R24"/>
                     <connections>
-                        <outlet property="mapImage" destination="VPh-RV-kWA" id="3tS-hT-CNn"/>
-                        <outlet property="seatinformation" destination="uH3-HG-R24" id="YKe-cz-C1x"/>
+                        <outlet property="mapImage" destination="KHW-PA-9Hz" id="erU-hc-bUw"/>
+                        <outlet property="scrollView" destination="2IM-vl-ZfF" id="SvR-ez-OmR"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8Da-vz-t1V" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2674" y="98"/>
+            <point key="canvasLocation" x="2673.913043478261" y="97.767857142857139"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="uSS-CS-R3b">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="GQA-nc-IoB" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" modalPresentationStyle="fullScreen" id="GQA-nc-IoB" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="GZF-sX-WRb">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
@@ -214,6 +220,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="erj175" width="72" height="426"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

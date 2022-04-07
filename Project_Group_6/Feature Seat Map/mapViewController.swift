@@ -7,7 +7,7 @@
 
 import UIKit
 
-class mapViewController: UIViewController {
+class mapViewController: UIViewController, UIScrollViewDelegate {
     //  tracks seat map information across different view controllers
     var seatMapTracker: SeatMapTracker!
     //  asset image
@@ -15,37 +15,32 @@ class mapViewController: UIViewController {
     //  imageView
     private var imageView: UIImageView?
     //  outlets
+    @IBOutlet var scrollView: UIScrollView!
     @IBOutlet var mapImage: UIImageView!
-    @IBOutlet var seatinformation: UINavigationItem!
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        view.backgroundColor = .systemBlue
+        scrollView.delegate = self
         loadImage()
+        scrollView.contentSize = mapImage.frame.size
+
     }
 
     func loadImage() {
         //  checks if the information that is passed in from the previous seatViewController is valid
         //  if so, create an image based on that name
         let imageName = seatMapTracker.list[0].getSeatMap()
-        //if let validImageName = seatinformation?.title {
-        //    imageCodeName = UIImage(named: validImageName)
-        //}
+        
         imageCodeName = UIImage(named: imageName)
-        //if let image = imageCodeName {
-            //  creates an image view based on the image
-        //    imageView = UIImageView(image: image)
-            //  adds the image to the screen
-        //    if let validImageView = imageView {
-         //       mapImage.addSubview(validImageView)
-         //   }
-       // }
-        imageView = UIImageView(image: imageCodeName)
-        if let validImageView = imageView {
-            mapImage.addSubview(validImageView)
-        }
+        
+        mapImage.image = imageCodeName
+        
         seatMapTracker.list.popLast()
-        //debugPrint(seatinformation.title!)
-        //debugPrint(mapImage.image!.debugDescription)
     }
+    
+    func viewForZooming(in scrollView: UIScrollView) -> UIView? {
+        return mapImage
+    }
+    
 }
