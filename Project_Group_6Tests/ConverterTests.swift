@@ -58,24 +58,9 @@ class ConverterTests: XCTestCase {
         return data
     }
     
-    // tests the enums
-    func testEnum() throws {
-        let result = CurrencyName(rawValue: "AUD")
-        XCTAssertEqual(result?.rawValue, "AUD")
-    }
-    
     // tests if the api is true
     func testAPI() {
         XCTAssert(true)
     }
     
-    // test for the keys
-    func testKeys() {
-        XCTAssert(CurrencyConverterLocalData.mostRecentExchangeRates == "CurrencyConverterLocalData.Keys.mostRecentExchangeRates")
-        }
-    
-    // test the exchange rates
-    func testfallExchange() {
-        XCTAssert(CurrencyConverterLocalData.fallBackExchangeRates == [.USD: 1.1321])
-    }
 }

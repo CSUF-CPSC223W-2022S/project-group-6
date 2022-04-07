@@ -8,6 +8,5 @@
 import Foundation
 
 struct Constants {
-    //static let something: String  = "www.ecb.europa.eu/stats/eurofxref/eurofxref-daily.xml" 
     static let API: String =  "https://open.er-api.com/v6/latest/USD"
 }

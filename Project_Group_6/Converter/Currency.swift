@@ -7,24 +7,43 @@
 import UIKit
 
 class Currency: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
+    
     // MARK: - Properties
-
     // array for the name of the currency code 
     var currency: [String] = []
     // the values of the currency
     var value: [Double] = []
     var active = 0.0
     
-    // MARK: - IBOutlets
-
+    // MARK: - IBOutlets Curency
     @IBOutlet var label: UILabel!
     
     @IBOutlet var amount: UITextField!
     
     @IBOutlet var pickerView: UIPickerView!
     
+    //MARK: - IBOutlets pop up
+    @IBOutlet var blur: UIVisualEffectView!
+    @IBOutlet var popUp: UIView!
+    @IBAction func offlineButton(_ sender: Any) {
+        animateOut(desiredView: popUp)
+        animateOut(desiredView: blur)
+    }
+    
+    //MARK: - IBOutlets switch
+    @IBAction func Onswitch(_ sender: UISwitch) {
+        //if #available(iOS 13.0, *) {
+            //let appDelegate = UIApplication.shared.windows.first
+            //if sender.isOn {
+                //appDelegate?.overrideUserInterfaceStyle = .dark
+                //return
+            //}
+            //appDelegate?.overrideUserInterfaceStyle = .light
+            //return
+        //}
+    }
+    
     // MARK: - ViewController
-
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -32,10 +51,39 @@ class Currency: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
         pickerView.dataSource = self
         fetchJSON()
         amount.addTarget(self, action: #selector(updateViews), for: .editingChanged)
+        
+        // animation
+        blur.bounds = view.bounds
+        popUp.bounds = CGRect(x: 0, y: 0, width: view.bounds.width * 0.9, height: view.bounds.height * 0.4)
+        //animateIn(desiredView: popUp)
+        //animateIn(desiredView: blur)
+    }
+    
+    //MARK: Function for pop up
+    func animateIn(desiredView: UIView) {
+        let background = view!
+        
+        background.addSubview(desiredView)
+        desiredView.transform = CGAffineTransform(scaleX: 1.2, y: 1.2)
+        desiredView.alpha = 0
+        desiredView.center = background.center
+        
+        UIView.animate(withDuration: 0.3, animations: {
+            desiredView.transform = CGAffineTransform(scaleX: 1.0, y: 1.0)
+            desiredView.alpha = 1
+        })
+    }
+    
+    func animateOut(desiredView: UIView) {
+        UIView.animate(withDuration: 0.3, animations: {
+            desiredView.transform = CGAffineTransform(scaleX: 1.0, y: 1.0)
+            desiredView.alpha = 1
+        }, completion: { _ in
+            desiredView.removeFromSuperview()
+        })
     }
     
     // MARK: - PickerView Code
-
     @objc func updateViews(input: Double) {
         guard let textAmount = amount.text, let theAmount = Double(textAmount) else {
             return
