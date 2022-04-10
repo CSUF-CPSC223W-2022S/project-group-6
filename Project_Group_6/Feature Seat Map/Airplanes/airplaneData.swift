@@ -36,7 +36,7 @@ func loadAirplanes() -> [String: [plane]] {
         "Air Canada": [
             plane("Airbus A319", .eDomestic, "airbusA319"), plane("Airbus A320", .eDomestic, "airbusA320"),
             plane("Airbus A321", .eDomestic, "airbusA321"), plane("Boeing 737-800", .eDomestic, "boeing737"),
-            plane("Boeing 777", .eInternational, "boeing777"), plane("Mitsubishi", .eDomestic, "cjr200"),
+            plane("Boeing 777", .eInternational, "boeing777"), plane("Mitsubishi", .eDomestic, "crj200"),
             plane("De Havilland", .eDomestic, "dehavilland")
         ]
     ]
