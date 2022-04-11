@@ -36,5 +36,9 @@ class seatMapTests: XCTestCase {
         
         XCTAssertEqual(seating.getSeatMap(), "boeing777")
     }
+    func testLoadindAirplaneData() {
+        let manager = planeManager()
+        XCTAssertGreaterThan(manager.airplanes.count, 1)
+    }
     
 }
