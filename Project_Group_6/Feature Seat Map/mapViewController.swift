@@ -31,6 +31,10 @@ class mapViewController: UIViewController, UIScrollViewDelegate {
         //  checks if the information that is passed in from the previous seatViewController is valid
         //  if so, create an image based on that name
         let imageName = seatMapTracker.list[0].getSeatMap()
+        debugPrint(seatMapTracker.list[0].starting)
+        debugPrint(seatMapTracker.list[0].destination)
+        debugPrint(seatMapTracker.list[0].airline)
+        debugPrint(imageName)
         
         imageCodeName = UIImage(named: imageName)
         

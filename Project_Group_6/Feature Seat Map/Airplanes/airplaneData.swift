@@ -84,7 +84,7 @@ func loadAirplanes() -> [String: [plane]] {
             plane("De Havilland", .eDomestic, "dash400"),
             plane("EJR-175", .eInternational, "ejr175")
         ],
-        "All Nippon Airways": [
+        "All Nippon Airways - ANA": [
             plane("Airbus A320", .eDomestic, "airbusA320"),
             plane("Airbus A321", .eDomestic, "airbusA321"),
             plane("Boeing 737-800", .eDomestic, "boeing737"),
@@ -95,6 +95,35 @@ func loadAirplanes() -> [String: [plane]] {
         "Allegiant Air": [
             plane("Airbus A319", .eDomestic, "airbusA319"),
             plane("Airbus A320", .eDomestic, "airbusA320")
+        ],
+        "American Eagle": [
+            plane("EJR-145", .eDomestic, "erj145"),
+            plane("EJR-175", .eInternational, "ejr175"),
+            plane("CJR-700", .eDomestic, "cjr700")
+        ],
+        "Asiana Airlines": [
+            plane("Airbus A320", .eDomestic, "airbusA320"),
+            plane("Airbus A321", .eDomestic, "airbusA321"),
+            plane("Airbus A350", .eInternational, "airbusA350"),
+            plane("Airbus A380", .eInternational, "airbusA380"),
+            plane("Boeing 747", .eInternational, "boeing747"),
+            plane("Boeing 767", .eDomestic, "boeing767"),
+            plane("Boeing 777", .eInternational, "boeing777")
+        ],
+        "Austrian Airlines": [
+            plane("Boeing 747", .eInternational, "boeing747"),
+            plane("Boeing 777", .eInternational, "boeing777"),
+            plane("Airbus A320", .eDomestic, "airbusA320"),
+            plane("Airbus A321", .eDomestic, "airbusA321"),
+            plane("EJR-195", .eDomestic, "erj195")
+        ],
+        "Avianca Airlines": [
+            plane("Airbus A319", .eDomestic, "airbusA319"),
+            plane("Airbus A320", .eDomestic, "airbusA320"),
+            plane("Airbus A321", .eDomestic, "airbusA321"),
+            plane("Airbus A330-300", .eInternational, "airbusA330"),
+            plane("787-9 Dreamliner", .eInternational, "dreamliner787"),
+            plane("ATR", .eDomestic, "atr")
         ]
     ]
     return dictionary
