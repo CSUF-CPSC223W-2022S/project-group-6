@@ -190,6 +190,7 @@
                     <navigationItem key="navigationItem" largeTitleDisplayMode="always" id="uH3-HG-R24"/>
                     <connections>
                         <outlet property="mapImage" destination="KHW-PA-9Hz" id="erU-hc-bUw"/>
+                        <outlet property="navItem" destination="uH3-HG-R24" id="CdB-4T-UHP"/>
                         <outlet property="scrollView" destination="2IM-vl-ZfF" id="SvR-ez-OmR"/>
                     </connections>
                 </viewController>
@@ -206,10 +207,10 @@
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" systemColor="systemBlueColor"/>
-                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <textAttributes key="titleTextAttributes">
-                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <color key="textShadowColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         </textAttributes>
                     </navigationBar>

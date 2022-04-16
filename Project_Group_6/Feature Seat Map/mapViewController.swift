@@ -17,7 +17,8 @@ class mapViewController: UIViewController, UIScrollViewDelegate {
     //  outlets
     @IBOutlet var scrollView: UIScrollView!
     @IBOutlet var mapImage: UIImageView!
-
+    @IBOutlet var navItem: UINavigationItem!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .systemBlue
@@ -30,6 +31,7 @@ class mapViewController: UIViewController, UIScrollViewDelegate {
     func loadImage() {
         //  checks if the information that is passed in from the previous seatViewController is valid
         //  if so, create an image based on that name
+        navItem.title = "Seat Number \(seatMapTracker.list[0].seatNumber)"
         let imageName = seatMapTracker.list[0].getSeatMap()
         debugPrint(seatMapTracker.list[0].starting)
         debugPrint(seatMapTracker.list[0].destination)
@@ -40,7 +42,7 @@ class mapViewController: UIViewController, UIScrollViewDelegate {
         
         mapImage.image = imageCodeName
         
-        seatMapTracker.list.popLast()
+        _ = seatMapTracker.list.popLast()
     }
     
     func viewForZooming(in scrollView: UIScrollView) -> UIView? {
