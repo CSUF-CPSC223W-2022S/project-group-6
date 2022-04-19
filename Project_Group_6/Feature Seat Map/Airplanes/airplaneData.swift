@@ -186,6 +186,18 @@ func loadAirplanes() -> [String: [plane]] {
         "Copa Airlines": [
             plane("Boeing 737-800", .eDomestic, "boeing737"),
             plane("Boeing 737-800", .eInternational, "boeing737"),
+        ],
+        "Delta Airlines": [
+            plane("Airbus A319", .eDomestic, "airbusA319"),
+            plane("Airbus A320", .eDomestic, "airbusA320"),
+            plane("Airbus A321", .eDomestic, "airbusA321"),
+            plane("Airbus A330-300", .eInternational, "airbusA330"),
+            plane("Airbus A350", .eInternational, "airbusA350"),
+            plane("Boeing 737-800", .eDomestic, "boeing737"),
+            plane("Boeing 767", .eDomestic, "boeing767"),
+            plane("EJR-175", .eDomestic, "erj175"),
+            plane("CRJ-200", .eDomestic, "crj200"),
+            plane("CJR-700", .eDomestic, "crj700")
         ]
     ]
     return dictionary
