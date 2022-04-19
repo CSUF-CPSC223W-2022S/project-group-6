@@ -50,10 +50,10 @@ class mapViewController: UIViewController, UIScrollViewDelegate {
             return
         }
         navItem.title = "Seat Number: \(seatMapTracker.list[0].seatNumber)"
-        debugPrint(seatMapTracker.list[0].starting)
-        debugPrint(seatMapTracker.list[0].destination)
-        debugPrint(seatMapTracker.list[0].airline)
-        debugPrint(imageName)
+//        debugPrint(seatMapTracker.list[0].starting)
+//        debugPrint(seatMapTracker.list[0].destination)
+//        debugPrint(seatMapTracker.list[0].airline)
+//        debugPrint(imageName)
         
         imageCodeName = UIImage(named: imageName)
         
@@ -66,7 +66,7 @@ class mapViewController: UIViewController, UIScrollViewDelegate {
         return mapImage
     }
     @IBAction func popUpButton(_ sender: Any) {
-        debugPrint("Pop up button was clicked: return to previous page.")
+//        debugPrint("Pop up button was clicked: return to previous page.")
         // once they click the button on the popUp they are returned to the selection page
         _ = navigationController?.popViewController(animated: true)
     }

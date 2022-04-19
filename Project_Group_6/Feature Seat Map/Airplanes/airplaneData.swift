@@ -136,7 +136,56 @@ func loadAirplanes() -> [String: [plane]] {
             plane("Airbus A380", .eInternational, "airbusA380"),
             plane("Boeing 777", .eInternational, "boeing777"),
             plane("787-9 Dreamliner", .eInternational, "dreamliner787")
+        ],
+        "Cathay Pacific Airlines": [
+            plane("Airbus A320", .eDomestic, "airbusA320"),
+            plane("Airbus A330-300", .eInternational, "airbusA330"),
+            plane("Airbus A350", .eInternational, "airbusA350"),
+            plane("Boeing 777", .eInternational, "boeing777")
+        ],
+        "China Airlines": [
+            plane("Airbus A321", .eDomestic, "airbusA321"),
+            plane("Airbus A330-300", .eInternational, "airbusA330"),
+            plane("Airbus A350", .eInternational, "airbusA350"),
+            plane("Boeing 737-800", .eDomestic, "boeing737"),
+            plane("Boeing 777", .eInternational, "boeing777")
             
+        ],
+        "China Cargo Airlines": [
+            plane("Airbus A321", .eDomestic, "airbusA321"),
+            plane("Airbus A330-300", .eInternational, "airbusA330"),
+            plane("Airbus A350", .eInternational, "airbusA350"),
+            plane("Boeing 737-800", .eDomestic, "boeing737"),
+            plane("Boeing 747", .eInternational, "boeing747"),
+            plane("Boeing 777", .eInternational, "boeing777")
+        ],
+        "China Eastern": [
+            plane("Airbus A319", .eDomestic, "airbusA319"),
+            plane("Airbus A320", .eDomestic, "airbusA320"),
+            plane("Airbus A321", .eDomestic, "airbusA321"),
+            plane("Airbus A330-300", .eInternational, "airbusA330"),
+            plane("Airbus A350", .eInternational, "airbusA350"),
+            plane("Boeing 737-800", .eDomestic, "boeing737"),
+            plane("Boeing 767", .eDomestic, "boeing767"),
+            plane("Boeing 777", .eInternational, "boeing777"),
+            plane("Boeing 787", .eInternational, "boeing787")
+            
+        ],
+        "China Southern Airlines": [
+            plane("Boeing 737-800", .eDomestic, "boeing737"),
+            plane("Boeing 747", .eInternational, "boeing747"),
+            plane("Boeing 777", .eInternational, "boeing777"),
+            plane("Boeing 787", .eInternational, "boeing787"),
+            plane("Airbus A319", .eDomestic, "airbusA319"),
+            plane("Airbus A320", .eDomestic, "airbusA320"),
+            plane("Airbus A321", .eDomestic, "airbusA321"),
+            plane("Airbus A330-300", .eInternational, "airbusA330"),
+            plane("EJR-195", .eDomestic, "erj195")
+            
+        ],
+        "Copa Airlines": [
+            plane("Boeing 737-800", .eDomestic, "boeing737"),
+            plane("Boeing 737-800", .eInternational, "boeing737"),
         ]
     ]
     return dictionary
