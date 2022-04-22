@@ -17,7 +17,7 @@ class SeatMapTracker {
     }
 }
 
-struct seatMap {
+struct seatMap : Codable {
     //  used to determine what type of plane I'll use for the seatList
     
     //  basic variables
@@ -71,5 +71,30 @@ struct seatMap {
     
     func getSeatMap() -> String {
         return pManager.getAirplaneImage(for: airline, of: planeSize)
+    }
+    
+    
+    //  Codable protocals
+    enum seatMapCodingKeys : CodingKey {
+        case seatNumber
+        case starting
+        case destination
+        case airline
+    }
+    init(from decoder: Decoder) throws {
+        let valueContainer = try decoder.container(keyedBy: seatMapCodingKeys.self)
+        self.seatNumber = try valueContainer.decode(String.self, forKey: seatMapCodingKeys.seatNumber)
+        self.starting = try valueContainer.decode(String.self, forKey: seatMapCodingKeys.starting)
+        self.destination = try valueContainer.decode(String.self, forKey: seatMapCodingKeys.destination)
+        self.airline = try valueContainer.decode(String.self, forKey: seatMapCodingKeys.airline)
+        
+        
+    }
+    func encode(to encoder: Encoder) throws {
+        var valueContainer = encoder.container(keyedBy: seatMapCodingKeys.self)
+        try valueContainer.encode(self.seatNumber, forKey: .seatNumber)
+        try valueContainer.encode(self.starting, forKey: .starting)
+        try valueContainer.encode(self.destination, forKey: .destination)
+        try valueContainer.encode(self.airline, forKey: .airline)
     }
 }

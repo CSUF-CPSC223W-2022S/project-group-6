@@ -10,6 +10,7 @@ import UIKit
 class mapViewController: UIViewController, UIScrollViewDelegate {
     //  tracks seat map information across different view controllers
     var seatMapTracker: SeatMapTracker!
+    var seatMapInstance: seatMap!
     //  asset image
     private var imageCodeName: UIImage?
     //  imageView
@@ -26,6 +27,7 @@ class mapViewController: UIViewController, UIScrollViewDelegate {
         view.backgroundColor = .systemBlue
         scrollView.delegate = self
         
+        seatMapInstance = seatMapTracker.list[0]
         blur.bounds = view.bounds
         popUpDisplay.bounds = CGRect(x: 0, y: 0, width: view.bounds.width * 0.9, height: view.bounds.height * 0.4)
         loadImage()
@@ -36,7 +38,7 @@ class mapViewController: UIViewController, UIScrollViewDelegate {
     func loadImage() {
         //  checks if the information that is passed in from the previous seatViewController is valid
         //  if so, create an image based on that name
-        let imageName = seatMapTracker.list[0].getSeatMap()
+        let imageName = seatMapInstance.getSeatMap()
         //  ensures the asset can be accessed via a non empty string by guarding that the imageName is empty
         guard imageName != "" else {
             debugPrint("Seat map doesnt exists: display pop up to return to seatViewController")
@@ -49,7 +51,7 @@ class mapViewController: UIViewController, UIScrollViewDelegate {
             //animateOut(desiredView: popUpDisplay)
             return
         }
-        navItem.title = "Seat Number: \(seatMapTracker.list[0].seatNumber)"
+        navItem.title = "Seat Number: \(seatMapInstance.seatNumber)"
 //        debugPrint(seatMapTracker.list[0].starting)
 //        debugPrint(seatMapTracker.list[0].destination)
 //        debugPrint(seatMapTracker.list[0].airline)
@@ -70,4 +72,24 @@ class mapViewController: UIViewController, UIScrollViewDelegate {
         // once they click the button on the popUp they are returned to the selection page
         _ = navigationController?.popViewController(animated: true)
     }
+    @IBAction func saveImage(_ sender: Any) {
+        debugPrint("Image Saved!")
+        let documentsDirectory = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first!
+        let archiveURL = documentsDirectory.appendingPathComponent("SeatMaps").appendingPathExtension("plist")
+        
+        let propertyListEncoder = PropertyListEncoder()
+        let encodedSeatMap = try? propertyListEncoder.encode(seatMapInstance)
+        try? encodedSeatMap?.write(to: archiveURL, options: .noFileProtection)
+
+    }
+//    @IBAction func loadSavedImage(_ sender: Any) {
+//        let documentsDirectory = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first!
+//        let archiveURL = documentsDirectory.appendingPathComponent("SeatMaps").appendingPathExtension("plist")
+//        let propertyListDecoder = PropertyListDecoder()
+//        if let retrievedData = try? Data(contentsOf: archiveURL), let decodedSeatMap = try? propertyListDecoder.decode(seatMap.self, from: retrievedData) {
+//            seatMapInstance = decodedSeatMap
+//            loadImage()
+//        }
+//        debugPrint("Loaded image in from file")
+//    }
 }
