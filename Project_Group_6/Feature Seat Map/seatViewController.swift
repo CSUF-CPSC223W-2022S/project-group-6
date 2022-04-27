@@ -38,22 +38,25 @@ class seatViewController: UIViewController,
     private var destination: String = ""
     private var airline: String = ""
     
-    private var startIsSearching: Bool = false
-    private var desIsSearching: Bool = false
-    private var airlineIsSearching: Bool = false
-    
     // private sorted arrays
     private var airportList = [String]()
     private var airlineList = [String]()
-    private var searchedData = [String]()
+    private var searchedAirports = [String]()
+    private var searchedAirlines = [String]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        //  Attempts to load seatMap information hides the label in case it doesn't exits
         savedInformation.isHidden = true
         loadInfomation()
+        //  changes background color
         view.backgroundColor = .systemBlue
+        //  createe the global tracker that will contain the seatMaps passed between controllers
         seatMapTracker = SeatMapTracker(name: "Created SeatMaps")
+        //  creates sorted arrays and sets them in the beginning
         createLists()
+        searchedAirlines = airlineList
+        searchedAirports = airportList
         
         // set up search bars
         start_searchBar.delegate = self
@@ -84,7 +87,7 @@ class seatViewController: UIViewController,
         if segue.identifier == "informationEntered" {
             let map = seatMap(yourSeatNumber: seatNumber, flyingFrom: start, to: destination, using: airline)
             seatMapTracker.list.append(map)
-        } else {//  Load Saved Image is pressed
+        } else { //  Load Saved Image is pressed
             if let validMap = savedSeatMap {
                 seatMapTracker.list.append(validMap)
             }
@@ -93,81 +96,56 @@ class seatViewController: UIViewController,
             addSeatMap.seatMapTracker = seatMapTracker
         }
     }
+
+    //  everytime the seatMapViewController is shown it tries to read data from a file to update the savedInformation
     override func viewWillAppear(_ animated: Bool) {
         loadInfomation()
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        //  determines the amount of cell the table should have
         if tableView.restorationIdentifier == "AirlineTable" {
             // return airline array count
-            if airlineIsSearching { return searchedData.count }
-            else {
-                return airlineList.count
-            }
+            return searchedAirlines.count
         } else {
             // return airport array count
-            if startIsSearching { return searchedData.count }
-            else if desIsSearching { return searchedData.count }
-            else {
-                return airportList.count
-            }
+            return searchedAirports.count
         }
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        //  creates / sets the data that will be presented in the table
         var cell = UITableViewCell()
         if tableView.restorationIdentifier == "STARTTable" {
             cell = (tableView.dequeueReusableCell(withIdentifier: startingAirportID) as UITableViewCell?)!
-            if startIsSearching {
-                cell.textLabel?.text = searchedData[indexPath.row]
-            } else {
-                cell.textLabel?.text = airportList[indexPath.row]
-            }
+            cell.textLabel?.text = searchedAirports[indexPath.row]
         } else if tableView.restorationIdentifier == "ENDTable" {
             cell = (tableView.dequeueReusableCell(withIdentifier: destinationAirportID) as UITableViewCell?)!
-            if desIsSearching {
-                cell.textLabel?.text = searchedData[indexPath.row]
-            } else {
-                cell.textLabel?.text = airportList[indexPath.row]
-            }
+            cell.textLabel?.text = searchedAirports[indexPath.row]
         } else if tableView.restorationIdentifier == "AirlineTable" {
             cell = (tableView.dequeueReusableCell(withIdentifier: airlineID) as UITableViewCell?)!
-            if airlineIsSearching {
-                cell.textLabel?.text = searchedData[indexPath.row]
-            } else {
-                cell.textLabel?.text = airlineList[indexPath.row]
-            }
+            cell.textLabel?.text = searchedAirlines[indexPath.row]
         }
         
         return cell
     }
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        //  sets the variable to what the user selects from the table
         if tableView.restorationIdentifier == "STARTTable" {
-            if startIsSearching {
-                start = searchedData[indexPath.row]
-            } else {
-                start = airportList[indexPath.row]
-            }
+            start = searchedAirports[indexPath.row]
             start_searchBar.text = start
             start_searchBar.searchTextField.endEditing(true)
         } else if tableView.restorationIdentifier == "ENDTable" {
-            if desIsSearching {
-                destination = searchedData[indexPath.row]
-            } else {
-                destination = airportList[indexPath.row]
-            }
+            destination = searchedAirports[indexPath.row]
             des_searchBar.text = destination
             des_searchBar.searchTextField.endEditing(true)
         } else if tableView.restorationIdentifier == "AirlineTable" {
-            if airlineIsSearching {
-                airline = searchedData[indexPath.row]
-            } else {
-                airline = airlineList[indexPath.row]
-            }
+            airline = searchedAirlines[indexPath.row]
             airline_searchBar.text = airline
             airline_searchBar.searchTextField.endEditing(true)
         }
+        //  after you select something, hide the tables to be able to click on other tables or buttons
         hideAllTables()
     }
     
@@ -175,34 +153,42 @@ class seatViewController: UIViewController,
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         print("function called!")
         if searchBar.restorationIdentifier == startingAirportID {
-            searchedData = airportList.filter { $0.lowercased().prefix(searchText.count) == searchText.lowercased() }
-            startIsSearching = true
+            if searchText.isEmpty {
+                searchedAirports = airportList
+            } else {
+                searchedAirports = airportList.filter { $0.lowercased().prefix(searchText.count) == searchText.lowercased() }
+            }
             airportTable.reloadData()
         } else if searchBar.restorationIdentifier == destinationAirportID {
-            searchedData = airportList.filter { $0.lowercased().prefix(searchText.count) == searchText.lowercased() }
-            desIsSearching = true
+            //  if the search bar is empty, use original airportList
+            //  else use filtered data
+            if searchText.isEmpty {
+                searchedAirports = airportList
+            } else {
+                searchedAirports = airportList.filter { $0.lowercased().prefix(searchText.count) == searchText.lowercased() }
+            }
             destinationAirportTable.reloadData()
-            
         } else if searchBar.restorationIdentifier == airlineID {
-            searchedData = airlineList.filter { $0.lowercased().prefix(searchText.count) == searchText.lowercased() }
-            airlineIsSearching = true
+            if searchText.isEmpty {
+                searchedAirlines = airlineList
+            } else {
+                searchedAirlines = airlineList.filter { $0.lowercased().prefix(searchText.count) == searchText.lowercased() }
+            }
             airlineTable.reloadData()
         }
     }
-    
+
+    //  called when you hit the cancel button
     func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
         if searchBar.restorationIdentifier == startingAirportID {
             searchBar.text = ""
-            startIsSearching = false
             airportTable.reloadData()
         } else if searchBar.restorationIdentifier == destinationAirportID {
             searchBar.text = ""
-            desIsSearching = false
             destinationAirportTable.reloadData()
             
         } else if searchBar.restorationIdentifier == airlineID {
             searchBar.text = ""
-            airlineIsSearching = false
             airlineTable.reloadData()
         }
         hideAllTables()
@@ -275,6 +261,8 @@ class seatViewController: UIViewController,
             airlineList.append(name)
         }
     }
+
+    //  Reads from a file and tries to saved it into an optional seatMap variable
     private func loadInfomation() {
         let documentsDirectory = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first!
         let archiveURL = documentsDirectory.appendingPathComponent("SeatMaps").appendingPathExtension("plist")
