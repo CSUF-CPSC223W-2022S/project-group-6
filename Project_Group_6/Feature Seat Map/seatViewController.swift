@@ -99,6 +99,10 @@ class seatViewController: UIViewController,
 
     //  everytime the seatMapViewController is shown it tries to read data from a file to update the savedInformation
     override func viewWillAppear(_ animated: Bool) {
+        seatNumber = ""
+        start = ""
+        destination = ""
+        airline = ""
         loadInfomation()
     }
     

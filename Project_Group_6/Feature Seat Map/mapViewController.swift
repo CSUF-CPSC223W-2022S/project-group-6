@@ -10,7 +10,7 @@ import UIKit
 class mapViewController: UIViewController, UIScrollViewDelegate {
     //  tracks seat map information across different view controllers
     var seatMapTracker: SeatMapTracker!
-    var seatMapInstance: seatMap!
+    var seatMapInstance: seatMap?
     //  asset image
     private var imageCodeName: UIImage?
     //  imageView
@@ -24,72 +24,59 @@ class mapViewController: UIViewController, UIScrollViewDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        if seatMapTracker.list.isEmpty {
+            seatMapInstance = nil
+        } else {
+            seatMapInstance = seatMapTracker.list[0]
+        }
         view.backgroundColor = .systemBlue
         scrollView.delegate = self
         
-        seatMapInstance = seatMapTracker.list[0]
         blur.bounds = view.bounds
         popUpDisplay.bounds = CGRect(x: 0, y: 0, width: view.bounds.width * 0.9, height: view.bounds.height * 0.4)
         loadImage()
         scrollView.contentSize = mapImage.frame.size
     }
     
+    override func viewWillDisappear(_ animated: Bool) {
+        _ = seatMapTracker.list.popLast()
+    }
 
     func loadImage() {
         //  checks if the information that is passed in from the previous seatViewController is valid
         //  if so, create an image based on that name
-        let imageName = seatMapInstance.getSeatMap()
-        //  ensures the asset can be accessed via a non empty string by guarding that the imageName is empty
-        guard imageName != "" else {
-            debugPrint("Seat map doesnt exists: display pop up to return to seatViewController")
-            //  pops it off here because it wont be able to go pass the return statement
-            _ = seatMapTracker.list.popLast()
-            
-            blur.isHidden = false 
-            //animateOut(desiredView: blur)
-            popUpDisplay.isHidden = false
-            //animateOut(desiredView: popUpDisplay)
-            return
+        if let validSeatMap = seatMapInstance, validSeatMap.getSeatMap() != "" {
+            navItem.title = "Seat Number: \(validSeatMap.seatNumber)"
+            imageCodeName = UIImage(named: validSeatMap.getSeatMap())
+            mapImage.image = imageCodeName
+        } else {
+            createPopUp()
         }
-        navItem.title = "Seat Number: \(seatMapInstance.seatNumber)"
-//        debugPrint(seatMapTracker.list[0].starting)
-//        debugPrint(seatMapTracker.list[0].destination)
-//        debugPrint(seatMapTracker.list[0].airline)
-//        debugPrint(imageName)
-        
-        imageCodeName = UIImage(named: imageName)
-        
-        mapImage.image = imageCodeName
-        
-        _ = seatMapTracker.list.popLast()
     }
     
     func viewForZooming(in scrollView: UIScrollView) -> UIView? {
         return mapImage
     }
+
     @IBAction func popUpButton(_ sender: Any) {
-//        debugPrint("Pop up button was clicked: return to previous page.")
         // once they click the button on the popUp they are returned to the selection page
         _ = navigationController?.popViewController(animated: true)
     }
+
+    //  Saves a seatMap class into the file SeatMaps.plist
+    //  potentially will extend to save an array of them into the file
     @IBAction func saveImage(_ sender: Any) {
-        debugPrint("Image Saved!")
         let documentsDirectory = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first!
         let archiveURL = documentsDirectory.appendingPathComponent("SeatMaps").appendingPathExtension("plist")
         
         let propertyListEncoder = PropertyListEncoder()
         let encodedSeatMap = try? propertyListEncoder.encode(seatMapInstance)
         try? encodedSeatMap?.write(to: archiveURL, options: .noFileProtection)
-
     }
-//    @IBAction func loadSavedImage(_ sender: Any) {
-//        let documentsDirectory = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first!
-//        let archiveURL = documentsDirectory.appendingPathComponent("SeatMaps").appendingPathExtension("plist")
-//        let propertyListDecoder = PropertyListDecoder()
-//        if let retrievedData = try? Data(contentsOf: archiveURL), let decodedSeatMap = try? propertyListDecoder.decode(seatMap.self, from: retrievedData) {
-//            seatMapInstance = decodedSeatMap
-//            loadImage()
-//        }
-//        debugPrint("Loaded image in from file")
-//    }
+
+    private func createPopUp() {
+        //  unhides the popUp
+        blur.isHidden = false
+        popUpDisplay.isHidden = false
+    }
 }
