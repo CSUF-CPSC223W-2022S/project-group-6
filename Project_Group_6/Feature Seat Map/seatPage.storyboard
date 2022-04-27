@@ -73,7 +73,7 @@
                                 <textInputTraits key="textInputTraits"/>
                             </searchBar>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="AirlineTable" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="tQm-TT-KZr" userLabel="Airline Table">
-                                <rect key="frame" x="20" y="274" width="374" height="311"/>
+                                <rect key="frame" x="20" y="274" width="374" height="178"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Airlines" id="GZV-ce-C8w">
@@ -95,21 +95,53 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hgv-l6-rJH">
-                                <rect key="frame" x="238" y="619" width="73" height="34"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="saved Information" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="10" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j8x-bf-Vjw">
+                                <rect key="frame" x="24" y="567" width="317" height="170"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="170" id="QKt-0Q-YcM"/>
+                                    <constraint firstAttribute="width" constant="317" id="cnW-k4-Y8w"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="id6-Uf-UDa">
+                                <rect key="frame" x="20" y="729" width="150" height="55"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="150" id="7Ge-Ec-YB6"/>
+                                    <constraint firstAttribute="height" constant="55" id="gWo-Jk-VuG"/>
+                                </constraints>
+                                <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                <state key="normal" title="Continue"/>
+                                <state key="normal" title="Load Saved Image"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Load Saved Image" cornerStyle="capsule">
+                                    <color key="baseForegroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <color key="baseBackgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </buttonConfiguration>
                                 <connections>
-                                    <action selector="informationEntered:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="XkX-k0-CRh"/>
-                                    <segue destination="rCN-FP-m57" kind="show" id="aDa-fK-16d"/>
+                                    <segue destination="rCN-FP-m57" kind="show" identifier="LoadSavedImage" id="Uwh-dS-5Uv"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3ta-Mi-MH2">
-                                <rect key="frame" x="197" y="725" width="149" height="31"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="View Saved images"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hgv-l6-rJH">
+                                <rect key="frame" x="261" y="481" width="115" height="52"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="115" id="Z4y-LD-UHg"/>
+                                    <constraint firstAttribute="height" constant="52" id="hbu-vb-A4h"/>
+                                </constraints>
+                                <color key="tintColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Continue">
+                                    <color key="titleColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <buttonConfiguration key="configuration" style="filled" title="Continue" cornerStyle="capsule">
+                                    <color key="baseForegroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <color key="baseBackgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="informationEntered:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="XkX-k0-CRh"/>
+                                    <segue destination="rCN-FP-m57" kind="show" identifier="informationEntered" id="aDa-fK-16d"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
@@ -117,9 +149,12 @@
                         <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="Wuu-gY-6ao" secondAttribute="trailing" constant="73" id="4Wk-l0-lrf"/>
-                            <constraint firstItem="hgv-l6-rJH" firstAttribute="top" secondItem="tQm-TT-KZr" secondAttribute="bottom" constant="34" id="7Ti-Nc-Jr5"/>
-                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="hgv-l6-rJH" secondAttribute="bottom" constant="209" id="94U-Xz-gA0"/>
+                            <constraint firstItem="hgv-l6-rJH" firstAttribute="top" secondItem="tQm-TT-KZr" secondAttribute="bottom" constant="29" id="7Ti-Nc-Jr5"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="hgv-l6-rJH" secondAttribute="bottom" constant="329" id="94U-Xz-gA0"/>
                             <constraint firstItem="wLQ-c6-jzL" firstAttribute="top" secondItem="vGc-h8-chn" secondAttribute="top" id="BI5-Dm-r0o"/>
+                            <constraint firstItem="hgv-l6-rJH" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="393" id="BQ6-5o-xUz"/>
+                            <constraint firstItem="j8x-bf-Vjw" firstAttribute="top" secondItem="tQm-TT-KZr" secondAttribute="bottom" constant="115" id="EuS-o8-cvK"/>
+                            <constraint firstItem="j8x-bf-Vjw" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="24" id="FVT-qC-W9q"/>
                             <constraint firstItem="wNb-y6-seb" firstAttribute="leading" secondItem="vGc-h8-chn" secondAttribute="leading" id="Nx6-Yr-rBI"/>
                             <constraint firstItem="vGc-h8-chn" firstAttribute="trailing" secondItem="tQm-TT-KZr" secondAttribute="trailing" id="S4S-B7-nTi"/>
                             <constraint firstItem="wNb-y6-seb" firstAttribute="trailing" secondItem="5EZ-qb-Rvc" secondAttribute="trailingMargin" id="Sae-6Z-MtF"/>
@@ -132,7 +167,8 @@
                             <constraint firstItem="Dbq-3W-Shm" firstAttribute="leading" secondItem="wLQ-c6-jzL" secondAttribute="leading" id="jXo-gw-uk3"/>
                             <constraint firstItem="D4k-Qt-CRo" firstAttribute="trailing" secondItem="Dbq-3W-Shm" secondAttribute="trailing" id="k0n-zK-drd"/>
                             <constraint firstItem="wNb-y6-seb" firstAttribute="trailing" secondItem="vGc-h8-chn" secondAttribute="trailing" id="o3e-dV-mDX"/>
-                            <constraint firstItem="hgv-l6-rJH" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="238" id="pxZ-f8-w3A"/>
+                            <constraint firstItem="id6-Uf-UDa" firstAttribute="top" secondItem="j8x-bf-Vjw" secondAttribute="bottom" constant="-8" id="oWw-Qd-nEn"/>
+                            <constraint firstItem="hgv-l6-rJH" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="261" id="pxZ-f8-w3A"/>
                             <constraint firstItem="Dbq-3W-Shm" firstAttribute="trailing" secondItem="wLQ-c6-jzL" secondAttribute="trailing" id="pzD-SI-A8e"/>
                             <constraint firstItem="Wuu-gY-6ao" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="qFB-Dk-ATS"/>
                             <constraint firstItem="tQm-TT-KZr" firstAttribute="top" secondItem="wLQ-c6-jzL" secondAttribute="bottom" id="qHe-1o-vPo"/>
@@ -140,6 +176,7 @@
                             <constraint firstItem="wNb-y6-seb" firstAttribute="leading" secondItem="5EZ-qb-Rvc" secondAttribute="leadingMargin" id="rYe-yK-uaR"/>
                             <constraint firstItem="D4k-Qt-CRo" firstAttribute="top" secondItem="Wuu-gY-6ao" secondAttribute="bottom" constant="6" id="vwg-fk-sTI"/>
                             <constraint firstItem="Dbq-3W-Shm" firstAttribute="centerX" secondItem="wNb-y6-seb" secondAttribute="centerX" id="w37-b0-aLE"/>
+                            <constraint firstItem="j8x-bf-Vjw" firstAttribute="leading" secondItem="id6-Uf-UDa" secondAttribute="leading" constant="4" id="yPn-1C-mfQ"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" largeTitleDisplayMode="always" id="cwL-Ha-t4F"/>
@@ -149,6 +186,7 @@
                         <outlet property="airportTable" destination="wNb-y6-seb" id="JEh-JZ-0ZB"/>
                         <outlet property="des_searchBar" destination="Dbq-3W-Shm" id="WJv-wa-Q7z"/>
                         <outlet property="destinationAirportTable" destination="vGc-h8-chn" id="eSO-2z-EnF"/>
+                        <outlet property="savedInformation" destination="j8x-bf-Vjw" id="G4o-X4-gKy"/>
                         <outlet property="start_searchBar" destination="D4k-Qt-CRo" id="cMZ-bg-amL"/>
                         <outlet property="userSeat" destination="Wuu-gY-6ao" id="qQ7-UV-WHi"/>
                     </connections>
@@ -288,6 +326,9 @@
             <point key="canvasLocation" x="1039.1304347826087" y="98.4375"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="aDa-fK-16d"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <image name="boeing767" width="480" height="2127"/>
         <systemColor name="labelColor">

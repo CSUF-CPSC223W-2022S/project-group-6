@@ -19,6 +19,7 @@ class seatViewController: UIViewController,
     let airlineID = "Airlines"
     //  tracks seat map information across different view controllers
     var seatMapTracker: SeatMapTracker!
+    var savedSeatMap: seatMap?
     //  OUTLETS
     @IBOutlet var userSeat: UITextField!
     
@@ -30,6 +31,7 @@ class seatViewController: UIViewController,
     @IBOutlet var destinationAirportTable: UITableView!
     @IBOutlet var airlineTable: UITableView!
     
+    @IBOutlet var savedInformation: UILabel!
     //  variables to store temporary information
     private var seatNumber: String = ""
     private var start: String = ""
@@ -47,6 +49,8 @@ class seatViewController: UIViewController,
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        savedInformation.isHidden = true
+        loadInfomation()
         view.backgroundColor = .systemBlue
         seatMapTracker = SeatMapTracker(name: "Created SeatMaps")
         createLists()
@@ -76,11 +80,21 @@ class seatViewController: UIViewController,
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         //  create the map instance in this seatViewController
         //  adds the seatMap object into the global tracker for use in mapViewController
-        let map = seatMap(yourSeatNumber: seatNumber, flyingFrom: start, to: destination, using: airline)
-        seatMapTracker.list.append(map)
+        //  Continue button is pressed
+        if segue.identifier == "informationEntered" {
+            let map = seatMap(yourSeatNumber: seatNumber, flyingFrom: start, to: destination, using: airline)
+            seatMapTracker.list.append(map)
+        } else {//  Load Saved Image is pressed
+            if let validMap = savedSeatMap {
+                seatMapTracker.list.append(validMap)
+            }
+        }
         if let addSeatMap = segue.destination as? mapViewController {
             addSeatMap.seatMapTracker = seatMapTracker
         }
+    }
+    override func viewWillAppear(_ animated: Bool) {
+        loadInfomation()
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -159,6 +173,7 @@ class seatViewController: UIViewController,
     
     //  function is called when a searchBar is being edited
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        print("function called!")
         if searchBar.restorationIdentifier == startingAirportID {
             searchedData = airportList.filter { $0.lowercased().prefix(searchText.count) == searchText.lowercased() }
             startIsSearching = true
@@ -258,6 +273,16 @@ class seatViewController: UIViewController,
         }
         for (name, _) in sortedAirlines {
             airlineList.append(name)
+        }
+    }
+    private func loadInfomation() {
+        let documentsDirectory = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first!
+        let archiveURL = documentsDirectory.appendingPathComponent("SeatMaps").appendingPathExtension("plist")
+        let propertyListDecoder = PropertyListDecoder()
+        if let retrievedData = try? Data(contentsOf: archiveURL), let decodedSeatMap = try? propertyListDecoder.decode(seatMap.self, from: retrievedData) {
+            savedSeatMap = decodedSeatMap
+            savedInformation.text = "Seat Number: \(savedSeatMap!.seatNumber)\nStarting Airport: \(savedSeatMap!.starting)\nDestination Airport: \(savedSeatMap!.destination)\nAirline: \(savedSeatMap!.airline)"
+            savedInformation.isHidden = false
         }
     }
 }

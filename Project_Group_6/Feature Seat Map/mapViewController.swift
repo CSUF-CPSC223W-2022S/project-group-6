@@ -32,8 +32,8 @@ class mapViewController: UIViewController, UIScrollViewDelegate {
         popUpDisplay.bounds = CGRect(x: 0, y: 0, width: view.bounds.width * 0.9, height: view.bounds.height * 0.4)
         loadImage()
         scrollView.contentSize = mapImage.frame.size
-
     }
+    
 
     func loadImage() {
         //  checks if the information that is passed in from the previous seatViewController is valid
