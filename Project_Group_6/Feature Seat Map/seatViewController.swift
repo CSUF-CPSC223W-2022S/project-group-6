@@ -99,10 +99,6 @@ class seatViewController: UIViewController,
 
     //  everytime the seatMapViewController is shown it tries to read data from a file to update the savedInformation
     override func viewWillAppear(_ animated: Bool) {
-        seatNumber = ""
-        start = ""
-        destination = ""
-        airline = ""
         loadInfomation()
     }
     
@@ -155,7 +151,6 @@ class seatViewController: UIViewController,
     
     //  function is called when a searchBar is being edited
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-        print("function called!")
         if searchBar.restorationIdentifier == startingAirportID {
             if searchText.isEmpty {
                 searchedAirports = airportList
@@ -186,15 +181,19 @@ class seatViewController: UIViewController,
     func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
         if searchBar.restorationIdentifier == startingAirportID {
             searchBar.text = ""
+            start = ""
             airportTable.reloadData()
         } else if searchBar.restorationIdentifier == destinationAirportID {
             searchBar.text = ""
+            destination = ""
             destinationAirportTable.reloadData()
             
         } else if searchBar.restorationIdentifier == airlineID {
             searchBar.text = ""
+            airline = ""
             airlineTable.reloadData()
         }
+        seatNumber = ""
         hideAllTables()
     }
     
