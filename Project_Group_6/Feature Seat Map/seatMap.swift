@@ -25,13 +25,13 @@ struct seatMap : Codable {
     var starting: String
     var destination: String
     var airline: String
-    
+    var imageName: String
     //  Manager variables
     let pManager = planeManager()
     let aManager = AirportManager()
     
     //  variable has to be private since the enum is private
-    private var planeSize: planeType {
+    var planeSize: planeType {
         if isflyingDomestic() {
             return .eDomestic
         } else {
@@ -43,11 +43,12 @@ struct seatMap : Codable {
 
     //  must create an instance of seatMap with this information
     //  will be user given information
-    init(yourSeatNumber seatNumber: String, flyingFrom starting: String, to destination: String, using airlineName: String) {
+    init(yourSeatNumber seatNumber: String, flyingFrom starting: String, to destination: String, using airlineName: String, _ imageName: String = "") {
         self.seatNumber = seatNumber
         self.starting = starting
         self.destination = destination
         self.airline = airlineName
+        self.imageName = imageName
     }
     
     
@@ -69,10 +70,6 @@ struct seatMap : Codable {
         }
     }
     
-    func getSeatMap() -> String {
-        return pManager.getAirplaneImage(for: airline, of: planeSize)
-    }
-    
     
     //  Codable protocals
     enum seatMapCodingKeys : CodingKey {
@@ -80,6 +77,7 @@ struct seatMap : Codable {
         case starting
         case destination
         case airline
+        case imageName
     }
     init(from decoder: Decoder) throws {
         let valueContainer = try decoder.container(keyedBy: seatMapCodingKeys.self)
@@ -87,6 +85,7 @@ struct seatMap : Codable {
         self.starting = try valueContainer.decode(String.self, forKey: seatMapCodingKeys.starting)
         self.destination = try valueContainer.decode(String.self, forKey: seatMapCodingKeys.destination)
         self.airline = try valueContainer.decode(String.self, forKey: seatMapCodingKeys.airline)
+        self.imageName = try valueContainer.decode(String.self, forKey: seatMapCodingKeys.imageName)
         
         
     }
@@ -96,5 +95,11 @@ struct seatMap : Codable {
         try valueContainer.encode(self.starting, forKey: .starting)
         try valueContainer.encode(self.destination, forKey: .destination)
         try valueContainer.encode(self.airline, forKey: .airline)
+        try valueContainer.encode(self.imageName, forKey: .imageName)
     }
+}
+
+func getSeatMap(for airline: String, of planeSize: planeType) -> String {
+    let pManager = planeManager()
+    return pManager.getAirplaneImage(for: airline , of: planeSize)
 }

@@ -46,14 +46,6 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
-                            <searchBar contentMode="redraw" restorationIdentifier="des_Airports" placeholder="Enter Destination Airport" showsCancelButton="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Dbq-3W-Shm">
-                                <rect key="frame" x="0.0" y="174" width="414" height="49"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="49" id="2gA-f0-3J0"/>
-                                </constraints>
-                                <color key="tintColor" systemColor="labelColor"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </searchBar>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="ENDTable" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="vGc-h8-chn" userLabel="Destination Table ">
                                 <rect key="frame" x="20" y="223" width="374" height="210"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -72,24 +64,10 @@
                                 </prototypes>
                             </tableView>
                             <searchBar contentMode="redraw" restorationIdentifier="Airlines" placeholder="Enter Airline" showsCancelButton="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wLQ-c6-jzL">
-                                <rect key="frame" x="0.0" y="223" width="414" height="51"/>
+                                <rect key="frame" x="0.0" y="251" width="414" height="51"/>
                                 <color key="tintColor" systemColor="labelColor"/>
                                 <textInputTraits key="textInputTraits"/>
                             </searchBar>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="AirlineTable" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="tQm-TT-KZr" userLabel="Airline Table">
-                                <rect key="frame" x="20" y="274" width="374" height="178"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Airlines" id="GZV-ce-C8w">
-                                        <rect key="frame" x="0.0" y="44.5" width="374" height="43.5"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="GZV-ce-C8w" id="0g0-dc-unt">
-                                            <rect key="frame" x="0.0" y="0.0" width="374" height="43.5"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                </prototypes>
-                            </tableView>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter your Seat Number" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Wuu-gY-6ao" userLabel="seatNumber">
                                 <rect key="frame" x="9" y="88" width="332" height="36"/>
                                 <color key="tintColor" systemColor="labelColor"/>
@@ -128,7 +106,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hgv-l6-rJH">
-                                <rect key="frame" x="261" y="481" width="115" height="52"/>
+                                <rect key="frame" x="262" y="489" width="115" height="52"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="115" id="Z4y-LD-UHg"/>
                                     <constraint firstAttribute="height" constant="52" id="hbu-vb-A4h"/>
@@ -147,36 +125,58 @@
                                     <segue destination="rCN-FP-m57" kind="show" identifier="informationEntered" id="aDa-fK-16d"/>
                                 </connections>
                             </button>
+                            <searchBar contentMode="redraw" restorationIdentifier="des_Airports" placeholder="Enter Destination Airport" showsCancelButton="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Dbq-3W-Shm">
+                                <rect key="frame" x="0.0" y="189" width="414" height="49"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="49" id="2gA-f0-3J0"/>
+                                </constraints>
+                                <color key="tintColor" systemColor="labelColor"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="AirlineTable" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="tQm-TT-KZr" userLabel="Airline Table">
+                                <rect key="frame" x="20" y="303" width="374" height="178"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Airlines" id="GZV-ce-C8w">
+                                        <rect key="frame" x="0.0" y="44.5" width="374" height="43.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="GZV-ce-C8w" id="0g0-dc-unt">
+                                            <rect key="frame" x="0.0" y="0.0" width="374" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBlueColor"/>
                         <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="Wuu-gY-6ao" secondAttribute="trailing" constant="73" id="4Wk-l0-lrf"/>
-                            <constraint firstItem="hgv-l6-rJH" firstAttribute="top" secondItem="tQm-TT-KZr" secondAttribute="bottom" constant="29" id="7Ti-Nc-Jr5"/>
-                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="hgv-l6-rJH" secondAttribute="bottom" constant="329" id="94U-Xz-gA0"/>
-                            <constraint firstItem="wLQ-c6-jzL" firstAttribute="top" secondItem="vGc-h8-chn" secondAttribute="top" id="BI5-Dm-r0o"/>
-                            <constraint firstItem="hgv-l6-rJH" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="393" id="BQ6-5o-xUz"/>
-                            <constraint firstItem="j8x-bf-Vjw" firstAttribute="top" secondItem="tQm-TT-KZr" secondAttribute="bottom" constant="115" id="EuS-o8-cvK"/>
+                            <constraint firstItem="hgv-l6-rJH" firstAttribute="top" secondItem="tQm-TT-KZr" secondAttribute="bottom" constant="8" id="7Ti-Nc-Jr5"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="hgv-l6-rJH" secondAttribute="bottom" constant="321" id="94U-Xz-gA0"/>
+                            <constraint firstItem="wLQ-c6-jzL" firstAttribute="top" secondItem="vGc-h8-chn" secondAttribute="top" constant="28" id="BI5-Dm-r0o"/>
+                            <constraint firstItem="hgv-l6-rJH" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="401" id="BQ6-5o-xUz"/>
+                            <constraint firstItem="j8x-bf-Vjw" firstAttribute="top" secondItem="tQm-TT-KZr" secondAttribute="bottom" constant="86" id="EuS-o8-cvK"/>
                             <constraint firstItem="j8x-bf-Vjw" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="24" id="FVT-qC-W9q"/>
                             <constraint firstItem="wNb-y6-seb" firstAttribute="leading" secondItem="vGc-h8-chn" secondAttribute="leading" id="Nx6-Yr-rBI"/>
                             <constraint firstItem="vGc-h8-chn" firstAttribute="trailing" secondItem="tQm-TT-KZr" secondAttribute="trailing" id="S4S-B7-nTi"/>
                             <constraint firstItem="wNb-y6-seb" firstAttribute="trailing" secondItem="5EZ-qb-Rvc" secondAttribute="trailingMargin" id="Sae-6Z-MtF"/>
                             <constraint firstItem="vGc-h8-chn" firstAttribute="leading" secondItem="tQm-TT-KZr" secondAttribute="leading" id="XIp-af-dkA"/>
-                            <constraint firstItem="Dbq-3W-Shm" firstAttribute="top" secondItem="D4k-Qt-CRo" secondAttribute="bottom" id="Zca-aT-c0K"/>
+                            <constraint firstItem="Dbq-3W-Shm" firstAttribute="top" secondItem="D4k-Qt-CRo" secondAttribute="bottom" constant="15" id="Zca-aT-c0K"/>
                             <constraint firstItem="D4k-Qt-CRo" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="gTK-D7-0hT"/>
                             <constraint firstItem="D4k-Qt-CRo" firstAttribute="leading" secondItem="Dbq-3W-Shm" secondAttribute="leading" id="gXd-Mq-ioe"/>
-                            <constraint firstItem="Dbq-3W-Shm" firstAttribute="top" secondItem="wNb-y6-seb" secondAttribute="top" id="h8A-az-VgQ"/>
+                            <constraint firstItem="Dbq-3W-Shm" firstAttribute="top" secondItem="wNb-y6-seb" secondAttribute="top" constant="15" id="h8A-az-VgQ"/>
                             <constraint firstItem="Wuu-gY-6ao" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="9" id="iPe-AF-LTR"/>
                             <constraint firstItem="Dbq-3W-Shm" firstAttribute="leading" secondItem="wLQ-c6-jzL" secondAttribute="leading" id="jXo-gw-uk3"/>
                             <constraint firstItem="D4k-Qt-CRo" firstAttribute="trailing" secondItem="Dbq-3W-Shm" secondAttribute="trailing" id="k0n-zK-drd"/>
                             <constraint firstItem="wNb-y6-seb" firstAttribute="trailing" secondItem="vGc-h8-chn" secondAttribute="trailing" id="o3e-dV-mDX"/>
                             <constraint firstItem="id6-Uf-UDa" firstAttribute="top" secondItem="j8x-bf-Vjw" secondAttribute="bottom" constant="-8" id="oWw-Qd-nEn"/>
-                            <constraint firstItem="hgv-l6-rJH" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="261" id="pxZ-f8-w3A"/>
+                            <constraint firstItem="hgv-l6-rJH" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="262" id="pxZ-f8-w3A"/>
                             <constraint firstItem="Dbq-3W-Shm" firstAttribute="trailing" secondItem="wLQ-c6-jzL" secondAttribute="trailing" id="pzD-SI-A8e"/>
                             <constraint firstItem="Wuu-gY-6ao" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="qFB-Dk-ATS"/>
-                            <constraint firstItem="tQm-TT-KZr" firstAttribute="top" secondItem="wLQ-c6-jzL" secondAttribute="bottom" id="qHe-1o-vPo"/>
-                            <constraint firstItem="wLQ-c6-jzL" firstAttribute="top" secondItem="Dbq-3W-Shm" secondAttribute="bottom" id="qW4-yQ-jmY"/>
+                            <constraint firstItem="tQm-TT-KZr" firstAttribute="top" secondItem="wLQ-c6-jzL" secondAttribute="bottom" constant="1" id="qHe-1o-vPo"/>
+                            <constraint firstItem="wLQ-c6-jzL" firstAttribute="top" secondItem="Dbq-3W-Shm" secondAttribute="bottom" constant="13" id="qW4-yQ-jmY"/>
                             <constraint firstItem="wNb-y6-seb" firstAttribute="leading" secondItem="5EZ-qb-Rvc" secondAttribute="leadingMargin" id="rYe-yK-uaR"/>
                             <constraint firstItem="D4k-Qt-CRo" firstAttribute="top" secondItem="Wuu-gY-6ao" secondAttribute="bottom" constant="6" id="vwg-fk-sTI"/>
                             <constraint firstItem="Dbq-3W-Shm" firstAttribute="centerX" secondItem="wNb-y6-seb" secondAttribute="centerX" id="w37-b0-aLE"/>
@@ -190,6 +190,7 @@
                         <outlet property="airportTable" destination="wNb-y6-seb" id="JEh-JZ-0ZB"/>
                         <outlet property="des_searchBar" destination="Dbq-3W-Shm" id="WJv-wa-Q7z"/>
                         <outlet property="destinationAirportTable" destination="vGc-h8-chn" id="eSO-2z-EnF"/>
+                        <outlet property="loadButton" destination="id6-Uf-UDa" id="h9y-TK-GLE"/>
                         <outlet property="savedInformation" destination="j8x-bf-Vjw" id="G4o-X4-gKy"/>
                         <outlet property="start_searchBar" destination="D4k-Qt-CRo" id="cMZ-bg-amL"/>
                         <outlet property="userSeat" destination="Wuu-gY-6ao" id="qQ7-UV-WHi"/>
@@ -237,7 +238,7 @@
                             <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jgA-Xh-OeH" userLabel="popUpDisplay">
                                 <rect key="frame" x="87" y="384" width="240" height="128"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="The selected Airline and Airports do not have a flight at this monement." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mdd-uj-sDL">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="The selected Airline and Airports do not have a flight at this moment." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mdd-uj-sDL">
                                         <rect key="frame" x="8" y="8" width="224" height="63"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="63" id="rTI-Bk-LnD"/>
@@ -248,8 +249,10 @@
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NmO-tB-eKU">
                                         <rect key="frame" x="8" y="79" width="224" height="31"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="gray" title="Return to Selections"/>
+                                        <buttonConfiguration key="configuration" style="filled" title="Return to Selections"/>
                                         <connections>
                                             <action selector="popUpButton:" destination="rCN-FP-m57" eventType="touchUpInside" id="TU5-cH-Fna"/>
                                         </connections>

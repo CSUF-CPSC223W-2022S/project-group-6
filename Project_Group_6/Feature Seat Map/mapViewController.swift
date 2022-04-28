@@ -45,9 +45,9 @@ class mapViewController: UIViewController, UIScrollViewDelegate {
     func loadImage() {
         //  checks if the information that is passed in from the previous seatViewController is valid
         //  if so, create an image based on that name
-        if let validSeatMap = seatMapInstance, validSeatMap.getSeatMap() != "" {
+        if let validSeatMap = seatMapInstance, validSeatMap.imageName != "" {
             navItem.title = "Seat Number: \(validSeatMap.seatNumber)"
-            imageCodeName = UIImage(named: validSeatMap.getSeatMap())
+            imageCodeName = UIImage(named: validSeatMap.imageName)
             mapImage.image = imageCodeName
         } else {
             createPopUp()

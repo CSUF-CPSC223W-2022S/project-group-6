@@ -20,6 +20,7 @@ class seatViewController: UIViewController,
     //  tracks seat map information across different view controllers
     var seatMapTracker: SeatMapTracker!
     var savedSeatMap: seatMap?
+    var seatMapInstance: seatMap!
     //  OUTLETS
     @IBOutlet var userSeat: UITextField!
     
@@ -31,12 +32,14 @@ class seatViewController: UIViewController,
     @IBOutlet var destinationAirportTable: UITableView!
     @IBOutlet var airlineTable: UITableView!
     
+    @IBOutlet var loadButton: UIButton!
     @IBOutlet var savedInformation: UILabel!
     //  variables to store temporary information
     private var seatNumber: String = ""
     private var start: String = ""
     private var destination: String = ""
     private var airline: String = ""
+    private var imageName: String = ""
     
     // private sorted arrays
     private var airportList = [String]()
@@ -48,6 +51,7 @@ class seatViewController: UIViewController,
         super.viewDidLoad()
         //  Attempts to load seatMap information hides the label in case it doesn't exits
         savedInformation.isHidden = true
+        loadButton.isHidden = true
         loadInfomation()
         //  changes background color
         view.backgroundColor = .systemBlue
@@ -85,7 +89,9 @@ class seatViewController: UIViewController,
         //  adds the seatMap object into the global tracker for use in mapViewController
         //  Continue button is pressed
         if segue.identifier == "informationEntered" {
-            let map = seatMap(yourSeatNumber: seatNumber, flyingFrom: start, to: destination, using: airline)
+                seatMapInstance = seatMap(yourSeatNumber: seatNumber, flyingFrom: start, to: destination, using: airline)
+                imageName = getSeatMap(for: airline, of: seatMapInstance.planeSize)
+            let map = seatMap(yourSeatNumber: seatNumber, flyingFrom: start, to: destination, using: airline, imageName)
             seatMapTracker.list.append(map)
         } else { //  Load Saved Image is pressed
             if let validMap = savedSeatMap {
@@ -273,7 +279,9 @@ class seatViewController: UIViewController,
         if let retrievedData = try? Data(contentsOf: archiveURL), let decodedSeatMap = try? propertyListDecoder.decode(seatMap.self, from: retrievedData) {
             savedSeatMap = decodedSeatMap
             savedInformation.text = "Seat Number: \(savedSeatMap!.seatNumber)\nStarting Airport: \(savedSeatMap!.starting)\nDestination Airport: \(savedSeatMap!.destination)\nAirline: \(savedSeatMap!.airline)"
+            imageName = decodedSeatMap.imageName
             savedInformation.isHidden = false
+            loadButton.isHidden = false
         }
     }
 }
