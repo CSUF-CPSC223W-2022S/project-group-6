@@ -30,10 +30,10 @@
                                 </scopeButtonTitles>
                             </searchBar>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="STARTTable" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="wNb-y6-seb" userLabel="Starting Airport Table">
-                                <rect key="frame" x="20" y="174" width="374" height="128"/>
+                                <rect key="frame" x="20" y="174" width="374" height="149"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="128" id="hGP-Qs-8VN"/>
+                                    <constraint firstAttribute="height" constant="149" id="hGP-Qs-8VN"/>
                                 </constraints>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="starting_Airports" id="zxi-7B-w1S">
@@ -47,10 +47,10 @@
                                 </prototypes>
                             </tableView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="ENDTable" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="vGc-h8-chn" userLabel="Destination Table ">
-                                <rect key="frame" x="20" y="223" width="374" height="210"/>
+                                <rect key="frame" x="20" y="238" width="374" height="206"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="210" id="5N2-DP-hoR"/>
+                                    <constraint firstAttribute="height" constant="206" id="5N2-DP-hoR"/>
                                 </constraints>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="des_Airports" id="f8d-Yr-lMU">
@@ -155,7 +155,7 @@
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="Wuu-gY-6ao" secondAttribute="trailing" constant="73" id="4Wk-l0-lrf"/>
                             <constraint firstItem="hgv-l6-rJH" firstAttribute="top" secondItem="tQm-TT-KZr" secondAttribute="bottom" constant="8" id="7Ti-Nc-Jr5"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="hgv-l6-rJH" secondAttribute="bottom" constant="321" id="94U-Xz-gA0"/>
-                            <constraint firstItem="wLQ-c6-jzL" firstAttribute="top" secondItem="vGc-h8-chn" secondAttribute="top" constant="28" id="BI5-Dm-r0o"/>
+                            <constraint firstItem="wLQ-c6-jzL" firstAttribute="top" secondItem="vGc-h8-chn" secondAttribute="top" constant="13" id="BI5-Dm-r0o"/>
                             <constraint firstItem="hgv-l6-rJH" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="401" id="BQ6-5o-xUz"/>
                             <constraint firstItem="j8x-bf-Vjw" firstAttribute="top" secondItem="tQm-TT-KZr" secondAttribute="bottom" constant="86" id="EuS-o8-cvK"/>
                             <constraint firstItem="j8x-bf-Vjw" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="24" id="FVT-qC-W9q"/>
