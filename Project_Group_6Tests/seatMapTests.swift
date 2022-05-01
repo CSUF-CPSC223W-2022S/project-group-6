@@ -41,4 +41,26 @@ class seatMapTests: XCTestCase {
         XCTAssertGreaterThan(manager.airplanes.count, 1)
     }
     
+    func testSeatMapSaveFile() {
+        var testMap = seatMap(yourSeatNumber: "A21", flyingFrom: "Los Angeles International Airport", to: "Haneda International Airport", using: "American Airlines")
+        testMap.imageName = "boeing777"
+        
+        let historyMap: mapViewController = mapViewController()
+        historyMap.seatMapInstance = testMap
+        let obj = (Any).self
+        historyMap.saveImage(obj)
+        
+        let seatMapDecoder = PropertyListDecoder()
+        guard let saveLocation = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first else {
+            XCTFail()
+            return
+        }
+        let fileURL = saveLocation.appendingPathComponent("SeatMaps").appendingPathExtension("plist")
+        guard let seatMapFile = try? Data(contentsOf: fileURL), let decodedHistoryMap = try? seatMapDecoder.decode(seatMap.self, from: seatMapFile) else {
+                    XCTFail()
+                    return
+                }
+        XCTAssertEqual(testMap.imageName, decodedHistoryMap.imageName)
+    }
+    
 }
