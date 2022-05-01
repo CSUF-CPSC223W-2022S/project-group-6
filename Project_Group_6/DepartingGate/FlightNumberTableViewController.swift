@@ -33,8 +33,8 @@ class FlightNumberTableViewController: UITableViewController, UISearchBarDelegat
 
         airlineName = nameOfAirline
         airportName = nameofAirport
-        //debugPrint(airlineName)
-        //debugPrint(airportName)
+        // debugPrint(airlineName)
+        // debugPrint(airportName)
         
         // Sets the background color.
         view.backgroundColor = .systemBlue

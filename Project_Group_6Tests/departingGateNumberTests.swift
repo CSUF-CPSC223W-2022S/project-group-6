@@ -369,4 +369,74 @@ class departingGateNumberTests: XCTestCase {
 
         XCTAssertTrue(gate)
     }
+
+    // MARK: - Tests for Saving Image, Loading Image, and Loading Information
+
+    func testSaveImage() {
+        // Create the parameters needed to get a terminal map.
+        var testMap = gateMap(airportName: "Los Angeles International Airport", terminalNumber: 8, airlineName: "All Nippon Airways - ANA", airportCode: "LAX", flightNumber: "922", gateNumber: "130")
+        testMap.imageName = "Terminal 8.pdf"
+
+        // Creates a gateViewController to be able to use the saveImage function.
+        let historyMap = gateViewController()
+        // This sets the variable that will be saved to the variable that we are testing.
+        historyMap.terminalMapInstance = testMap
+        historyMap.saveImage()
+
+        let terminal = PropertyListDecoder()
+        guard let savedLocation = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first else {
+            XCTFail()
+            return
+        }
+
+        // Tries to decode the information that is saved in the file.
+        let fileURL = savedLocation.appendingPathComponent("TerminalMap").appendingPathExtension("plist")
+        guard let gameFile = try? Data(contentsOf: fileURL), let decodeTerminalMap = try? terminal.decode(gateMap.self, from: gameFile) else {
+            XCTFail()
+            return
+        }
+
+        // Checks to see if the saved terminal map is equal to the terminal map that was created.
+        XCTAssertEqual(testMap.imageName, decodeTerminalMap.imageName)
+    }
+
+    func testLoadImageOfLAX() {
+        let destination = gateViewController()
+
+        XCTAssertEqual("", destination.terminalMapInstance?.getTerminalMapofLAX() ?? "")
+    }
+
+    func testLoadImageOfOtherAirports() {
+        let destination = gateViewController()
+
+        XCTAssertEqual("", destination.terminalMapInstance?.getTerminalMapofOtherAirports() ?? "")
+    }
+
+    func testLoadInformation() {
+        // Create the parameters needed to get a terminal map.
+        var testMap = gateMap(airportName: "Los Angeles International Airport", terminalNumber: 8, airlineName: "All Nippon Airways - ANA", airportCode: "LAX", flightNumber: "922", gateNumber: "130")
+        testMap.imageName = "Terminal 8.pdf"
+
+        // Writes to the file to see if the data can be loaded before testing.
+        let terminalEncoder = PropertyListEncoder()
+        guard let loadLocation = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first, let encodedHistory = try? terminalEncoder.encode(testMap) else {
+            return
+        }
+
+        let fileURL = loadLocation.appendingPathComponent("TerminalMap").appendingPathExtension("plist")
+        try? encodedHistory.write(to: fileURL)
+
+        // Creates a gateViewController to be able to use the testLoadInformation function.
+        let historyMap = gateViewController()
+        historyMap.testLoadInformation()
+
+        // Checks to see if the testLoadInformation function isn't empty.
+        guard let savedTerminalMap = historyMap.terminalMapInstance else {
+            XCTFail()
+            return
+        }
+
+        // Checks to see if the loaded terminal map is equal to the terminal map that was created.
+        XCTAssertEqual(testMap.imageName, savedTerminalMap.imageName)
+    }
 }
