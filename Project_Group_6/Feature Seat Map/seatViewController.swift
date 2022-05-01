@@ -284,4 +284,14 @@ class seatViewController: UIViewController,
             loadButton.isHidden = false
         }
     }
+    //  had to copy the load function to this test verison because the UIbutton/UIlabel in the other loadInformation causes issues for the test
+    func testloadInfomation() {
+        let documentsDirectory = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first!
+        let archiveURL = documentsDirectory.appendingPathComponent("SeatMaps").appendingPathExtension("plist")
+        let propertyListDecoder = PropertyListDecoder()
+        if let retrievedData = try? Data(contentsOf: archiveURL), let decodedSeatMap = try? propertyListDecoder.decode(seatMap.self, from: retrievedData) {
+            savedSeatMap = decodedSeatMap
+            imageName = decodedSeatMap.imageName
+        }
+    }
 }

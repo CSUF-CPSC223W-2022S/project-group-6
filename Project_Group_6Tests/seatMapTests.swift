@@ -42,25 +42,59 @@ class seatMapTests: XCTestCase {
     }
     
     func testSeatMapSaveFile() {
+        //  creates our test control variable
         var testMap = seatMap(yourSeatNumber: "A21", flyingFrom: "Los Angeles International Airport", to: "Haneda International Airport", using: "American Airlines")
         testMap.imageName = "boeing777"
         
+        // creates a mapViewController to use the save function
         let historyMap: mapViewController = mapViewController()
+        //  sets the variable that will be saved to our test variable
         historyMap.seatMapInstance = testMap
         let obj = (Any).self
         historyMap.saveImage(obj)
+        //-----------------------------------------------------
         
         let seatMapDecoder = PropertyListDecoder()
         guard let saveLocation = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first else {
             XCTFail()
             return
         }
+        //  trys to decode the information that should be saved into the file
         let fileURL = saveLocation.appendingPathComponent("SeatMaps").appendingPathExtension("plist")
         guard let seatMapFile = try? Data(contentsOf: fileURL), let decodedHistoryMap = try? seatMapDecoder.decode(seatMap.self, from: seatMapFile) else {
-                    XCTFail()
-                    return
-                }
+            XCTFail()
+            return
+        }
+        //  ensure the saved seat Map == to our original variable
         XCTAssertEqual(testMap.imageName, decodedHistoryMap.imageName)
     }
     
+    func testSeatMapLoadFile() {
+        var testMap = seatMap(yourSeatNumber: "A21", flyingFrom: "Los Angeles International Airport", to: "Haneda International Airport", using: "American Airlines")
+        testMap.imageName = "boeing777"
+        
+        //  first you must write to the file before testing if you can load the data
+        let seatEncoder = PropertyListEncoder()
+        guard let saveLocation = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first, let encodedHistory = try? seatEncoder.encode(testMap) else {
+            return
+        }
+        let fileURL = saveLocation.appendingPathComponent("SeatMaps").appendingPathExtension("plist")
+        try? encodedHistory.write(to: fileURL)
+        //  ------------------------------------------------------------------------
+        
+        //  Create an seatViewController to use the load function
+        let historyMap: seatViewController = seatViewController()
+        historyMap.testloadInfomation()
+        
+        //  checks to see if the load function did load something else it fails the whole test
+        guard let saveSeatMap = historyMap.savedSeatMap else {
+            XCTFail()
+            return
+        }
+        
+        //  ensure that the load seat map == the original test map
+        XCTAssertEqual(testMap.imageName, saveSeatMap.imageName)
+        
+        
+}
 }
