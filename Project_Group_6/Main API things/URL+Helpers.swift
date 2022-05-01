@@ -38,4 +38,11 @@ extension URL {
         components?.scheme = "https"
         return components?.url
     }
+    func withSlug(_ nameOfLocation: String) -> URL? {
+        var components = URLComponents(url: self, resolvingAgainstBaseURL: true)
+        let dashedLocation = nameOfLocation.replacingOccurrences(of: " ", with: "-")
+        
+        components?.path.append("slug:\(dashedLocation.lowercased())/images/")
+        return components?.url
+    }
 }

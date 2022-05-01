@@ -29,25 +29,41 @@
                                 <color key="textColor" red="0.99474667230000002" green="1" blue="0.99015174859999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aZt-FA-iYn">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="aZt-FA-iYn">
                                 <rect key="frame" x="20" y="205" width="374" height="583"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pA4-xq-7sM">
+                                <rect key="frame" x="40" y="132" width="285" height="65"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="65" id="17J-B0-J5r"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                <color key="textColor" red="0.99474667230000002" green="1" blue="0.99015174859999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBlueColor"/>
                         <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="aZt-FA-iYn" secondAttribute="bottom" constant="25" id="3D2-q4-r2j"/>
+                            <constraint firstItem="pA4-xq-7sM" firstAttribute="trailing" secondItem="1Ig-Bo-YyO" secondAttribute="trailing" id="UWN-td-hvq"/>
                             <constraint firstItem="1Ig-Bo-YyO" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="40" id="XNw-KQ-9lt"/>
+                            <constraint firstItem="aZt-FA-iYn" firstAttribute="top" secondItem="pA4-xq-7sM" secondAttribute="bottom" constant="8" id="dTV-c6-HG5"/>
                             <constraint firstItem="WBl-4C-EgP" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="e32-na-Yqf"/>
+                            <constraint firstItem="aZt-FA-iYn" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="epv-CS-WFK"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="WBl-4C-EgP" secondAttribute="trailing" constant="200" id="grD-le-Gdw"/>
+                            <constraint firstItem="aZt-FA-iYn" firstAttribute="leading" secondItem="WBl-4C-EgP" secondAttribute="leading" id="hKQ-W2-hnQ"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="1Ig-Bo-YyO" secondAttribute="trailing" symbolic="YES" id="kUH-fK-Knj"/>
                             <constraint firstItem="WBl-4C-EgP" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="ogY-rb-qH6"/>
+                            <constraint firstItem="pA4-xq-7sM" firstAttribute="leading" secondItem="1Ig-Bo-YyO" secondAttribute="leading" id="pT0-Td-oHc"/>
+                            <constraint firstItem="pA4-xq-7sM" firstAttribute="top" secondItem="1Ig-Bo-YyO" secondAttribute="bottom" constant="8" id="rtZ-lO-JsS"/>
                             <constraint firstItem="1Ig-Bo-YyO" firstAttribute="top" secondItem="WBl-4C-EgP" secondAttribute="bottom" constant="26" id="uQr-La-EvY"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Home" image="HomeIcon.32.filled" id="wy4-Ax-Div"/>
                     <connections>
                         <outlet property="Image" destination="aZt-FA-iYn" id="6zV-ge-rCY"/>
+                        <outlet property="cityName" destination="pA4-xq-7sM" id="qtv-VZ-GK3"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
