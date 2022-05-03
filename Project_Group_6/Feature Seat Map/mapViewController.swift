@@ -21,7 +21,7 @@ class mapViewController: UIViewController, UIScrollViewDelegate {
     @IBOutlet var navItem: UINavigationItem!
     @IBOutlet var popUpDisplay: UIView!
     @IBOutlet var blur: UIVisualEffectView!
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         if seatMapTracker.list.isEmpty {
@@ -31,13 +31,13 @@ class mapViewController: UIViewController, UIScrollViewDelegate {
         }
         view.backgroundColor = .systemBlue
         scrollView.delegate = self
-        
+
         blur.bounds = view.bounds
         popUpDisplay.bounds = CGRect(x: 0, y: 0, width: view.bounds.width * 0.9, height: view.bounds.height * 0.4)
         loadImage()
         scrollView.contentSize = mapImage.frame.size
     }
-    
+
     override func viewWillDisappear(_ animated: Bool) {
         _ = seatMapTracker.list.popLast()
     }
@@ -53,7 +53,7 @@ class mapViewController: UIViewController, UIScrollViewDelegate {
             createPopUp()
         }
     }
-    
+
     func viewForZooming(in scrollView: UIScrollView) -> UIView? {
         return mapImage
     }
@@ -68,7 +68,7 @@ class mapViewController: UIViewController, UIScrollViewDelegate {
     @IBAction func saveImage(_ sender: Any) {
         let documentsDirectory = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first!
         let archiveURL = documentsDirectory.appendingPathComponent("SeatMaps").appendingPathExtension("plist")
-        
+
         let propertyListEncoder = PropertyListEncoder()
         let encodedSeatMap = try? propertyListEncoder.encode(seatMapInstance)
         try? encodedSeatMap?.write(to: archiveURL, options: .noFileProtection)

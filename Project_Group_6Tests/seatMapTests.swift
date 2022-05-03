@@ -10,7 +10,6 @@ import XCTest
 @testable import Project_Group_6
 
 class seatMapTests: XCTestCase {
-    
     override func setUpWithError() throws {
         // Put setup code here. This method is called before the invocation of each test method in the class.
     }
@@ -20,22 +19,23 @@ class seatMapTests: XCTestCase {
     }
     
     func testInializer() {
-   
         let seating = seatMap(yourSeatNumber: "7B", flyingFrom: "Los Angeles International Airport", to: "Northwest Arkansas National Airport", using: "Aeroflot")
         
         XCTAssertEqual(seating.seatNumber, "7B")
     }
+
     func testIsDomestic() {
-        
         let seating = seatMap(yourSeatNumber: "34A", flyingFrom: "Los Angeles International Airport", to: "Haneda International Airport", using: "American Airlines")
         
         XCTAssertEqual(seating.isflyingDomestic(), false)
     }
+
     func testGetSeatMap() {
         let seating = seatMap(yourSeatNumber: "34A", flyingFrom: "Los Angeles International Airport", to: "Haneda International Airport", using: "American Airlines")
         
         XCTAssertEqual(getSeatMap(for: seating.airline, of: seating.planeSize), "boeing777")
     }
+
     func testLoadindAirplaneData() {
         let manager = planeManager()
         XCTAssertGreaterThan(manager.airplanes.count, 1)
@@ -47,12 +47,12 @@ class seatMapTests: XCTestCase {
         testMap.imageName = "boeing777"
         
         // creates a mapViewController to use the save function
-        let historyMap: mapViewController = mapViewController()
+        let historyMap = mapViewController()
         //  sets the variable that will be saved to our test variable
         historyMap.seatMapInstance = testMap
-        let obj = (Any).self
+        let obj = Any.self
         historyMap.saveImage(obj)
-        //-----------------------------------------------------
+        // -----------------------------------------------------
         
         let seatMapDecoder = PropertyListDecoder()
         guard let saveLocation = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first else {
@@ -83,7 +83,7 @@ class seatMapTests: XCTestCase {
         //  ------------------------------------------------------------------------
         
         //  Create an seatViewController to use the load function
-        let historyMap: seatViewController = seatViewController()
+        let historyMap = seatViewController()
         historyMap.testloadInfomation()
         
         //  checks to see if the load function did load something else it fails the whole test
@@ -94,7 +94,5 @@ class seatMapTests: XCTestCase {
         
         //  ensure that the load seat map == the original test map
         XCTAssertEqual(testMap.imageName, saveSeatMap.imageName)
-        
-        
-}
+    }
 }

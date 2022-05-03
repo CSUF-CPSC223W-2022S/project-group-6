@@ -6,7 +6,6 @@
 //
 
 import Foundation
-import Metal
 
 /* struct Seat {
 
@@ -52,7 +51,7 @@ class planeManager {
     //  Dictionary of airline names connected to airplanes that airline uses
     //  i.e American Airlines uses planes [a, b, c, d]
     let airplanes: [String: [plane]]
-    var connectedAirports: [String] = [String]()
+    var connectedAirports: [String] = .init()
     init() {
         airplanes = loadAirplanes()
     }

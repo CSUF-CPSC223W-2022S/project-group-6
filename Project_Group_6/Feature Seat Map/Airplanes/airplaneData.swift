@@ -149,7 +149,7 @@ func loadAirplanes() -> [String: [plane]] {
             plane("Airbus A350", .eInternational, "airbusA350"),
             plane("Boeing 737-800", .eDomestic, "boeing737"),
             plane("Boeing 777", .eInternational, "boeing777")
-            
+
         ],
         "China Cargo Airlines": [
             plane("Airbus A321", .eDomestic, "airbusA321"),
@@ -169,7 +169,7 @@ func loadAirplanes() -> [String: [plane]] {
             plane("Boeing 767", .eDomestic, "boeing767"),
             plane("Boeing 777", .eInternational, "boeing777"),
             plane("Boeing 787", .eInternational, "boeing787")
-            
+
         ],
         "China Southern Airlines": [
             plane("Boeing 737-800", .eDomestic, "boeing737"),
@@ -181,11 +181,11 @@ func loadAirplanes() -> [String: [plane]] {
             plane("Airbus A321", .eDomestic, "airbusA321"),
             plane("Airbus A330-300", .eInternational, "airbusA330"),
             plane("EJR-195", .eDomestic, "erj195")
-            
+
         ],
         "Copa Airlines": [
             plane("Boeing 737-800", .eDomestic, "boeing737"),
-            plane("Boeing 737-800", .eInternational, "boeing737"),
+            plane("Boeing 737-800", .eInternational, "boeing737")
         ],
         "Delta Airlines": [
             plane("Airbus A319", .eDomestic, "airbusA319"),
@@ -342,7 +342,7 @@ func loadAirplanes() -> [String: [plane]] {
         ],
         "Nippon Cargo Airlines": [
             plane("Boeing 737-800", .eDomestic, "boeing737"),
-            plane("Boeing 737-800", .eInternational, "boeing737"),
+            plane("Boeing 737-800", .eInternational, "boeing737")
         ],
         "Norwegian Air Shuttle": [
             plane("Airbus A321", .eDomestic, "airbusA321"),

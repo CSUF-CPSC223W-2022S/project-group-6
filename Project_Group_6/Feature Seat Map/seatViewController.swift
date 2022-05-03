@@ -89,8 +89,8 @@ class seatViewController: UIViewController,
         //  adds the seatMap object into the global tracker for use in mapViewController
         //  Continue button is pressed
         if segue.identifier == "informationEntered" {
-                seatMapInstance = seatMap(yourSeatNumber: seatNumber, flyingFrom: start, to: destination, using: airline)
-                imageName = getSeatMap(for: airline, of: seatMapInstance.planeSize)
+            seatMapInstance = seatMap(yourSeatNumber: seatNumber, flyingFrom: start, to: destination, using: airline)
+            imageName = getSeatMap(for: airline, of: seatMapInstance.planeSize)
             let map = seatMap(yourSeatNumber: seatNumber, flyingFrom: start, to: destination, using: airline, imageName)
             seatMapTracker.list.append(map)
         } else { //  Load Saved Image is pressed
@@ -284,6 +284,7 @@ class seatViewController: UIViewController,
             loadButton.isHidden = false
         }
     }
+
     //  had to copy the load function to this test verison because the UIbutton/UIlabel in the other loadInformation causes issues for the test
     func testloadInfomation() {
         let documentsDirectory = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first!
