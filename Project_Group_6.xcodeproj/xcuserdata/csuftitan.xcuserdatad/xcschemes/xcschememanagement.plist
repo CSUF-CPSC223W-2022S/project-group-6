@@ -7,6 +7,13 @@
 		<key>Project_Group_6.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
+			<integer>1</integer>
+		</dict>
+		<key>Project_Group_6UITests.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>isShown</key>
+			<true/>
+			<key>orderHint</key>
 			<integer>0</integer>
 		</dict>
 	</dict>
@@ -18,6 +25,11 @@
 			<true/>
 		</dict>
 		<key>7A55813827BED13300C2FC3F</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>7A55814227BED13300C2FC3F</key>
 		<dict>
 			<key>primary</key>
 			<true/>

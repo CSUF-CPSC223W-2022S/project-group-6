@@ -7,19 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		7A24AB4627D7DD4600A15924 /* departingGateNumber_V2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A24AB4527D7DD4600A15924 /* departingGateNumber_V2.swift */; };
-		7A24AB4B27D7E14600A15924 /* departingGateNumberTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A24AB4A27D7E14600A15924 /* departingGateNumberTests.swift */; };
-		7A24AB5027D9464100A15924 /* DepartingGate.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7A24AB4F27D9464100A15924 /* DepartingGate.storyboard */; };
-		7A24AB5427D9B05C00A15924 /* gateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A24AB5327D9B05C00A15924 /* gateViewController.swift */; };
-		7A24ABDB27EB8D4400A15924 /* FlightNumberTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A24ABDA27EB8D4400A15924 /* FlightNumberTableViewController.swift */; };
-		7A24ABDD27EB8D5E00A15924 /* AirlineNameTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A24ABDC27EB8D5E00A15924 /* AirlineNameTableViewController.swift */; };
-		7A24ABDF27F3FE8600A15924 /* AirportTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A24ABDE27F3FE8600A15924 /* AirportTableViewController.swift */; };
-		7A24ABE127F6982100A15924 /* otherTerminalMaps.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A24ABE027F6982100A15924 /* otherTerminalMaps.swift */; };
-		7A24ABE327F6995000A15924 /* otherTerminalMapsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A24ABE227F6995000A15924 /* otherTerminalMapsManager.swift */; };
-		7A24ABE5281A656600A15924 /* TerminalMapTracker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A24ABE4281A656600A15924 /* TerminalMapTracker.swift */; };
-		7A2AFAC127E7A87E00A45E39 /* mapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A2AFAC027E7A87E00A45E39 /* mapViewController.swift */; };
-		7A3E02C927E1447600CD752D /* airplaneData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A3E02C827E1447600CD752D /* airplaneData.swift */; };
-		7A3770F8281DB32A007C03AF /* URL+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A3770F7281DB32A007C03AF /* URL+Helpers.swift */; };
+		7A0E0E09282193140056A5F3 /* departingGateNumber_V2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A0E0E05282193140056A5F3 /* departingGateNumber_V2.swift */; };
 		7A55812727BED12E00C2FC3F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A55812627BED12E00C2FC3F /* AppDelegate.swift */; };
 		7A55812927BED12E00C2FC3F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A55812827BED12E00C2FC3F /* SceneDelegate.swift */; };
 		7A55812B27BED12E00C2FC3F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A55812A27BED12E00C2FC3F /* ViewController.swift */; };
@@ -27,22 +15,35 @@
 		7A55813027BED13200C2FC3F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7A55812F27BED13200C2FC3F /* Assets.xcassets */; };
 		7A55813327BED13200C2FC3F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7A55813127BED13200C2FC3F /* LaunchScreen.storyboard */; };
 		7A55813E27BED13300C2FC3F /* Project_Group_6Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A55813D27BED13300C2FC3F /* Project_Group_6Tests.swift */; };
+		7A55814827BED13300C2FC3F /* Project_Group_6UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A55814727BED13300C2FC3F /* Project_Group_6UITests.swift */; };
+		7A55814A27BED13300C2FC3F /* Project_Group_6UITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A55814927BED13300C2FC3F /* Project_Group_6UITestsLaunchTests.swift */; };
 		7A55815727BED17500C2FC3F /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 7A55815627BED17500C2FC3F /* .gitignore */; };
-		7A6CE56C27D8169000A40678 /* seatMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A6CE56B27D8169000A40678 /* seatMap.swift */; };
-		7A6CE56E27D8175700A40678 /* seatMapTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A6CE56D27D8175700A40678 /* seatMapTests.swift */; };
-		7A6FDBD127D8547C00595D34 /* seatPage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7A6FDBD027D8547C00595D34 /* seatPage.storyboard */; };
-		7A8B482327DD31C0002182DC /* planeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A8B482227DD31C0002182DC /* planeManager.swift */; };
+		7AA49D6928219E7900012AE9 /* mapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AA49D6528219E7900012AE9 /* mapViewController.swift */; };
+		7AA49D6A28219E7900012AE9 /* seatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AA49D6628219E7900012AE9 /* seatViewController.swift */; };
+		7AA49D6B28219E7900012AE9 /* seatPage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7AA49D6728219E7900012AE9 /* seatPage.storyboard */; };
+		7AA49D6C28219E7900012AE9 /* seatMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AA49D6828219E7900012AE9 /* seatMap.swift */; };
+		7AA49D6F28219E9000012AE9 /* planeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AA49D6D28219E9000012AE9 /* planeManager.swift */; };
+		7AA49D7028219E9000012AE9 /* airplaneData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AA49D6E28219E9000012AE9 /* airplaneData.swift */; };
+		7AA49D7928219F1F00012AE9 /* AirlineNameTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AA49D7128219F1F00012AE9 /* AirlineNameTableViewController.swift */; };
+		7AA49D7A28219F1F00012AE9 /* otherTerminalMaps.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AA49D7228219F1F00012AE9 /* otherTerminalMaps.swift */; };
+		7AA49D7B28219F1F00012AE9 /* TerminalMapTracker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AA49D7328219F1F00012AE9 /* TerminalMapTracker.swift */; };
+		7AA49D7C28219F1F00012AE9 /* gateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AA49D7428219F1F00012AE9 /* gateViewController.swift */; };
+		7AA49D7D28219F1F00012AE9 /* AirportTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AA49D7528219F1F00012AE9 /* AirportTableViewController.swift */; };
+		7AA49D7E28219F1F00012AE9 /* otherTerminalMapsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AA49D7628219F1F00012AE9 /* otherTerminalMapsManager.swift */; };
+		7AA49D7F28219F1F00012AE9 /* FlightNumberTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AA49D7728219F1F00012AE9 /* FlightNumberTableViewController.swift */; };
+		7AA49D8028219F1F00012AE9 /* DepartingGate.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7AA49D7828219F1F00012AE9 /* DepartingGate.storyboard */; };
+		7AA49D852821A08C00012AE9 /* locationPhotoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AA49D822821A08C00012AE9 /* locationPhotoController.swift */; };
+		7AA49D862821A08C00012AE9 /* locationPhotoInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AA49D832821A08C00012AE9 /* locationPhotoInfo.swift */; };
+		7AA49D872821A08C00012AE9 /* URL+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AA49D842821A08C00012AE9 /* URL+Helpers.swift */; };
 		7ABB28D0281BACC9001BA81B /* Feature 1.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7ABB28CF281BACC9001BA81B /* Feature 1.storyboard */; };
 		7ABB28D4281BAE28001BA81B /* Feature 2.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7ABB28D3281BAE28001BA81B /* Feature 2.storyboard */; };
 		7ABB28D6281BAEF7001BA81B /* Feature 3.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7ABB28D5281BAEF7001BA81B /* Feature 3.storyboard */; };
 		7ABB28D8281BAFB9001BA81B /* Feature 4.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7ABB28D7281BAFB9001BA81B /* Feature 4.storyboard */; };
+		7ABBCF662821983200A849C2 /* seatMapTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ABBCF642821983200A849C2 /* seatMapTests.swift */; };
+		7ABBCF672821983200A849C2 /* departingGateNumberTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ABBCF652821983200A849C2 /* departingGateNumberTests.swift */; };
 		7ABC8D8127C8A21B00910A35 /* airportManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ABC8D8027C8A21B00910A35 /* airportManager.swift */; };
 		7ABC8D8327C8A23600910A35 /* managerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ABC8D8227C8A23600910A35 /* managerTests.swift */; };
-		7ABC8D8527C8A24A00910A35 /* Images in Resources */ = {isa = PBXBuildFile; fileRef = 7ABC8D8427C8A24A00910A35 /* Images */; };
 		7AC24BDE27CC12BB00BEAC21 /* airportData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AC24BDD27CC12BB00BEAC21 /* airportData.swift */; };
-		7AD70B1827D9ADCA0059A1B7 /* seatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AD70B1727D9ADCA0059A1B7 /* seatViewController.swift */; };
-		7AD58A33281E28C1001627DD /* locationPhotoInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AD58A32281E28C1001627DD /* locationPhotoInfo.swift */; };
-		7AD58A35281E3105001627DD /* locationPhotoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AD58A34281E3105001627DD /* locationPhotoController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,22 +54,17 @@
 			remoteGlobalIDString = 7A55812227BED12E00C2FC3F;
 			remoteInfo = Project_Group_6;
 		};
+		7A55814427BED13300C2FC3F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7A55811B27BED12E00C2FC3F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7A55812227BED12E00C2FC3F;
+			remoteInfo = Project_Group_6;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		7A24AB4527D7DD4600A15924 /* departingGateNumber_V2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = departingGateNumber_V2.swift; sourceTree = "<group>"; };
-		7A24AB4A27D7E14600A15924 /* departingGateNumberTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = departingGateNumberTests.swift; sourceTree = "<group>"; };
-		7A24AB4F27D9464100A15924 /* DepartingGate.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DepartingGate.storyboard; sourceTree = "<group>"; };
-		7A24AB5327D9B05C00A15924 /* gateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = gateViewController.swift; sourceTree = "<group>"; };
-		7A24ABDA27EB8D4400A15924 /* FlightNumberTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightNumberTableViewController.swift; sourceTree = "<group>"; };
-		7A24ABDC27EB8D5E00A15924 /* AirlineNameTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AirlineNameTableViewController.swift; sourceTree = "<group>"; };
-		7A24ABDE27F3FE8600A15924 /* AirportTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AirportTableViewController.swift; sourceTree = "<group>"; };
-		7A24ABE027F6982100A15924 /* otherTerminalMaps.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = otherTerminalMaps.swift; sourceTree = "<group>"; };
-		7A24ABE227F6995000A15924 /* otherTerminalMapsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = otherTerminalMapsManager.swift; sourceTree = "<group>"; };
-		7A24ABE4281A656600A15924 /* TerminalMapTracker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TerminalMapTracker.swift; sourceTree = "<group>"; };
-		7A2AFAC027E7A87E00A45E39 /* mapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mapViewController.swift; sourceTree = "<group>"; };
-		7A3E02C827E1447600CD752D /* airplaneData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = airplaneData.swift; sourceTree = "<group>"; };
-		7A3770F7281DB32A007C03AF /* URL+Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URL+Helpers.swift"; sourceTree = "<group>"; };
+		7A0E0E05282193140056A5F3 /* departingGateNumber_V2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = departingGateNumber_V2.swift; sourceTree = "<group>"; };
 		7A55812327BED12E00C2FC3F /* Project_Group_6.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Project_Group_6.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7A55812627BED12E00C2FC3F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7A55812827BED12E00C2FC3F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -79,24 +75,36 @@
 		7A55813427BED13200C2FC3F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7A55813927BED13300C2FC3F /* Project_Group_6Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Project_Group_6Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7A55813D27BED13300C2FC3F /* Project_Group_6Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Project_Group_6Tests.swift; sourceTree = "<group>"; };
+		7A55814327BED13300C2FC3F /* Project_Group_6UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Project_Group_6UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7A55814727BED13300C2FC3F /* Project_Group_6UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Project_Group_6UITests.swift; sourceTree = "<group>"; };
 		7A55814927BED13300C2FC3F /* Project_Group_6UITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Project_Group_6UITestsLaunchTests.swift; sourceTree = "<group>"; };
 		7A55815627BED17500C2FC3F /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
-		7A6CE56B27D8169000A40678 /* seatMap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = seatMap.swift; sourceTree = "<group>"; };
-		7A6CE56D27D8175700A40678 /* seatMapTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = seatMapTests.swift; sourceTree = "<group>"; };
-		7A6FDBD027D8547C00595D34 /* seatPage.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = seatPage.storyboard; sourceTree = "<group>"; };
-		7A8B482227DD31C0002182DC /* planeManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = planeManager.swift; sourceTree = "<group>"; };
+		7AA49D6528219E7900012AE9 /* mapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = mapViewController.swift; sourceTree = "<group>"; };
+		7AA49D6628219E7900012AE9 /* seatViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = seatViewController.swift; sourceTree = "<group>"; };
+		7AA49D6728219E7900012AE9 /* seatPage.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = seatPage.storyboard; sourceTree = "<group>"; };
+		7AA49D6828219E7900012AE9 /* seatMap.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = seatMap.swift; sourceTree = "<group>"; };
+		7AA49D6D28219E9000012AE9 /* planeManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = planeManager.swift; sourceTree = "<group>"; };
+		7AA49D6E28219E9000012AE9 /* airplaneData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = airplaneData.swift; sourceTree = "<group>"; };
+		7AA49D7128219F1F00012AE9 /* AirlineNameTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AirlineNameTableViewController.swift; sourceTree = "<group>"; };
+		7AA49D7228219F1F00012AE9 /* otherTerminalMaps.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = otherTerminalMaps.swift; sourceTree = "<group>"; };
+		7AA49D7328219F1F00012AE9 /* TerminalMapTracker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TerminalMapTracker.swift; sourceTree = "<group>"; };
+		7AA49D7428219F1F00012AE9 /* gateViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = gateViewController.swift; sourceTree = "<group>"; };
+		7AA49D7528219F1F00012AE9 /* AirportTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AirportTableViewController.swift; sourceTree = "<group>"; };
+		7AA49D7628219F1F00012AE9 /* otherTerminalMapsManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = otherTerminalMapsManager.swift; sourceTree = "<group>"; };
+		7AA49D7728219F1F00012AE9 /* FlightNumberTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlightNumberTableViewController.swift; sourceTree = "<group>"; };
+		7AA49D7828219F1F00012AE9 /* DepartingGate.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = DepartingGate.storyboard; sourceTree = "<group>"; };
+		7AA49D822821A08C00012AE9 /* locationPhotoController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = locationPhotoController.swift; path = "Project_Group_6/Main API things/locationPhotoController.swift"; sourceTree = SOURCE_ROOT; };
+		7AA49D832821A08C00012AE9 /* locationPhotoInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = locationPhotoInfo.swift; path = "Project_Group_6/Main API things/locationPhotoInfo.swift"; sourceTree = SOURCE_ROOT; };
+		7AA49D842821A08C00012AE9 /* URL+Helpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "URL+Helpers.swift"; path = "Project_Group_6/Main API things/URL+Helpers.swift"; sourceTree = SOURCE_ROOT; };
 		7ABB28CF281BACC9001BA81B /* Feature 1.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Feature 1.storyboard"; sourceTree = "<group>"; };
 		7ABB28D3281BAE28001BA81B /* Feature 2.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Feature 2.storyboard"; sourceTree = "<group>"; };
 		7ABB28D5281BAEF7001BA81B /* Feature 3.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Feature 3.storyboard"; sourceTree = "<group>"; };
 		7ABB28D7281BAFB9001BA81B /* Feature 4.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Feature 4.storyboard"; sourceTree = "<group>"; };
+		7ABBCF642821983200A849C2 /* seatMapTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = seatMapTests.swift; sourceTree = "<group>"; };
+		7ABBCF652821983200A849C2 /* departingGateNumberTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = departingGateNumberTests.swift; sourceTree = "<group>"; };
 		7ABC8D8027C8A21B00910A35 /* airportManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = airportManager.swift; sourceTree = "<group>"; };
 		7ABC8D8227C8A23600910A35 /* managerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = managerTests.swift; sourceTree = "<group>"; };
-		7ABC8D8427C8A24A00910A35 /* Images */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Images; sourceTree = "<group>"; };
 		7AC24BDD27CC12BB00BEAC21 /* airportData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = airportData.swift; sourceTree = "<group>"; };
-		7AD70B1727D9ADCA0059A1B7 /* seatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = seatViewController.swift; sourceTree = "<group>"; };
-		7AD58A32281E28C1001627DD /* locationPhotoInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = locationPhotoInfo.swift; sourceTree = "<group>"; };
-		7AD58A34281E3105001627DD /* locationPhotoController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = locationPhotoController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,44 +122,20 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		7A55814027BED13300C2FC3F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		7A24AB4E27D9462100A15924 /* DepartingGate */ = {
-			isa = PBXGroup;
-			children = (
-				7A24AB4F27D9464100A15924 /* DepartingGate.storyboard */,
-				7A24AB5327D9B05C00A15924 /* gateViewController.swift */,
-				7A24ABDA27EB8D4400A15924 /* FlightNumberTableViewController.swift */,
-				7A24ABDC27EB8D5E00A15924 /* AirlineNameTableViewController.swift */,
-				7A24ABDE27F3FE8600A15924 /* AirportTableViewController.swift */,
-				7A24ABE027F6982100A15924 /* otherTerminalMaps.swift */,
-				7A24ABE227F6995000A15924 /* otherTerminalMapsManager.swift */,
-				7A24ABE4281A656600A15924 /* TerminalMapTracker.swift */,
-			);
-			path = DepartingGate;
-		7A3E02C727E1445400CD752D /* Airplanes */ = {
-			isa = PBXGroup;
-			children = (
-				7A8B482227DD31C0002182DC /* planeManager.swift */,
-				7A3E02C827E1447600CD752D /* airplaneData.swift */,
-			);
-			path = Airplanes;
-		7A3770F4281DB2C2007C03AF /* Main API things */ = {
-			isa = PBXGroup;
-			children = (
-				7A3770F7281DB32A007C03AF /* URL+Helpers.swift */,
-				7AD58A32281E28C1001627DD /* locationPhotoInfo.swift */,
-				7AD58A34281E3105001627DD /* locationPhotoController.swift */,
-			);
-			path = "Main API things";
-			sourceTree = "<group>";
-		};
 		7A55811A27BED12E00C2FC3F = {
 			isa = PBXGroup;
 			children = (
 				7A55815627BED17500C2FC3F /* .gitignore */,
-				7ABC8D8427C8A24A00910A35 /* Images */,
 				7A55812527BED12E00C2FC3F /* Project_Group_6 */,
 				7A55813C27BED13300C2FC3F /* Project_Group_6Tests */,
 				7A55814627BED13300C2FC3F /* Project_Group_6UITests */,
@@ -164,6 +148,7 @@
 			children = (
 				7A55812327BED12E00C2FC3F /* Project_Group_6.app */,
 				7A55813927BED13300C2FC3F /* Project_Group_6Tests.xctest */,
+				7A55814327BED13300C2FC3F /* Project_Group_6UITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -171,19 +156,19 @@
 		7A55812527BED12E00C2FC3F /* Project_Group_6 */ = {
 			isa = PBXGroup;
 			children = (
-				7A24AB4E27D9462100A15924 /* DepartingGate */,
-				7A6FDBCF27D8545300595D34 /* Feature Seat Map */,
+				7AA49D892821A23C00012AE9 /* Feature Seat Map */,
+				7AA49D882821A17800012AE9 /* DepartingGate */,
+				7AA49D812821A02D00012AE9 /* Main API Things */,
+				7A0E0E05282193140056A5F3 /* departingGateNumber_V2.swift */,
 				7ABC8D8027C8A21B00910A35 /* airportManager.swift */,
 				7AC24BDD27CC12BB00BEAC21 /* airportData.swift */,
 				7A55812627BED12E00C2FC3F /* AppDelegate.swift */,
 				7A55812827BED12E00C2FC3F /* SceneDelegate.swift */,
 				7A55812A27BED12E00C2FC3F /* ViewController.swift */,
 				7A55812C27BED12E00C2FC3F /* Main.storyboard */,
-				7A3770F4281DB2C2007C03AF /* Main API things */,
 				7A55812F27BED13200C2FC3F /* Assets.xcassets */,
 				7A55813127BED13200C2FC3F /* LaunchScreen.storyboard */,
 				7A55813427BED13200C2FC3F /* Info.plist */,
-				7A24AB4527D7DD4600A15924 /* departingGateNumber_V2.swift */,
 				7ABB28CF281BACC9001BA81B /* Feature 1.storyboard */,
 				7ABB28D3281BAE28001BA81B /* Feature 2.storyboard */,
 				7ABB28D5281BAEF7001BA81B /* Feature 3.storyboard */,
@@ -195,10 +180,10 @@
 		7A55813C27BED13300C2FC3F /* Project_Group_6Tests */ = {
 			isa = PBXGroup;
 			children = (
+				7ABBCF652821983200A849C2 /* departingGateNumberTests.swift */,
+				7ABBCF642821983200A849C2 /* seatMapTests.swift */,
 				7ABC8D8227C8A23600910A35 /* managerTests.swift */,
 				7A55813D27BED13300C2FC3F /* Project_Group_6Tests.swift */,
-				7A24AB4A27D7E14600A15924 /* departingGateNumberTests.swift */,
-				7A6CE56D27D8175700A40678 /* seatMapTests.swift */,
 			);
 			path = Project_Group_6Tests;
 			sourceTree = "<group>";
@@ -212,16 +197,50 @@
 			path = Project_Group_6UITests;
 			sourceTree = "<group>";
 		};
-		7A6FDBCF27D8545300595D34 /* Feature Seat Map */ = {
+		7AA49D812821A02D00012AE9 /* Main API Things */ = {
 			isa = PBXGroup;
 			children = (
-				7A3E02C727E1445400CD752D /* Airplanes */,
-				7A6CE56B27D8169000A40678 /* seatMap.swift */,
-				7A6FDBD027D8547C00595D34 /* seatPage.storyboard */,
-				7AD70B1727D9ADCA0059A1B7 /* seatViewController.swift */,
-				7A2AFAC027E7A87E00A45E39 /* mapViewController.swift */,
+				7AA49D822821A08C00012AE9 /* locationPhotoController.swift */,
+				7AA49D832821A08C00012AE9 /* locationPhotoInfo.swift */,
+				7AA49D842821A08C00012AE9 /* URL+Helpers.swift */,
+			);
+			path = "Main API Things";
+			sourceTree = "<group>";
+		};
+		7AA49D882821A17800012AE9 /* DepartingGate */ = {
+			isa = PBXGroup;
+			children = (
+				7AA49D7128219F1F00012AE9 /* AirlineNameTableViewController.swift */,
+				7AA49D7528219F1F00012AE9 /* AirportTableViewController.swift */,
+				7AA49D7828219F1F00012AE9 /* DepartingGate.storyboard */,
+				7AA49D7728219F1F00012AE9 /* FlightNumberTableViewController.swift */,
+				7AA49D7428219F1F00012AE9 /* gateViewController.swift */,
+				7AA49D7228219F1F00012AE9 /* otherTerminalMaps.swift */,
+				7AA49D7628219F1F00012AE9 /* otherTerminalMapsManager.swift */,
+				7AA49D7328219F1F00012AE9 /* TerminalMapTracker.swift */,
+			);
+			path = DepartingGate;
+			sourceTree = "<group>";
+		};
+		7AA49D892821A23C00012AE9 /* Feature Seat Map */ = {
+			isa = PBXGroup;
+			children = (
+				7AA49D6528219E7900012AE9 /* mapViewController.swift */,
+				7AA49D6828219E7900012AE9 /* seatMap.swift */,
+				7AA49D6728219E7900012AE9 /* seatPage.storyboard */,
+				7AA49D6628219E7900012AE9 /* seatViewController.swift */,
+				7AA49D8A2821A25B00012AE9 /* Airplanes */,
 			);
 			path = "Feature Seat Map";
+			sourceTree = "<group>";
+		};
+		7AA49D8A2821A25B00012AE9 /* Airplanes */ = {
+			isa = PBXGroup;
+			children = (
+				7AA49D6E28219E9000012AE9 /* airplaneData.swift */,
+				7AA49D6D28219E9000012AE9 /* planeManager.swift */,
+			);
+			path = Airplanes;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -262,6 +281,24 @@
 			productReference = 7A55813927BED13300C2FC3F /* Project_Group_6Tests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		7A55814227BED13300C2FC3F /* Project_Group_6UITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7A55815327BED13300C2FC3F /* Build configuration list for PBXNativeTarget "Project_Group_6UITests" */;
+			buildPhases = (
+				7A55813F27BED13300C2FC3F /* Sources */,
+				7A55814027BED13300C2FC3F /* Frameworks */,
+				7A55814127BED13300C2FC3F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				7A55814527BED13300C2FC3F /* PBXTargetDependency */,
+			);
+			name = Project_Group_6UITests;
+			productName = Project_Group_6UITests;
+			productReference = 7A55814327BED13300C2FC3F /* Project_Group_6UITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -276,6 +313,10 @@
 						CreatedOnToolsVersion = 13.2.1;
 					};
 					7A55813827BED13300C2FC3F = {
+						CreatedOnToolsVersion = 13.2.1;
+						TestTargetID = 7A55812227BED12E00C2FC3F;
+					};
+					7A55814227BED13300C2FC3F = {
 						CreatedOnToolsVersion = 13.2.1;
 						TestTargetID = 7A55812227BED12E00C2FC3F;
 					};
@@ -296,6 +337,7 @@
 			targets = (
 				7A55812227BED12E00C2FC3F /* Project_Group_6 */,
 				7A55813827BED13300C2FC3F /* Project_Group_6Tests */,
+				7A55814227BED13300C2FC3F /* Project_Group_6UITests */,
 			);
 		};
 /* End PBXProject section */
@@ -305,21 +347,27 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7A6FDBD127D8547C00595D34 /* seatPage.storyboard in Resources */,
-				7ABC8D8527C8A24A00910A35 /* Images in Resources */,
 				7ABB28D8281BAFB9001BA81B /* Feature 4.storyboard in Resources */,
 				7A55815727BED17500C2FC3F /* .gitignore in Resources */,
 				7ABB28D6281BAEF7001BA81B /* Feature 3.storyboard in Resources */,
 				7ABB28D0281BACC9001BA81B /* Feature 1.storyboard in Resources */,
+				7AA49D6B28219E7900012AE9 /* seatPage.storyboard in Resources */,
 				7A55813327BED13200C2FC3F /* LaunchScreen.storyboard in Resources */,
+				7AA49D8028219F1F00012AE9 /* DepartingGate.storyboard in Resources */,
 				7A55813027BED13200C2FC3F /* Assets.xcassets in Resources */,
-				7A24AB5027D9464100A15924 /* DepartingGate.storyboard in Resources */,
 				7A55812E27BED12E00C2FC3F /* Main.storyboard in Resources */,
 				7ABB28D4281BAE28001BA81B /* Feature 2.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		7A55813727BED13300C2FC3F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7A55814127BED13300C2FC3F /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -333,29 +381,27 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7A24ABE127F6982100A15924 /* otherTerminalMaps.swift in Sources */,
-				7A24AB4627D7DD4600A15924 /* departingGateNumber_V2.swift in Sources */,
+				7AA49D7928219F1F00012AE9 /* AirlineNameTableViewController.swift in Sources */,
+				7AA49D7C28219F1F00012AE9 /* gateViewController.swift in Sources */,
+				7AA49D7A28219F1F00012AE9 /* otherTerminalMaps.swift in Sources */,
+				7AA49D6928219E7900012AE9 /* mapViewController.swift in Sources */,
+				7AA49D7D28219F1F00012AE9 /* AirportTableViewController.swift in Sources */,
+				7A0E0E09282193140056A5F3 /* departingGateNumber_V2.swift in Sources */,
 				7A55812B27BED12E00C2FC3F /* ViewController.swift in Sources */,
-				7A24ABE327F6995000A15924 /* otherTerminalMapsManager.swift in Sources */,
+				7AA49D6A28219E7900012AE9 /* seatViewController.swift in Sources */,
+				7AA49D7B28219F1F00012AE9 /* TerminalMapTracker.swift in Sources */,
 				7A55812727BED12E00C2FC3F /* AppDelegate.swift in Sources */,
-				7A24ABDD27EB8D5E00A15924 /* AirlineNameTableViewController.swift in Sources */,
-				7A24ABDF27F3FE8600A15924 /* AirportTableViewController.swift in Sources */,
-				7A24AB5427D9B05C00A15924 /* gateViewController.swift in Sources */,
-				7AD58A33281E28C1001627DD /* locationPhotoInfo.swift in Sources */,
-				7A55812B27BED12E00C2FC3F /* ViewController.swift in Sources */,
-				7A2AFAC127E7A87E00A45E39 /* mapViewController.swift in Sources */,
-				7A55812727BED12E00C2FC3F /* AppDelegate.swift in Sources */,
-				7A3770F8281DB32A007C03AF /* URL+Helpers.swift in Sources */,
+				7AA49D872821A08C00012AE9 /* URL+Helpers.swift in Sources */,
 				7AC24BDE27CC12BB00BEAC21 /* airportData.swift in Sources */,
-				7A24ABE5281A656600A15924 /* TerminalMapTracker.swift in Sources */,
+				7AA49D6F28219E9000012AE9 /* planeManager.swift in Sources */,
+				7AA49D7E28219F1F00012AE9 /* otherTerminalMapsManager.swift in Sources */,
+				7AA49D862821A08C00012AE9 /* locationPhotoInfo.swift in Sources */,
 				7A55812927BED12E00C2FC3F /* SceneDelegate.swift in Sources */,
-				7A24ABDB27EB8D4400A15924 /* FlightNumberTableViewController.swift in Sources */,
-				7AD70B1827D9ADCA0059A1B7 /* seatViewController.swift in Sources */,
-				7A8B482327DD31C0002182DC /* planeManager.swift in Sources */,
 				7ABC8D8127C8A21B00910A35 /* airportManager.swift in Sources */,
-				7A3E02C927E1447600CD752D /* airplaneData.swift in Sources */,
-				7A6CE56C27D8169000A40678 /* seatMap.swift in Sources */,
-				7AD58A35281E3105001627DD /* locationPhotoController.swift in Sources */,
+				7AA49D852821A08C00012AE9 /* locationPhotoController.swift in Sources */,
+				7AA49D7F28219F1F00012AE9 /* FlightNumberTableViewController.swift in Sources */,
+				7AA49D6C28219E7900012AE9 /* seatMap.swift in Sources */,
+				7AA49D7028219E9000012AE9 /* airplaneData.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -363,10 +409,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7A24AB4B27D7E14600A15924 /* departingGateNumberTests.swift in Sources */,
-				7A6CE56E27D8175700A40678 /* seatMapTests.swift in Sources */,
+				7ABBCF672821983200A849C2 /* departingGateNumberTests.swift in Sources */,
+				7ABBCF662821983200A849C2 /* seatMapTests.swift in Sources */,
 				7A55813E27BED13300C2FC3F /* Project_Group_6Tests.swift in Sources */,
 				7ABC8D8327C8A23600910A35 /* managerTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7A55813F27BED13300C2FC3F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7A55814827BED13300C2FC3F /* Project_Group_6UITests.swift in Sources */,
+				7A55814A27BED13300C2FC3F /* Project_Group_6UITestsLaunchTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -377,6 +432,11 @@
 			isa = PBXTargetDependency;
 			target = 7A55812227BED12E00C2FC3F /* Project_Group_6 */;
 			targetProxy = 7A55813A27BED13300C2FC3F /* PBXContainerItemProxy */;
+		};
+		7A55814527BED13300C2FC3F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 7A55812227BED12E00C2FC3F /* Project_Group_6 */;
+			targetProxy = 7A55814427BED13300C2FC3F /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -615,6 +675,42 @@
 			};
 			name = Release;
 		};
+		7A55815427BED13300C2FC3F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = SWZ2ZYMKNS;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "edu.fullerton.ecs.paul.Project-Group-6UITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Project_Group_6;
+			};
+			name = Debug;
+		};
+		7A55815527BED13300C2FC3F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = SWZ2ZYMKNS;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "edu.fullerton.ecs.paul.Project-Group-6UITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Project_Group_6;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -641,6 +737,15 @@
 			buildConfigurations = (
 				7A55815127BED13300C2FC3F /* Debug */,
 				7A55815227BED13300C2FC3F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7A55815327BED13300C2FC3F /* Build configuration list for PBXNativeTarget "Project_Group_6UITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7A55815427BED13300C2FC3F /* Debug */,
+				7A55815527BED13300C2FC3F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

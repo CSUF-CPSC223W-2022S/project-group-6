@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="VXc-dU-fz9">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="VXc-dU-fz9">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -37,9 +37,11 @@
                             <outlet property="delegate" destination="Csc-kw-bBH" id="H8M-G2-6Fo"/>
                         </connections>
                     </tableView>
+                    <tabBarItem key="tabBarItem" title="Terminals" image="airplane" catalog="system" id="z4v-j2-eUh"/>
                     <navigationItem key="navigationItem" title="Departing Airport" largeTitleDisplayMode="always" id="yWF-gA-78K">
                         <barButtonItem key="backBarButtonItem" title="Departing Airport" id="sIC-mq-jNK"/>
                     </navigationItem>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="searchBar" destination="S2S-hI-fLx" id="AV4-s5-kZT"/>
                         <segue destination="bch-ac-6BY" kind="show" id="mej-hP-jhy"/>
@@ -328,6 +330,7 @@
     </scenes>
     <resources>
         <image name="Terminal 1" width="792" height="612"/>
+        <image name="airplane" catalog="system" width="128" height="115"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

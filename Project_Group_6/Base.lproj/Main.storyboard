@@ -66,17 +66,17 @@
         <!--Feature 1-->
         <scene sceneID="rJr-M1-UsU">
             <objects>
-                <viewControllerPlaceholder storyboardName="Feature 1" id="nGO-OT-DVF" userLabel="Feature 1" sceneMemberID="viewController">
+                <viewControllerPlaceholder storyboardName="DepartingGate" id="nGO-OT-DVF" userLabel="Feature 1" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Feature 1" image="airplane" catalog="system" id="4HF-43-hCp"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XMX-FL-eT1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="548" y="-526"/>
         </scene>
-        <!--Feature 2-->
+        <!--seatPage-->
         <scene sceneID="zvQ-m8-VE9">
             <objects>
-                <viewControllerPlaceholder storyboardName="Feature 2" id="zEN-DA-iz6" sceneMemberID="viewController">
+                <viewControllerPlaceholder storyboardName="seatPage" id="zEN-DA-iz6" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Feature 2" image="seat.32.filled.1x" id="a1N-1Y-ZKo"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ghc-2c-RQ9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
