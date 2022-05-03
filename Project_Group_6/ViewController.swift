@@ -46,7 +46,11 @@ class ViewController: UIViewController {
         animationTimer = Timer.scheduledTimer(withTimeInterval: 10, repeats: true) {
             _ in
             UIView.transition(with: self.cityName, duration: 1, options: .transitionCrossDissolve, animations: {
+                let oldName = self.cityName.text
                 self.cityName.text = self.cities.randomElement()
+                if oldName == self.cityName.text {
+                    self.cityName.text = self.cities.randomElement()
+                }
             }, completion: nil)
             self.updateImage()
         }
