@@ -8,6 +8,7 @@
 import UIKit
 
 class ViewController: UIViewController {
+  
     @IBOutlet var Image: UIImageView!
     
     @IBOutlet var cityName: UILabel!
