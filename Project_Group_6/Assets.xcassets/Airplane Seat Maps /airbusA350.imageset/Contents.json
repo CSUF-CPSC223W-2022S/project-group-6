@@ -1,7 +1,7 @@
 {
   "images" : [
     {
-      "filename" : "LAX_terminal_overview.pdf",
+      "filename" : "airbusA350.pdf",
       "idiom" : "universal",
       "scale" : "1x"
     },
@@ -17,8 +17,5 @@
   "info" : {
     "author" : "xcode",
     "version" : 1
-  },
-  "properties" : {
-    "localizable" : true
   }
 }

@@ -17,6 +17,9 @@
 		7A24ABE127F6982100A15924 /* otherTerminalMaps.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A24ABE027F6982100A15924 /* otherTerminalMaps.swift */; };
 		7A24ABE327F6995000A15924 /* otherTerminalMapsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A24ABE227F6995000A15924 /* otherTerminalMapsManager.swift */; };
 		7A24ABE5281A656600A15924 /* TerminalMapTracker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A24ABE4281A656600A15924 /* TerminalMapTracker.swift */; };
+		7A2AFAC127E7A87E00A45E39 /* mapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A2AFAC027E7A87E00A45E39 /* mapViewController.swift */; };
+		7A3E02C927E1447600CD752D /* airplaneData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A3E02C827E1447600CD752D /* airplaneData.swift */; };
+		7A3770F8281DB32A007C03AF /* URL+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A3770F7281DB32A007C03AF /* URL+Helpers.swift */; };
 		7A55812727BED12E00C2FC3F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A55812627BED12E00C2FC3F /* AppDelegate.swift */; };
 		7A55812927BED12E00C2FC3F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A55812827BED12E00C2FC3F /* SceneDelegate.swift */; };
 		7A55812B27BED12E00C2FC3F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A55812A27BED12E00C2FC3F /* ViewController.swift */; };
@@ -25,10 +28,21 @@
 		7A55813327BED13200C2FC3F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7A55813127BED13200C2FC3F /* LaunchScreen.storyboard */; };
 		7A55813E27BED13300C2FC3F /* Project_Group_6Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A55813D27BED13300C2FC3F /* Project_Group_6Tests.swift */; };
 		7A55815727BED17500C2FC3F /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 7A55815627BED17500C2FC3F /* .gitignore */; };
+		7A6CE56C27D8169000A40678 /* seatMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A6CE56B27D8169000A40678 /* seatMap.swift */; };
+		7A6CE56E27D8175700A40678 /* seatMapTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A6CE56D27D8175700A40678 /* seatMapTests.swift */; };
+		7A6FDBD127D8547C00595D34 /* seatPage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7A6FDBD027D8547C00595D34 /* seatPage.storyboard */; };
+		7A8B482327DD31C0002182DC /* planeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A8B482227DD31C0002182DC /* planeManager.swift */; };
+		7ABB28D0281BACC9001BA81B /* Feature 1.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7ABB28CF281BACC9001BA81B /* Feature 1.storyboard */; };
+		7ABB28D4281BAE28001BA81B /* Feature 2.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7ABB28D3281BAE28001BA81B /* Feature 2.storyboard */; };
+		7ABB28D6281BAEF7001BA81B /* Feature 3.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7ABB28D5281BAEF7001BA81B /* Feature 3.storyboard */; };
+		7ABB28D8281BAFB9001BA81B /* Feature 4.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7ABB28D7281BAFB9001BA81B /* Feature 4.storyboard */; };
 		7ABC8D8127C8A21B00910A35 /* airportManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ABC8D8027C8A21B00910A35 /* airportManager.swift */; };
 		7ABC8D8327C8A23600910A35 /* managerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ABC8D8227C8A23600910A35 /* managerTests.swift */; };
 		7ABC8D8527C8A24A00910A35 /* Images in Resources */ = {isa = PBXBuildFile; fileRef = 7ABC8D8427C8A24A00910A35 /* Images */; };
 		7AC24BDE27CC12BB00BEAC21 /* airportData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AC24BDD27CC12BB00BEAC21 /* airportData.swift */; };
+		7AD70B1827D9ADCA0059A1B7 /* seatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AD70B1727D9ADCA0059A1B7 /* seatViewController.swift */; };
+		7AD58A33281E28C1001627DD /* locationPhotoInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AD58A32281E28C1001627DD /* locationPhotoInfo.swift */; };
+		7AD58A35281E3105001627DD /* locationPhotoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AD58A34281E3105001627DD /* locationPhotoController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +66,9 @@
 		7A24ABE027F6982100A15924 /* otherTerminalMaps.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = otherTerminalMaps.swift; sourceTree = "<group>"; };
 		7A24ABE227F6995000A15924 /* otherTerminalMapsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = otherTerminalMapsManager.swift; sourceTree = "<group>"; };
 		7A24ABE4281A656600A15924 /* TerminalMapTracker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TerminalMapTracker.swift; sourceTree = "<group>"; };
+		7A2AFAC027E7A87E00A45E39 /* mapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mapViewController.swift; sourceTree = "<group>"; };
+		7A3E02C827E1447600CD752D /* airplaneData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = airplaneData.swift; sourceTree = "<group>"; };
+		7A3770F7281DB32A007C03AF /* URL+Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URL+Helpers.swift"; sourceTree = "<group>"; };
 		7A55812327BED12E00C2FC3F /* Project_Group_6.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Project_Group_6.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7A55812627BED12E00C2FC3F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7A55812827BED12E00C2FC3F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -65,10 +82,21 @@
 		7A55814727BED13300C2FC3F /* Project_Group_6UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Project_Group_6UITests.swift; sourceTree = "<group>"; };
 		7A55814927BED13300C2FC3F /* Project_Group_6UITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Project_Group_6UITestsLaunchTests.swift; sourceTree = "<group>"; };
 		7A55815627BED17500C2FC3F /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
+		7A6CE56B27D8169000A40678 /* seatMap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = seatMap.swift; sourceTree = "<group>"; };
+		7A6CE56D27D8175700A40678 /* seatMapTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = seatMapTests.swift; sourceTree = "<group>"; };
+		7A6FDBD027D8547C00595D34 /* seatPage.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = seatPage.storyboard; sourceTree = "<group>"; };
+		7A8B482227DD31C0002182DC /* planeManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = planeManager.swift; sourceTree = "<group>"; };
+		7ABB28CF281BACC9001BA81B /* Feature 1.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Feature 1.storyboard"; sourceTree = "<group>"; };
+		7ABB28D3281BAE28001BA81B /* Feature 2.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Feature 2.storyboard"; sourceTree = "<group>"; };
+		7ABB28D5281BAEF7001BA81B /* Feature 3.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Feature 3.storyboard"; sourceTree = "<group>"; };
+		7ABB28D7281BAFB9001BA81B /* Feature 4.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Feature 4.storyboard"; sourceTree = "<group>"; };
 		7ABC8D8027C8A21B00910A35 /* airportManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = airportManager.swift; sourceTree = "<group>"; };
 		7ABC8D8227C8A23600910A35 /* managerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = managerTests.swift; sourceTree = "<group>"; };
 		7ABC8D8427C8A24A00910A35 /* Images */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Images; sourceTree = "<group>"; };
 		7AC24BDD27CC12BB00BEAC21 /* airportData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = airportData.swift; sourceTree = "<group>"; };
+		7AD70B1727D9ADCA0059A1B7 /* seatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = seatViewController.swift; sourceTree = "<group>"; };
+		7AD58A32281E28C1001627DD /* locationPhotoInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = locationPhotoInfo.swift; sourceTree = "<group>"; };
+		7AD58A34281E3105001627DD /* locationPhotoController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = locationPhotoController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +130,21 @@
 				7A24ABE4281A656600A15924 /* TerminalMapTracker.swift */,
 			);
 			path = DepartingGate;
+		7A3E02C727E1445400CD752D /* Airplanes */ = {
+			isa = PBXGroup;
+			children = (
+				7A8B482227DD31C0002182DC /* planeManager.swift */,
+				7A3E02C827E1447600CD752D /* airplaneData.swift */,
+			);
+			path = Airplanes;
+		7A3770F4281DB2C2007C03AF /* Main API things */ = {
+			isa = PBXGroup;
+			children = (
+				7A3770F7281DB32A007C03AF /* URL+Helpers.swift */,
+				7AD58A32281E28C1001627DD /* locationPhotoInfo.swift */,
+				7AD58A34281E3105001627DD /* locationPhotoController.swift */,
+			);
+			path = "Main API things";
 			sourceTree = "<group>";
 		};
 		7A55811A27BED12E00C2FC3F = {
@@ -129,16 +172,22 @@
 			isa = PBXGroup;
 			children = (
 				7A24AB4E27D9462100A15924 /* DepartingGate */,
+				7A6FDBCF27D8545300595D34 /* Feature Seat Map */,
 				7ABC8D8027C8A21B00910A35 /* airportManager.swift */,
 				7AC24BDD27CC12BB00BEAC21 /* airportData.swift */,
 				7A55812627BED12E00C2FC3F /* AppDelegate.swift */,
 				7A55812827BED12E00C2FC3F /* SceneDelegate.swift */,
 				7A55812A27BED12E00C2FC3F /* ViewController.swift */,
 				7A55812C27BED12E00C2FC3F /* Main.storyboard */,
+				7A3770F4281DB2C2007C03AF /* Main API things */,
 				7A55812F27BED13200C2FC3F /* Assets.xcassets */,
 				7A55813127BED13200C2FC3F /* LaunchScreen.storyboard */,
 				7A55813427BED13200C2FC3F /* Info.plist */,
 				7A24AB4527D7DD4600A15924 /* departingGateNumber_V2.swift */,
+				7ABB28CF281BACC9001BA81B /* Feature 1.storyboard */,
+				7ABB28D3281BAE28001BA81B /* Feature 2.storyboard */,
+				7ABB28D5281BAEF7001BA81B /* Feature 3.storyboard */,
+				7ABB28D7281BAFB9001BA81B /* Feature 4.storyboard */,
 			);
 			path = Project_Group_6;
 			sourceTree = "<group>";
@@ -149,6 +198,7 @@
 				7ABC8D8227C8A23600910A35 /* managerTests.swift */,
 				7A55813D27BED13300C2FC3F /* Project_Group_6Tests.swift */,
 				7A24AB4A27D7E14600A15924 /* departingGateNumberTests.swift */,
+				7A6CE56D27D8175700A40678 /* seatMapTests.swift */,
 			);
 			path = Project_Group_6Tests;
 			sourceTree = "<group>";
@@ -160,6 +210,18 @@
 				7A55814927BED13300C2FC3F /* Project_Group_6UITestsLaunchTests.swift */,
 			);
 			path = Project_Group_6UITests;
+			sourceTree = "<group>";
+		};
+		7A6FDBCF27D8545300595D34 /* Feature Seat Map */ = {
+			isa = PBXGroup;
+			children = (
+				7A3E02C727E1445400CD752D /* Airplanes */,
+				7A6CE56B27D8169000A40678 /* seatMap.swift */,
+				7A6FDBD027D8547C00595D34 /* seatPage.storyboard */,
+				7AD70B1727D9ADCA0059A1B7 /* seatViewController.swift */,
+				7A2AFAC027E7A87E00A45E39 /* mapViewController.swift */,
+			);
+			path = "Feature Seat Map";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -243,12 +305,17 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7A6FDBD127D8547C00595D34 /* seatPage.storyboard in Resources */,
 				7ABC8D8527C8A24A00910A35 /* Images in Resources */,
+				7ABB28D8281BAFB9001BA81B /* Feature 4.storyboard in Resources */,
 				7A55815727BED17500C2FC3F /* .gitignore in Resources */,
+				7ABB28D6281BAEF7001BA81B /* Feature 3.storyboard in Resources */,
+				7ABB28D0281BACC9001BA81B /* Feature 1.storyboard in Resources */,
 				7A55813327BED13200C2FC3F /* LaunchScreen.storyboard in Resources */,
 				7A55813027BED13200C2FC3F /* Assets.xcassets in Resources */,
 				7A24AB5027D9464100A15924 /* DepartingGate.storyboard in Resources */,
 				7A55812E27BED12E00C2FC3F /* Main.storyboard in Resources */,
+				7ABB28D4281BAE28001BA81B /* Feature 2.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -274,11 +341,21 @@
 				7A24ABDD27EB8D5E00A15924 /* AirlineNameTableViewController.swift in Sources */,
 				7A24ABDF27F3FE8600A15924 /* AirportTableViewController.swift in Sources */,
 				7A24AB5427D9B05C00A15924 /* gateViewController.swift in Sources */,
+				7AD58A33281E28C1001627DD /* locationPhotoInfo.swift in Sources */,
+				7A55812B27BED12E00C2FC3F /* ViewController.swift in Sources */,
+				7A2AFAC127E7A87E00A45E39 /* mapViewController.swift in Sources */,
+				7A55812727BED12E00C2FC3F /* AppDelegate.swift in Sources */,
+				7A3770F8281DB32A007C03AF /* URL+Helpers.swift in Sources */,
 				7AC24BDE27CC12BB00BEAC21 /* airportData.swift in Sources */,
 				7A24ABE5281A656600A15924 /* TerminalMapTracker.swift in Sources */,
 				7A55812927BED12E00C2FC3F /* SceneDelegate.swift in Sources */,
 				7A24ABDB27EB8D4400A15924 /* FlightNumberTableViewController.swift in Sources */,
+				7AD70B1827D9ADCA0059A1B7 /* seatViewController.swift in Sources */,
+				7A8B482327DD31C0002182DC /* planeManager.swift in Sources */,
 				7ABC8D8127C8A21B00910A35 /* airportManager.swift in Sources */,
+				7A3E02C927E1447600CD752D /* airplaneData.swift in Sources */,
+				7A6CE56C27D8169000A40678 /* seatMap.swift in Sources */,
+				7AD58A35281E3105001627DD /* locationPhotoController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -287,6 +364,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7A24AB4B27D7E14600A15924 /* departingGateNumberTests.swift in Sources */,
+				7A6CE56E27D8175700A40678 /* seatMapTests.swift in Sources */,
 				7A55813E27BED13300C2FC3F /* Project_Group_6Tests.swift in Sources */,
 				7ABC8D8327C8A23600910A35 /* managerTests.swift in Sources */,
 			);
