@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7A0E0E09282193140056A5F3 /* departingGateNumber_V2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A0E0E05282193140056A5F3 /* departingGateNumber_V2.swift */; };
 		7A55812727BED12E00C2FC3F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A55812627BED12E00C2FC3F /* AppDelegate.swift */; };
 		7A55812927BED12E00C2FC3F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A55812827BED12E00C2FC3F /* SceneDelegate.swift */; };
 		7A55812B27BED12E00C2FC3F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A55812A27BED12E00C2FC3F /* ViewController.swift */; };
@@ -26,6 +27,32 @@
 		A98C857627FA6484003E78BA /* Offline.swift in Sources */ = {isa = PBXBuildFile; fileRef = A98C857527FA6484003E78BA /* Offline.swift */; };
 		A98C857B27FA99C2003E78BA /* OfflineTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A98C857A27FA99C2003E78BA /* OfflineTests.swift */; };
 		A9A2A78E27E38BB800433FCD /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9A2A78D27E38BB800433FCD /* Constants.swift */; };
+		7AA49D6928219E7900012AE9 /* mapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AA49D6528219E7900012AE9 /* mapViewController.swift */; };
+		7AA49D6A28219E7900012AE9 /* seatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AA49D6628219E7900012AE9 /* seatViewController.swift */; };
+		7AA49D6B28219E7900012AE9 /* seatPage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7AA49D6728219E7900012AE9 /* seatPage.storyboard */; };
+		7AA49D6C28219E7900012AE9 /* seatMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AA49D6828219E7900012AE9 /* seatMap.swift */; };
+		7AA49D6F28219E9000012AE9 /* planeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AA49D6D28219E9000012AE9 /* planeManager.swift */; };
+		7AA49D7028219E9000012AE9 /* airplaneData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AA49D6E28219E9000012AE9 /* airplaneData.swift */; };
+		7AA49D7928219F1F00012AE9 /* AirlineNameTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AA49D7128219F1F00012AE9 /* AirlineNameTableViewController.swift */; };
+		7AA49D7A28219F1F00012AE9 /* otherTerminalMaps.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AA49D7228219F1F00012AE9 /* otherTerminalMaps.swift */; };
+		7AA49D7B28219F1F00012AE9 /* TerminalMapTracker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AA49D7328219F1F00012AE9 /* TerminalMapTracker.swift */; };
+		7AA49D7C28219F1F00012AE9 /* gateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AA49D7428219F1F00012AE9 /* gateViewController.swift */; };
+		7AA49D7D28219F1F00012AE9 /* AirportTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AA49D7528219F1F00012AE9 /* AirportTableViewController.swift */; };
+		7AA49D7E28219F1F00012AE9 /* otherTerminalMapsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AA49D7628219F1F00012AE9 /* otherTerminalMapsManager.swift */; };
+		7AA49D7F28219F1F00012AE9 /* FlightNumberTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AA49D7728219F1F00012AE9 /* FlightNumberTableViewController.swift */; };
+		7AA49D8028219F1F00012AE9 /* DepartingGate.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7AA49D7828219F1F00012AE9 /* DepartingGate.storyboard */; };
+		7AA49D852821A08C00012AE9 /* locationPhotoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AA49D822821A08C00012AE9 /* locationPhotoController.swift */; };
+		7AA49D862821A08C00012AE9 /* locationPhotoInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AA49D832821A08C00012AE9 /* locationPhotoInfo.swift */; };
+		7AA49D872821A08C00012AE9 /* URL+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AA49D842821A08C00012AE9 /* URL+Helpers.swift */; };
+		7ABB28D0281BACC9001BA81B /* Feature 1.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7ABB28CF281BACC9001BA81B /* Feature 1.storyboard */; };
+		7ABB28D4281BAE28001BA81B /* Feature 2.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7ABB28D3281BAE28001BA81B /* Feature 2.storyboard */; };
+		7ABB28D6281BAEF7001BA81B /* Feature 3.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7ABB28D5281BAEF7001BA81B /* Feature 3.storyboard */; };
+		7ABB28D8281BAFB9001BA81B /* Feature 4.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7ABB28D7281BAFB9001BA81B /* Feature 4.storyboard */; };
+		7ABBCF662821983200A849C2 /* seatMapTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ABBCF642821983200A849C2 /* seatMapTests.swift */; };
+		7ABBCF672821983200A849C2 /* departingGateNumberTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ABBCF652821983200A849C2 /* departingGateNumberTests.swift */; };
+		7ABC8D8127C8A21B00910A35 /* airportManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ABC8D8027C8A21B00910A35 /* airportManager.swift */; };
+		7ABC8D8327C8A23600910A35 /* managerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ABC8D8227C8A23600910A35 /* managerTests.swift */; };
+		7AC24BDE27CC12BB00BEAC21 /* airportData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AC24BDD27CC12BB00BEAC21 /* airportData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +73,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		7A0E0E05282193140056A5F3 /* departingGateNumber_V2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = departingGateNumber_V2.swift; sourceTree = "<group>"; };
 		7A55812327BED12E00C2FC3F /* Project_Group_6.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Project_Group_6.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7A55812627BED12E00C2FC3F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7A55812827BED12E00C2FC3F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -69,6 +97,32 @@
 		A98C857527FA6484003E78BA /* Offline.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Offline.swift; sourceTree = "<group>"; };
 		A98C857A27FA99C2003E78BA /* OfflineTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OfflineTests.swift; sourceTree = "<group>"; };
 		A9A2A78D27E38BB800433FCD /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		7AA49D6528219E7900012AE9 /* mapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = mapViewController.swift; sourceTree = "<group>"; };
+		7AA49D6628219E7900012AE9 /* seatViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = seatViewController.swift; sourceTree = "<group>"; };
+		7AA49D6728219E7900012AE9 /* seatPage.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = seatPage.storyboard; sourceTree = "<group>"; };
+		7AA49D6828219E7900012AE9 /* seatMap.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = seatMap.swift; sourceTree = "<group>"; };
+		7AA49D6D28219E9000012AE9 /* planeManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = planeManager.swift; sourceTree = "<group>"; };
+		7AA49D6E28219E9000012AE9 /* airplaneData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = airplaneData.swift; sourceTree = "<group>"; };
+		7AA49D7128219F1F00012AE9 /* AirlineNameTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AirlineNameTableViewController.swift; sourceTree = "<group>"; };
+		7AA49D7228219F1F00012AE9 /* otherTerminalMaps.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = otherTerminalMaps.swift; sourceTree = "<group>"; };
+		7AA49D7328219F1F00012AE9 /* TerminalMapTracker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TerminalMapTracker.swift; sourceTree = "<group>"; };
+		7AA49D7428219F1F00012AE9 /* gateViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = gateViewController.swift; sourceTree = "<group>"; };
+		7AA49D7528219F1F00012AE9 /* AirportTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AirportTableViewController.swift; sourceTree = "<group>"; };
+		7AA49D7628219F1F00012AE9 /* otherTerminalMapsManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = otherTerminalMapsManager.swift; sourceTree = "<group>"; };
+		7AA49D7728219F1F00012AE9 /* FlightNumberTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlightNumberTableViewController.swift; sourceTree = "<group>"; };
+		7AA49D7828219F1F00012AE9 /* DepartingGate.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = DepartingGate.storyboard; sourceTree = "<group>"; };
+		7AA49D822821A08C00012AE9 /* locationPhotoController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = locationPhotoController.swift; path = "Project_Group_6/Main API things/locationPhotoController.swift"; sourceTree = SOURCE_ROOT; };
+		7AA49D832821A08C00012AE9 /* locationPhotoInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = locationPhotoInfo.swift; path = "Project_Group_6/Main API things/locationPhotoInfo.swift"; sourceTree = SOURCE_ROOT; };
+		7AA49D842821A08C00012AE9 /* URL+Helpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "URL+Helpers.swift"; path = "Project_Group_6/Main API things/URL+Helpers.swift"; sourceTree = SOURCE_ROOT; };
+		7ABB28CF281BACC9001BA81B /* Feature 1.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Feature 1.storyboard"; sourceTree = "<group>"; };
+		7ABB28D3281BAE28001BA81B /* Feature 2.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Feature 2.storyboard"; sourceTree = "<group>"; };
+		7ABB28D5281BAEF7001BA81B /* Feature 3.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Feature 3.storyboard"; sourceTree = "<group>"; };
+		7ABB28D7281BAFB9001BA81B /* Feature 4.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Feature 4.storyboard"; sourceTree = "<group>"; };
+		7ABBCF642821983200A849C2 /* seatMapTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = seatMapTests.swift; sourceTree = "<group>"; };
+		7ABBCF652821983200A849C2 /* departingGateNumberTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = departingGateNumberTests.swift; sourceTree = "<group>"; };
+		7ABC8D8027C8A21B00910A35 /* airportManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = airportManager.swift; sourceTree = "<group>"; };
+		7ABC8D8227C8A23600910A35 /* managerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = managerTests.swift; sourceTree = "<group>"; };
+		7AC24BDD27CC12BB00BEAC21 /* airportData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = airportData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -127,6 +181,12 @@
 				A956A52127DA598E00218859 /* Currency.swift */,
 				A98C857527FA6484003E78BA /* Offline.swift */,
 				A96C4BA127FFA8CF009C195E /* Internet.swift */,
+				7AA49D892821A23C00012AE9 /* Feature Seat Map */,
+				7AA49D882821A17800012AE9 /* DepartingGate */,
+				7AA49D812821A02D00012AE9 /* Main API Things */,
+				7A0E0E05282193140056A5F3 /* departingGateNumber_V2.swift */,
+				7ABC8D8027C8A21B00910A35 /* airportManager.swift */,
+				7AC24BDD27CC12BB00BEAC21 /* airportData.swift */,
 				7A55812627BED12E00C2FC3F /* AppDelegate.swift */,
 				7A55812827BED12E00C2FC3F /* SceneDelegate.swift */,
 				7A55812A27BED12E00C2FC3F /* ViewController.swift */,
@@ -134,6 +194,10 @@
 				7A55812F27BED13200C2FC3F /* Assets.xcassets */,
 				7A55813127BED13200C2FC3F /* LaunchScreen.storyboard */,
 				7A55813427BED13200C2FC3F /* Info.plist */,
+				7ABB28CF281BACC9001BA81B /* Feature 1.storyboard */,
+				7ABB28D3281BAE28001BA81B /* Feature 2.storyboard */,
+				7ABB28D5281BAEF7001BA81B /* Feature 3.storyboard */,
+				7ABB28D7281BAFB9001BA81B /* Feature 4.storyboard */,
 			);
 			path = Project_Group_6;
 			sourceTree = "<group>";
@@ -141,6 +205,9 @@
 		7A55813C27BED13300C2FC3F /* Project_Group_6Tests */ = {
 			isa = PBXGroup;
 			children = (
+				7ABBCF652821983200A849C2 /* departingGateNumberTests.swift */,
+				7ABBCF642821983200A849C2 /* seatMapTests.swift */,
+				7ABC8D8227C8A23600910A35 /* managerTests.swift */,
 				7A55813D27BED13300C2FC3F /* Project_Group_6Tests.swift */,
 				A913F5EC27D91A6E00D3744B /* ConverterTests.swift */,
 				A98C857A27FA99C2003E78BA /* OfflineTests.swift */,
@@ -155,6 +222,52 @@
 				7A55814927BED13300C2FC3F /* Project_Group_6UITestsLaunchTests.swift */,
 			);
 			path = Project_Group_6UITests;
+			sourceTree = "<group>";
+		};
+		7AA49D812821A02D00012AE9 /* Main API Things */ = {
+			isa = PBXGroup;
+			children = (
+				7AA49D822821A08C00012AE9 /* locationPhotoController.swift */,
+				7AA49D832821A08C00012AE9 /* locationPhotoInfo.swift */,
+				7AA49D842821A08C00012AE9 /* URL+Helpers.swift */,
+			);
+			path = "Main API Things";
+			sourceTree = "<group>";
+		};
+		7AA49D882821A17800012AE9 /* DepartingGate */ = {
+			isa = PBXGroup;
+			children = (
+				7AA49D7128219F1F00012AE9 /* AirlineNameTableViewController.swift */,
+				7AA49D7528219F1F00012AE9 /* AirportTableViewController.swift */,
+				7AA49D7828219F1F00012AE9 /* DepartingGate.storyboard */,
+				7AA49D7728219F1F00012AE9 /* FlightNumberTableViewController.swift */,
+				7AA49D7428219F1F00012AE9 /* gateViewController.swift */,
+				7AA49D7228219F1F00012AE9 /* otherTerminalMaps.swift */,
+				7AA49D7628219F1F00012AE9 /* otherTerminalMapsManager.swift */,
+				7AA49D7328219F1F00012AE9 /* TerminalMapTracker.swift */,
+			);
+			path = DepartingGate;
+			sourceTree = "<group>";
+		};
+		7AA49D892821A23C00012AE9 /* Feature Seat Map */ = {
+			isa = PBXGroup;
+			children = (
+				7AA49D6528219E7900012AE9 /* mapViewController.swift */,
+				7AA49D6828219E7900012AE9 /* seatMap.swift */,
+				7AA49D6728219E7900012AE9 /* seatPage.storyboard */,
+				7AA49D6628219E7900012AE9 /* seatViewController.swift */,
+				7AA49D8A2821A25B00012AE9 /* Airplanes */,
+			);
+			path = "Feature Seat Map";
+			sourceTree = "<group>";
+		};
+		7AA49D8A2821A25B00012AE9 /* Airplanes */ = {
+			isa = PBXGroup;
+			children = (
+				7AA49D6E28219E9000012AE9 /* airplaneData.swift */,
+				7AA49D6D28219E9000012AE9 /* planeManager.swift */,
+			);
+			path = Airplanes;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -261,11 +374,17 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7ABB28D8281BAFB9001BA81B /* Feature 4.storyboard in Resources */,
 				7A55815727BED17500C2FC3F /* .gitignore in Resources */,
+				7ABB28D6281BAEF7001BA81B /* Feature 3.storyboard in Resources */,
+				7ABB28D0281BACC9001BA81B /* Feature 1.storyboard in Resources */,
+				7AA49D6B28219E7900012AE9 /* seatPage.storyboard in Resources */,
 				7A55813327BED13200C2FC3F /* LaunchScreen.storyboard in Resources */,
 				A913F5E627D7D32C00D3744B /* Converter.storyboard in Resources */,
+				7AA49D8028219F1F00012AE9 /* DepartingGate.storyboard in Resources */,
 				7A55813027BED13200C2FC3F /* Assets.xcassets in Resources */,
 				7A55812E27BED12E00C2FC3F /* Main.storyboard in Resources */,
+				7ABB28D4281BAE28001BA81B /* Feature 2.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -298,7 +417,27 @@
 				7A55812727BED12E00C2FC3F /* AppDelegate.swift in Sources */,
 				A9A2A78E27E38BB800433FCD /* Constants.swift in Sources */,
 				A956A52427DA59B100218859 /* ExchangeRates.swift in Sources */,
+				7AA49D7928219F1F00012AE9 /* AirlineNameTableViewController.swift in Sources */,
+				7AA49D7C28219F1F00012AE9 /* gateViewController.swift in Sources */,
+				7AA49D7A28219F1F00012AE9 /* otherTerminalMaps.swift in Sources */,
+				7AA49D6928219E7900012AE9 /* mapViewController.swift in Sources */,
+				7AA49D7D28219F1F00012AE9 /* AirportTableViewController.swift in Sources */,
+				7A0E0E09282193140056A5F3 /* departingGateNumber_V2.swift in Sources */,
+				7A55812B27BED12E00C2FC3F /* ViewController.swift in Sources */,
+				7AA49D6A28219E7900012AE9 /* seatViewController.swift in Sources */,
+				7AA49D7B28219F1F00012AE9 /* TerminalMapTracker.swift in Sources */,
+				7A55812727BED12E00C2FC3F /* AppDelegate.swift in Sources */,
+				7AA49D872821A08C00012AE9 /* URL+Helpers.swift in Sources */,
+				7AC24BDE27CC12BB00BEAC21 /* airportData.swift in Sources */,
+				7AA49D6F28219E9000012AE9 /* planeManager.swift in Sources */,
+				7AA49D7E28219F1F00012AE9 /* otherTerminalMapsManager.swift in Sources */,
+				7AA49D862821A08C00012AE9 /* locationPhotoInfo.swift in Sources */,
 				7A55812927BED12E00C2FC3F /* SceneDelegate.swift in Sources */,
+				7ABC8D8127C8A21B00910A35 /* airportManager.swift in Sources */,
+				7AA49D852821A08C00012AE9 /* locationPhotoController.swift in Sources */,
+				7AA49D7F28219F1F00012AE9 /* FlightNumberTableViewController.swift in Sources */,
+				7AA49D6C28219E7900012AE9 /* seatMap.swift in Sources */,
+				7AA49D7028219E9000012AE9 /* airplaneData.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -309,6 +448,10 @@
 				A913F5ED27D91A6E00D3744B /* ConverterTests.swift in Sources */,
 				7A55813E27BED13300C2FC3F /* Project_Group_6Tests.swift in Sources */,
 				A98C857B27FA99C2003E78BA /* OfflineTests.swift in Sources */,
+				7ABBCF672821983200A849C2 /* departingGateNumberTests.swift in Sources */,
+				7ABBCF662821983200A849C2 /* seatMapTests.swift in Sources */,
+				7A55813E27BED13300C2FC3F /* Project_Group_6Tests.swift in Sources */,
+				7ABC8D8327C8A23600910A35 /* managerTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -407,7 +550,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -462,7 +605,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -479,6 +622,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = SWZ2ZYMKNS;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Project_Group_6/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -486,12 +630,13 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "edu.fullerton.ecs.paul.Project-Group-6";
+				PRODUCT_BUNDLE_IDENTIFIER = "edu.fullerton.ecs.group6.Project-Group-6";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -506,6 +651,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = SWZ2ZYMKNS;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Project_Group_6/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -513,6 +659,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -531,10 +678,12 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = SWZ2ZYMKNS;
 				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "edu.fullerton.ecs.paul.Project-Group-6Tests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -552,8 +701,9 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = SWZ2ZYMKNS;
 				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "edu.fullerton.ecs.paul.Project-Group-6Tests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -570,6 +720,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = SWZ2ZYMKNS;
 				GENERATE_INFOPLIST_FILE = YES;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "edu.fullerton.ecs.paul.Project-Group-6UITests";
@@ -587,6 +738,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = SWZ2ZYMKNS;
 				GENERATE_INFOPLIST_FILE = YES;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "edu.fullerton.ecs.paul.Project-Group-6UITests";
