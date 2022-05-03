@@ -17,9 +17,8 @@ class LocationPhotoController {
         guard let url = baseURL?.withSlug(city), let secureURL = url.withHTTPS() else {
             return
         }
-        
-        // Create a request to retrieve data from the NASA server. The closure is called
-        // once the server replies to the request.
+        print(secureURL)
+        // Create a request to retrieve data from the teleport server. The closure is called once the server replies to the request.
         let task = URLSession.shared.dataTask(with: secureURL) {
             (data, response, error) in
             // Decode the data into a PhotoInfo object.

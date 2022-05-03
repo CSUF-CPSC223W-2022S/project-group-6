@@ -19,7 +19,7 @@
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Feature 2" image="coins.40.filled.stack" id="8Vi-Sc-AxH"/>
+                    <tabBarItem key="tabBarItem" title="Feature 2" image="seat.32.filled.1x" id="8Vi-Sc-AxH"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -28,7 +28,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="coins.40.filled.stack" width="40" height="40"/>
+        <image name="seat.32.filled.1x" width="32" height="32"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

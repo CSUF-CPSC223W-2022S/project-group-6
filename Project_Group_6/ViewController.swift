@@ -12,15 +12,18 @@ class ViewController: UIViewController {
     
     @IBOutlet var cityName: UILabel!
     
+    var animationTimer: Timer?
+    
     let cities: [String] = [
         "Los Angeles",
         "Paris",
         "Chicago",
         "Las Vegas",
-        "Philadephia",
+        "Philadelphia",
         "New Orleans",
         "London",
         "Dubai",
+        "Tokyo",
         "San Francisco Bay Area",
         "Singapore",
         "New York",
@@ -32,8 +35,26 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        cityName.text = cities.randomElement()
-        updateImage()
+        cityName.text = "Los Angeles"
+        
+        Image.layer.masksToBounds = true
+        Image.layer.cornerRadius = 135
+        Image.clipsToBounds = true
+        Image.image = UIImage(named: "LA-starting-Image")
+    }
+    override func viewWillAppear(_ animated: Bool) {
+        animationTimer = Timer.scheduledTimer(withTimeInterval: 10, repeats: true) {
+            _ in
+            UIView.transition(with: self.cityName, duration: 1, options: .transitionCrossDissolve, animations: {
+                self.cityName.text = self.cities.randomElement()
+            }, completion: nil)
+            self.updateImage()
+        }
+    }
+    override func viewWillDisappear(_ animated: Bool) {
+        if let timer = animationTimer {
+            timer.invalidate()
+        }
     }
     func updateImage() {
         let lpcIfno = LocationPhotoController()
@@ -60,7 +81,9 @@ class ViewController: UIViewController {
                          */
                         guard let theImage = image else { return }
                         // Update image on the interface if available
-                        self.Image.image = theImage
+                        UIView.transition(with: self.Image, duration: 2.5, options: .transitionFlipFromRight, animations: {
+                            self.Image.image = theImage
+                        },completion: nil)
                     }
                 }
             }
