@@ -5,11 +5,10 @@
 //  Created by Diego on 2/24/22.
 //
 
-import XCTest
 @testable import Project_Group_6
+import XCTest
 
 class AirportManagerTests: XCTestCase {
-    
     override func setUpWithError() throws {
         // Put setup code here. This method is called before the invocation of each test method in the class.
     }
@@ -81,6 +80,7 @@ class AirportManagerTests: XCTestCase {
         let Gates = manager.gateNumbers(from: "Los Angeles International Airport")
         XCTAssertEqual(manager.getFlightNumber(from: "Los Angeles International Airport", for: Gates[10]), Flights[10])
     }
+
     func testGetFlightAndGate() {
         let manager = AirportManager()
         let flights = manager.flightNumbers(from: "J.F.K International Airport")
@@ -94,12 +94,18 @@ class AirportManagerTests: XCTestCase {
     
     func testgetMap() {
         let m = AirportManager()
+        // code for getting terminal number
+        var terminalX = 1
+        XCTAssertEqual(m.getMap(of: "Los Angeles International Airport", terminalNumber: terminalX), "Terminal 1.pdf")
+        terminalX = 8
+        XCTAssertEqual(m.getMap(of: "Los Angeles International Airport", terminalNumber: terminalX), "Terminal 8.pdf")
         //code for getting terminal number
         var terminalX: Int = 1
         XCTAssertEqual(m.getMap(of: "Los Angeles International Airport", terminalNumber: terminalX), "Terminal 1")
         terminalX = 8
         XCTAssertEqual(m.getMap(of: "Los Angeles International Airport", terminalNumber: terminalX), "Terminal 8" )
     }
+
     func testSizeComputedProperty() {
         let m = AirportManager()
         XCTAssertEqual(m.airportSize, 5)
