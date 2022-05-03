@@ -6,7 +6,8 @@
 //
 import Foundation
 
+// codable to later be used to decode the api's data
 struct ExchangeRates: Codable {
-    // a dictionary that holds the rates 
+    // a dictionary that holds the rates
     let rates: [String: Double]
 }

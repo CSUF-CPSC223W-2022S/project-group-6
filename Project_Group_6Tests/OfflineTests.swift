@@ -27,33 +27,80 @@ class OfflineTests: XCTestCase {
     
     // currency names
     func testUSD() {
-        let USD: String = "USD"
+        let USD = "USD"
         XCTAssertEqual(USD, "USD")
     }
     
     func testEUR() {
-        let EUR: String = "EUR"
+        let EUR = "EUR"
         XCTAssertEqual(EUR, "EUR")
     }
     
     func testJPY() {
-        let JPY: String = "JPY"
+        let JPY = "JPY"
         XCTAssertEqual(JPY, "JPY")
     }
     
     // currency values
     func testUSDValue() {
-        let USDValue: Double = 1.1321
+        let USDValue = 1.1321
         XCTAssertEqual(USDValue, 1.1321)
     }
     
     func testEURValue() {
-        let EURValue: Double = 1.11
+        let EURValue = 1.11
         XCTAssertEqual(EURValue, 1.11)
     }
     
     func testJPYValue() {
-        let JPYValue: Double = 126.76
+        let JPYValue = 126.76
         XCTAssertEqual(JPYValue, 126.76)
+    }
+    
+    func testSave() {
+        // create parameters for the array
+        let testArray = sumthing(cur: ["USD", "EUR", "JPY", "BGN", "CZK", "DKK", "GBP", "HUF", "PLN", "RON", "SEK", "CHF", "ISK", "NOK", "HRK", "RUB", "TRY", "AUD", "BRL", "CAD", "CNY", "HKD", "IDR", "ILS", "INR", "KRW", "MXN", "MYR", "NZD", "PHP", "SGD", "THB", "ZAR"], fall: [1.1321, 1.11, 126.76, 1.9558, 25.623, 7.4643, 0.8629, 321.9, 4.2796, 4.7598, 10.4788, 1.1326, 135.2, 9.602, 7.435, 72.6133, 6.535, 1.5771, 4.3884, 1.5082, 7.5939, 8.8788, 15954.12, 4.0389, 78.2915, 1283.0, 21.236, 4.658, 1.6748, 58.553, 1.5318, 35.955, 15.7631])
+        
+        
+        let offline = OfflineConverter()
+        offline.sumthingArray = testArray
+        offline.save_load_Array()
+
+        let currency = PropertyListDecoder()
+        guard let savedLocation = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first else {
+            XCTFail()
+            return
+        }
+
+        // Tries to decode the information that is saved in the file.
+        let fileURL = savedLocation.appendingPathComponent("Array").appendingPathExtension("plist")
+        guard let file = try? Data(contentsOf: fileURL), let decodeArray = try? currency.decode(sumthing.self, from: file)
+        else {
+            XCTFail()
+            return
+        }
+        print(decodeArray.currencyArray[0])
+        // Checks to see if the array is saved.
+        XCTAssertEqual(testArray.currencyArray[0], decodeArray.currencyArray[0])
+    }
+    
+    func testLoad() {
+        // create parameters for the array
+        let testArray = sumthing(cur: ["USD"], fall: [1.1321])
+
+        let currency = PropertyListEncoder()
+        guard let loadLocation = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first, let encodedHistory = try? currency.encode(testArray) else {
+            XCTFail()
+            return
+        }
+        let fileURL = loadLocation.appendingPathComponent("Array").appendingPathExtension("plist")
+        try? encodedHistory.write(to: fileURL)
+        
+        let offline = OfflineConverter()
+        offline.sumthingArray = testArray
+        offline.save_load_Array()
+        
+        XCTAssertEqual(testArray.currencyArray[0], offline.sumthingArray.currencyArray[0])
+        
     }
 }

@@ -7,6 +7,7 @@
 
 import Foundation
 
+// API is holding the address of the api's website
 struct Constants {
-    static let API: String =  "https://open.er-api.com/v6/latest/USD"
+    static let API: String = "https://open.er-api.com/v6/latest/USD"
 }

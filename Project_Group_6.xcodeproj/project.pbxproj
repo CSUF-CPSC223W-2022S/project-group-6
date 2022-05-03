@@ -21,9 +21,10 @@
 		A913F5ED27D91A6E00D3744B /* ConverterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A913F5EC27D91A6E00D3744B /* ConverterTests.swift */; };
 		A956A52227DA598E00218859 /* Currency.swift in Sources */ = {isa = PBXBuildFile; fileRef = A956A52127DA598E00218859 /* Currency.swift */; };
 		A956A52427DA59B100218859 /* ExchangeRates.swift in Sources */ = {isa = PBXBuildFile; fileRef = A956A52327DA59B100218859 /* ExchangeRates.swift */; };
+		A96C4BA227FFA8CF009C195E /* Internet.swift in Sources */ = {isa = PBXBuildFile; fileRef = A96C4BA127FFA8CF009C195E /* Internet.swift */; };
+		A96C4BA727FFAAED009C195E /* Connection.swift in Sources */ = {isa = PBXBuildFile; fileRef = A96C4BA627FFAAED009C195E /* Connection.swift */; };
 		A98C857627FA6484003E78BA /* Offline.swift in Sources */ = {isa = PBXBuildFile; fileRef = A98C857527FA6484003E78BA /* Offline.swift */; };
 		A98C857B27FA99C2003E78BA /* OfflineTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A98C857A27FA99C2003E78BA /* OfflineTests.swift */; };
-		A98C857D27FAA23F003E78BA /* TrialOffline.swift in Sources */ = {isa = PBXBuildFile; fileRef = A98C857C27FAA23F003E78BA /* TrialOffline.swift */; };
 		A9A2A78E27E38BB800433FCD /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9A2A78D27E38BB800433FCD /* Constants.swift */; };
 /* End PBXBuildFile section */
 
@@ -59,13 +60,14 @@
 		7A55814727BED13300C2FC3F /* Project_Group_6UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Project_Group_6UITests.swift; sourceTree = "<group>"; };
 		7A55814927BED13300C2FC3F /* Project_Group_6UITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Project_Group_6UITestsLaunchTests.swift; sourceTree = "<group>"; };
 		7A55815627BED17500C2FC3F /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
-		A913F5E527D7D32C00D3744B /* Converter.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Converter.storyboard; path = Project_Group_6/View/Converter.storyboard; sourceTree = SOURCE_ROOT; };
+		A913F5E527D7D32C00D3744B /* Converter.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Converter.storyboard; path = Project_Group_6/Converter.storyboard; sourceTree = SOURCE_ROOT; };
 		A913F5EC27D91A6E00D3744B /* ConverterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConverterTests.swift; sourceTree = "<group>"; };
 		A956A52127DA598E00218859 /* Currency.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Currency.swift; sourceTree = "<group>"; };
 		A956A52327DA59B100218859 /* ExchangeRates.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExchangeRates.swift; sourceTree = "<group>"; };
+		A96C4BA127FFA8CF009C195E /* Internet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Internet.swift; sourceTree = "<group>"; };
+		A96C4BA627FFAAED009C195E /* Connection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Connection.swift; sourceTree = "<group>"; };
 		A98C857527FA6484003E78BA /* Offline.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Offline.swift; sourceTree = "<group>"; };
 		A98C857A27FA99C2003E78BA /* OfflineTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OfflineTests.swift; sourceTree = "<group>"; };
-		A98C857C27FAA23F003E78BA /* TrialOffline.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrialOffline.swift; sourceTree = "<group>"; };
 		A9A2A78D27E38BB800433FCD /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -118,9 +120,13 @@
 		7A55812527BED12E00C2FC3F /* Project_Group_6 */ = {
 			isa = PBXGroup;
 			children = (
-				A92885CC27F8E1CB000CB234 /* View */,
-				A92885CB27F8E1A3000CB234 /* Constant */,
-				A956A52027DA596700218859 /* Converter */,
+				A913F5E527D7D32C00D3744B /* Converter.storyboard */,
+				A9A2A78D27E38BB800433FCD /* Constants.swift */,
+				A956A52327DA59B100218859 /* ExchangeRates.swift */,
+				A96C4BA627FFAAED009C195E /* Connection.swift */,
+				A956A52127DA598E00218859 /* Currency.swift */,
+				A98C857527FA6484003E78BA /* Offline.swift */,
+				A96C4BA127FFA8CF009C195E /* Internet.swift */,
 				7A55812627BED12E00C2FC3F /* AppDelegate.swift */,
 				7A55812827BED12E00C2FC3F /* SceneDelegate.swift */,
 				7A55812A27BED12E00C2FC3F /* ViewController.swift */,
@@ -149,41 +155,6 @@
 				7A55814927BED13300C2FC3F /* Project_Group_6UITestsLaunchTests.swift */,
 			);
 			path = Project_Group_6UITests;
-			sourceTree = "<group>";
-		};
-		A92885CB27F8E1A3000CB234 /* Constant */ = {
-			isa = PBXGroup;
-			children = (
-				A9A2A78D27E38BB800433FCD /* Constants.swift */,
-				A956A52327DA59B100218859 /* ExchangeRates.swift */,
-			);
-			path = Constant;
-			sourceTree = "<group>";
-		};
-		A92885CC27F8E1CB000CB234 /* View */ = {
-			isa = PBXGroup;
-			children = (
-				A913F5E527D7D32C00D3744B /* Converter.storyboard */,
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
-		A956A52027DA596700218859 /* Converter */ = {
-			isa = PBXGroup;
-			children = (
-				A956A52127DA598E00218859 /* Currency.swift */,
-				A98C857727FA67CA003E78BA /* Offline */,
-			);
-			path = Converter;
-			sourceTree = "<group>";
-		};
-		A98C857727FA67CA003E78BA /* Offline */ = {
-			isa = PBXGroup;
-			children = (
-				A98C857527FA6484003E78BA /* Offline.swift */,
-				A98C857C27FAA23F003E78BA /* TrialOffline.swift */,
-			);
-			path = Offline;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -320,8 +291,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				A956A52227DA598E00218859 /* Currency.swift in Sources */,
+				A96C4BA727FFAAED009C195E /* Connection.swift in Sources */,
 				7A55812B27BED12E00C2FC3F /* ViewController.swift in Sources */,
-				A98C857D27FAA23F003E78BA /* TrialOffline.swift in Sources */,
+				A96C4BA227FFA8CF009C195E /* Internet.swift in Sources */,
 				A98C857627FA6484003E78BA /* Offline.swift in Sources */,
 				7A55812727BED12E00C2FC3F /* AppDelegate.swift in Sources */,
 				A9A2A78E27E38BB800433FCD /* Constants.swift in Sources */,
