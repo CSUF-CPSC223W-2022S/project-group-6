@@ -18,15 +18,6 @@
 		7A55814827BED13300C2FC3F /* Project_Group_6UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A55814727BED13300C2FC3F /* Project_Group_6UITests.swift */; };
 		7A55814A27BED13300C2FC3F /* Project_Group_6UITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A55814927BED13300C2FC3F /* Project_Group_6UITestsLaunchTests.swift */; };
 		7A55815727BED17500C2FC3F /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 7A55815627BED17500C2FC3F /* .gitignore */; };
-		A913F5E627D7D32C00D3744B /* Converter.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A913F5E527D7D32C00D3744B /* Converter.storyboard */; };
-		A913F5ED27D91A6E00D3744B /* ConverterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A913F5EC27D91A6E00D3744B /* ConverterTests.swift */; };
-		A956A52227DA598E00218859 /* Currency.swift in Sources */ = {isa = PBXBuildFile; fileRef = A956A52127DA598E00218859 /* Currency.swift */; };
-		A956A52427DA59B100218859 /* ExchangeRates.swift in Sources */ = {isa = PBXBuildFile; fileRef = A956A52327DA59B100218859 /* ExchangeRates.swift */; };
-		A96C4BA227FFA8CF009C195E /* Internet.swift in Sources */ = {isa = PBXBuildFile; fileRef = A96C4BA127FFA8CF009C195E /* Internet.swift */; };
-		A96C4BA727FFAAED009C195E /* Connection.swift in Sources */ = {isa = PBXBuildFile; fileRef = A96C4BA627FFAAED009C195E /* Connection.swift */; };
-		A98C857627FA6484003E78BA /* Offline.swift in Sources */ = {isa = PBXBuildFile; fileRef = A98C857527FA6484003E78BA /* Offline.swift */; };
-		A98C857B27FA99C2003E78BA /* OfflineTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A98C857A27FA99C2003E78BA /* OfflineTests.swift */; };
-		A9A2A78E27E38BB800433FCD /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9A2A78D27E38BB800433FCD /* Constants.swift */; };
 		7AA49D6928219E7900012AE9 /* mapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AA49D6528219E7900012AE9 /* mapViewController.swift */; };
 		7AA49D6A28219E7900012AE9 /* seatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AA49D6628219E7900012AE9 /* seatViewController.swift */; };
 		7AA49D6B28219E7900012AE9 /* seatPage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7AA49D6728219E7900012AE9 /* seatPage.storyboard */; };
@@ -53,6 +44,15 @@
 		7ABC8D8127C8A21B00910A35 /* airportManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ABC8D8027C8A21B00910A35 /* airportManager.swift */; };
 		7ABC8D8327C8A23600910A35 /* managerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ABC8D8227C8A23600910A35 /* managerTests.swift */; };
 		7AC24BDE27CC12BB00BEAC21 /* airportData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AC24BDD27CC12BB00BEAC21 /* airportData.swift */; };
+		A913F5E627D7D32C00D3744B /* Converter.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A913F5E527D7D32C00D3744B /* Converter.storyboard */; };
+		A913F5ED27D91A6E00D3744B /* ConverterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A913F5EC27D91A6E00D3744B /* ConverterTests.swift */; };
+		A956A52227DA598E00218859 /* Currency.swift in Sources */ = {isa = PBXBuildFile; fileRef = A956A52127DA598E00218859 /* Currency.swift */; };
+		A956A52427DA59B100218859 /* ExchangeRates.swift in Sources */ = {isa = PBXBuildFile; fileRef = A956A52327DA59B100218859 /* ExchangeRates.swift */; };
+		A96C4BA227FFA8CF009C195E /* Internet.swift in Sources */ = {isa = PBXBuildFile; fileRef = A96C4BA127FFA8CF009C195E /* Internet.swift */; };
+		A96C4BA727FFAAED009C195E /* Connection.swift in Sources */ = {isa = PBXBuildFile; fileRef = A96C4BA627FFAAED009C195E /* Connection.swift */; };
+		A98C857627FA6484003E78BA /* Offline.swift in Sources */ = {isa = PBXBuildFile; fileRef = A98C857527FA6484003E78BA /* Offline.swift */; };
+		A98C857B27FA99C2003E78BA /* OfflineTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A98C857A27FA99C2003E78BA /* OfflineTests.swift */; };
+		A9A2A78E27E38BB800433FCD /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9A2A78D27E38BB800433FCD /* Constants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -88,15 +88,6 @@
 		7A55814727BED13300C2FC3F /* Project_Group_6UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Project_Group_6UITests.swift; sourceTree = "<group>"; };
 		7A55814927BED13300C2FC3F /* Project_Group_6UITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Project_Group_6UITestsLaunchTests.swift; sourceTree = "<group>"; };
 		7A55815627BED17500C2FC3F /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
-		A913F5E527D7D32C00D3744B /* Converter.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Converter.storyboard; path = Project_Group_6/Converter.storyboard; sourceTree = SOURCE_ROOT; };
-		A913F5EC27D91A6E00D3744B /* ConverterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConverterTests.swift; sourceTree = "<group>"; };
-		A956A52127DA598E00218859 /* Currency.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Currency.swift; sourceTree = "<group>"; };
-		A956A52327DA59B100218859 /* ExchangeRates.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExchangeRates.swift; sourceTree = "<group>"; };
-		A96C4BA127FFA8CF009C195E /* Internet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Internet.swift; sourceTree = "<group>"; };
-		A96C4BA627FFAAED009C195E /* Connection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Connection.swift; sourceTree = "<group>"; };
-		A98C857527FA6484003E78BA /* Offline.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Offline.swift; sourceTree = "<group>"; };
-		A98C857A27FA99C2003E78BA /* OfflineTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OfflineTests.swift; sourceTree = "<group>"; };
-		A9A2A78D27E38BB800433FCD /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		7AA49D6528219E7900012AE9 /* mapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = mapViewController.swift; sourceTree = "<group>"; };
 		7AA49D6628219E7900012AE9 /* seatViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = seatViewController.swift; sourceTree = "<group>"; };
 		7AA49D6728219E7900012AE9 /* seatPage.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = seatPage.storyboard; sourceTree = "<group>"; };
@@ -123,6 +114,15 @@
 		7ABC8D8027C8A21B00910A35 /* airportManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = airportManager.swift; sourceTree = "<group>"; };
 		7ABC8D8227C8A23600910A35 /* managerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = managerTests.swift; sourceTree = "<group>"; };
 		7AC24BDD27CC12BB00BEAC21 /* airportData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = airportData.swift; sourceTree = "<group>"; };
+		A913F5E527D7D32C00D3744B /* Converter.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Converter.storyboard; path = "Project_Group_6/Currency Converter/Converter.storyboard"; sourceTree = SOURCE_ROOT; };
+		A913F5EC27D91A6E00D3744B /* ConverterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConverterTests.swift; sourceTree = "<group>"; };
+		A956A52127DA598E00218859 /* Currency.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Currency.swift; sourceTree = "<group>"; };
+		A956A52327DA59B100218859 /* ExchangeRates.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExchangeRates.swift; sourceTree = "<group>"; };
+		A96C4BA127FFA8CF009C195E /* Internet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Internet.swift; sourceTree = "<group>"; };
+		A96C4BA627FFAAED009C195E /* Connection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Connection.swift; sourceTree = "<group>"; };
+		A98C857527FA6484003E78BA /* Offline.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Offline.swift; sourceTree = "<group>"; };
+		A98C857A27FA99C2003E78BA /* OfflineTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OfflineTests.swift; sourceTree = "<group>"; };
+		A9A2A78D27E38BB800433FCD /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -174,13 +174,7 @@
 		7A55812527BED12E00C2FC3F /* Project_Group_6 */ = {
 			isa = PBXGroup;
 			children = (
-				A913F5E527D7D32C00D3744B /* Converter.storyboard */,
-				A9A2A78D27E38BB800433FCD /* Constants.swift */,
-				A956A52327DA59B100218859 /* ExchangeRates.swift */,
-				A96C4BA627FFAAED009C195E /* Connection.swift */,
-				A956A52127DA598E00218859 /* Currency.swift */,
-				A98C857527FA6484003E78BA /* Offline.swift */,
-				A96C4BA127FFA8CF009C195E /* Internet.swift */,
+				7AA49D8B2821AE4200012AE9 /* Currency Converter */,
 				7AA49D892821A23C00012AE9 /* Feature Seat Map */,
 				7AA49D882821A17800012AE9 /* DepartingGate */,
 				7AA49D812821A02D00012AE9 /* Main API Things */,
@@ -268,6 +262,20 @@
 				7AA49D6D28219E9000012AE9 /* planeManager.swift */,
 			);
 			path = Airplanes;
+			sourceTree = "<group>";
+		};
+		7AA49D8B2821AE4200012AE9 /* Currency Converter */ = {
+			isa = PBXGroup;
+			children = (
+				A913F5E527D7D32C00D3744B /* Converter.storyboard */,
+				A9A2A78D27E38BB800433FCD /* Constants.swift */,
+				A956A52327DA59B100218859 /* ExchangeRates.swift */,
+				A96C4BA627FFAAED009C195E /* Connection.swift */,
+				A956A52127DA598E00218859 /* Currency.swift */,
+				A98C857527FA6484003E78BA /* Offline.swift */,
+				A96C4BA127FFA8CF009C195E /* Internet.swift */,
+			);
+			path = "Currency Converter";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

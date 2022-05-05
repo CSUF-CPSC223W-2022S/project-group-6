@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="AB8-oP-8rF">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -26,7 +27,7 @@
             </objects>
             <point key="canvasLocation" x="1000" y="-699"/>
         </scene>
-        <!--Internet-->
+        <!--Currency-->
         <scene sceneID="DNr-NA-vJJ">
             <objects>
                 <viewController storyboardIdentifier="something" id="YfA-lw-UNy" customClass="Internet" customModule="Project_Group_6" customModuleProvider="target" sceneMemberID="viewController">
@@ -58,7 +59,9 @@
                             <constraint firstItem="uzZ-Td-f9J" firstAttribute="centerY" secondItem="Wn4-7l-kby" secondAttribute="centerY" id="gRu-J7-f0d"/>
                         </constraints>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Currency" image="coins.40.filled.stack" id="RgB-8S-pZo"/>
                     <navigationItem key="navigationItem" id="3ig-s9-DmO"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="offButton" destination="UFc-zv-yva" id="BJX-Nn-mLf"/>
                     </connections>
@@ -101,6 +104,7 @@
                         <viewLayoutGuide key="safeArea" id="hA4-Wq-tmi"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Currency" image="coins.40.filled.stack" id="PrW-9H-kDw"/>
                     <navigationItem key="navigationItem" id="UVe-Gz-4Rb"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
@@ -162,6 +166,7 @@
     <resources>
         <image name="Image" width="560" height="560"/>
         <image name="Image-1" width="512" height="512"/>
+        <image name="coins.40.filled.stack" width="40" height="40"/>
         <image name="offline" width="150" height="145"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

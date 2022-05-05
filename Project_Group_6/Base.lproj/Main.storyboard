@@ -18,23 +18,16 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pA4-xq-7sM">
-                                <rect key="frame" x="40" y="132" width="205" height="65"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="65" id="17J-B0-J5r"/>
-                                </constraints>
+                                <rect key="frame" x="40" y="151" width="292" height="65"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
                                 <color key="textColor" red="0.99474667230000002" green="1" blue="0.99015174859999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="aZt-FA-iYn">
                                 <rect key="frame" x="7" y="248" width="400" height="400"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="400" id="qd9-00-9Lj"/>
-                                    <constraint firstAttribute="height" constant="400" id="wv7-3A-GDv"/>
-                                </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome to iTravel" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Ig-Bo-YyO">
-                                <rect key="frame" x="83" y="87" width="249" height="37"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome to iTravel" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Ig-Bo-YyO">
+                                <rect key="frame" x="40" y="87" width="332" height="37"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
                                 <color key="textColor" red="0.99474667230000002" green="1" blue="0.99015174859999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
@@ -43,14 +36,21 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBlueColor"/>
                         <constraints>
-                            <constraint firstItem="pA4-xq-7sM" firstAttribute="trailing" secondItem="1Ig-Bo-YyO" secondAttribute="trailing" constant="-87" id="UWN-td-hvq"/>
-                            <constraint firstItem="1Ig-Bo-YyO" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="83" id="XNw-KQ-9lt"/>
-                            <constraint firstItem="aZt-FA-iYn" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" constant="13" id="cdM-0z-8cD"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="aZt-FA-iYn" secondAttribute="bottom" constant="165" id="iOK-hJ-4pu"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="1Ig-Bo-YyO" secondAttribute="trailing" symbolic="YES" id="kUH-fK-Knj"/>
-                            <constraint firstItem="pA4-xq-7sM" firstAttribute="leading" secondItem="1Ig-Bo-YyO" secondAttribute="leading" constant="-43" id="pT0-Td-oHc"/>
-                            <constraint firstItem="pA4-xq-7sM" firstAttribute="top" secondItem="1Ig-Bo-YyO" secondAttribute="bottom" constant="8" id="rtZ-lO-JsS"/>
-                            <constraint firstItem="1Ig-Bo-YyO" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="43" id="zYz-tK-HEH"/>
+                            <constraint firstItem="1Ig-Bo-YyO" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="40" id="3SQ-uJ-JdP"/>
+                            <constraint firstItem="1Ig-Bo-YyO" firstAttribute="trailing" secondItem="pA4-xq-7sM" secondAttribute="trailing" constant="40" id="5cR-wO-KAT"/>
+                            <constraint firstItem="aZt-FA-iYn" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="7" id="6LU-NN-G3G"/>
+                            <constraint firstItem="1Ig-Bo-YyO" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="43" id="C7O-Mm-yIA"/>
+                            <constraint firstItem="aZt-FA-iYn" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="UoN-Rr-0uC"/>
+                            <constraint firstItem="aZt-FA-iYn" firstAttribute="top" secondItem="1Ig-Bo-YyO" secondAttribute="bottom" constant="124" id="Zrq-MP-H7g"/>
+                            <constraint firstItem="aZt-FA-iYn" firstAttribute="top" secondItem="pA4-xq-7sM" secondAttribute="bottom" constant="32" id="bU6-uE-SGe"/>
+                            <constraint firstItem="1Ig-Bo-YyO" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="43" id="d8a-9G-kH1"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="1Ig-Bo-YyO" secondAttribute="trailing" constant="42" id="dj3-Os-W0z"/>
+                            <constraint firstItem="1Ig-Bo-YyO" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="-1" id="hWk-dg-C0d"/>
+                            <constraint firstItem="1Ig-Bo-YyO" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="40" id="ia3-6L-Z11"/>
+                            <constraint firstItem="1Ig-Bo-YyO" firstAttribute="centerX" secondItem="aZt-FA-iYn" secondAttribute="centerX" constant="-1" id="ig2-ML-HwX"/>
+                            <constraint firstItem="pA4-xq-7sM" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="40" id="jky-HK-3w2"/>
+                            <constraint firstItem="pA4-xq-7sM" firstAttribute="top" secondItem="1Ig-Bo-YyO" secondAttribute="bottom" constant="27" id="nB5-dI-fXY"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="aZt-FA-iYn" secondAttribute="bottom" constant="165" id="tV3-aL-ykk"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Home" image="HomeIcon.32.filled" id="wy4-Ax-Div"/>
@@ -86,7 +86,7 @@
         <!--Feature 3-->
         <scene sceneID="GH3-jJ-AJ7">
             <objects>
-                <viewControllerPlaceholder storyboardName="Feature 3" id="YNj-O1-AjJ" userLabel="Feature 3" sceneMemberID="viewController">
+                <viewControllerPlaceholder storyboardName="Converter" id="YNj-O1-AjJ" userLabel="Feature 3" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Feature 3" image="coins.40.filled.stack" id="7I9-5j-2lK"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Siz-Vd-ab9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
