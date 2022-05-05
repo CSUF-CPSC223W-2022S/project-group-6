@@ -35,9 +35,6 @@
 		7AA49D852821A08C00012AE9 /* locationPhotoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AA49D822821A08C00012AE9 /* locationPhotoController.swift */; };
 		7AA49D862821A08C00012AE9 /* locationPhotoInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AA49D832821A08C00012AE9 /* locationPhotoInfo.swift */; };
 		7AA49D872821A08C00012AE9 /* URL+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AA49D842821A08C00012AE9 /* URL+Helpers.swift */; };
-		7ABB28D0281BACC9001BA81B /* Feature 1.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7ABB28CF281BACC9001BA81B /* Feature 1.storyboard */; };
-		7ABB28D4281BAE28001BA81B /* Feature 2.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7ABB28D3281BAE28001BA81B /* Feature 2.storyboard */; };
-		7ABB28D6281BAEF7001BA81B /* Feature 3.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7ABB28D5281BAEF7001BA81B /* Feature 3.storyboard */; };
 		7ABB28D8281BAFB9001BA81B /* Feature 4.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7ABB28D7281BAFB9001BA81B /* Feature 4.storyboard */; };
 		7ABBCF662821983200A849C2 /* seatMapTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ABBCF642821983200A849C2 /* seatMapTests.swift */; };
 		7ABBCF672821983200A849C2 /* departingGateNumberTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ABBCF652821983200A849C2 /* departingGateNumberTests.swift */; };
@@ -105,9 +102,6 @@
 		7AA49D822821A08C00012AE9 /* locationPhotoController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = locationPhotoController.swift; path = "Project_Group_6/Main API things/locationPhotoController.swift"; sourceTree = SOURCE_ROOT; };
 		7AA49D832821A08C00012AE9 /* locationPhotoInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = locationPhotoInfo.swift; path = "Project_Group_6/Main API things/locationPhotoInfo.swift"; sourceTree = SOURCE_ROOT; };
 		7AA49D842821A08C00012AE9 /* URL+Helpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "URL+Helpers.swift"; path = "Project_Group_6/Main API things/URL+Helpers.swift"; sourceTree = SOURCE_ROOT; };
-		7ABB28CF281BACC9001BA81B /* Feature 1.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Feature 1.storyboard"; sourceTree = "<group>"; };
-		7ABB28D3281BAE28001BA81B /* Feature 2.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Feature 2.storyboard"; sourceTree = "<group>"; };
-		7ABB28D5281BAEF7001BA81B /* Feature 3.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Feature 3.storyboard"; sourceTree = "<group>"; };
 		7ABB28D7281BAFB9001BA81B /* Feature 4.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Feature 4.storyboard"; sourceTree = "<group>"; };
 		7ABBCF642821983200A849C2 /* seatMapTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = seatMapTests.swift; sourceTree = "<group>"; };
 		7ABBCF652821983200A849C2 /* departingGateNumberTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = departingGateNumberTests.swift; sourceTree = "<group>"; };
@@ -188,9 +182,6 @@
 				7A55812F27BED13200C2FC3F /* Assets.xcassets */,
 				7A55813127BED13200C2FC3F /* LaunchScreen.storyboard */,
 				7A55813427BED13200C2FC3F /* Info.plist */,
-				7ABB28CF281BACC9001BA81B /* Feature 1.storyboard */,
-				7ABB28D3281BAE28001BA81B /* Feature 2.storyboard */,
-				7ABB28D5281BAEF7001BA81B /* Feature 3.storyboard */,
 				7ABB28D7281BAFB9001BA81B /* Feature 4.storyboard */,
 			);
 			path = Project_Group_6;
@@ -384,15 +375,12 @@
 			files = (
 				7ABB28D8281BAFB9001BA81B /* Feature 4.storyboard in Resources */,
 				7A55815727BED17500C2FC3F /* .gitignore in Resources */,
-				7ABB28D6281BAEF7001BA81B /* Feature 3.storyboard in Resources */,
-				7ABB28D0281BACC9001BA81B /* Feature 1.storyboard in Resources */,
 				7AA49D6B28219E7900012AE9 /* seatPage.storyboard in Resources */,
 				7A55813327BED13200C2FC3F /* LaunchScreen.storyboard in Resources */,
 				A913F5E627D7D32C00D3744B /* Converter.storyboard in Resources */,
 				7AA49D8028219F1F00012AE9 /* DepartingGate.storyboard in Resources */,
 				7A55813027BED13200C2FC3F /* Assets.xcassets in Resources */,
 				7A55812E27BED12E00C2FC3F /* Main.storyboard in Resources */,
-				7ABB28D4281BAE28001BA81B /* Feature 2.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -30,8 +30,6 @@ class Currency: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
         super.viewDidLoad()
         pickerView.delegate = self
         pickerView.dataSource = self
-        // calls the fetechJSON function
-        fetchJSON()
         // changes the amount displayed in the view controller
         amount.addTarget(self, action: #selector(updateViews), for: .editingChanged)
         // changes background color
@@ -41,6 +39,8 @@ class Currency: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
     override func viewWillAppear(_ animated: Bool) {
         // shows the no-internet connection pop up
         showAlert()
+        // calls the fetechJSON function
+        fetchJSON()
     }
     
     // MARK: - PickerView Code
